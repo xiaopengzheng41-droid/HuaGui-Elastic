@@ -24,17 +24,19 @@ function canUseLocalStorage() {
 function hasInquiryBlobStorage() {
   return Boolean(
     process.env.INQUIRIES_BLOB_READ_WRITE_TOKEN ||
-    process.env.INQUIRIES_BLOB_STORE_ID
+    process.env.INQUIRIES_BLOB_STORE_ID ||
+    process.env.INQUIRIES_STORE_ID
   );
 }
 
 function inquiryBlobClientOptions() {
+  const storeId = process.env.INQUIRIES_BLOB_STORE_ID || process.env.INQUIRIES_STORE_ID;
   return {
     ...(process.env.INQUIRIES_BLOB_READ_WRITE_TOKEN
       ? { token: process.env.INQUIRIES_BLOB_READ_WRITE_TOKEN }
       : {}),
-    ...(process.env.INQUIRIES_BLOB_STORE_ID
-      ? { storeId: process.env.INQUIRIES_BLOB_STORE_ID }
+    ...(storeId
+      ? { storeId }
       : {})
   };
 }

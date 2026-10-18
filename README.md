@@ -98,7 +98,7 @@ huagui_company_site/data/inquiries.json
 Production inquiries contain customer names, email addresses, and phone numbers, so they must not use the public Blob store that serves product content and images. Create and connect a separate Vercel Private Blob Store, then configure:
 
 ```text
-INQUIRIES_BLOB_STORE_ID
+INQUIRIES_STORE_ID
 ```
 
 Optional inquiry settings:
@@ -108,4 +108,4 @@ INQUIRIES_BLOB_READ_WRITE_TOKEN
 INQUIRIES_BLOB_PREFIX
 ```
 
-`INQUIRIES_BLOB_READ_WRITE_TOKEN` is only needed for a legacy token-based connection. With Vercel OIDC, set the private store ID and use the project's automatically managed `VERCEL_OIDC_TOKEN`.
+`INQUIRIES_BLOB_STORE_ID` is also accepted as a legacy/manual alias. `INQUIRIES_BLOB_READ_WRITE_TOKEN` is only needed for a legacy token-based connection. With Vercel OIDC, connect the private store with the `INQUIRIES` prefix so Vercel provides `INQUIRIES_STORE_ID`, then use the project's automatically managed `VERCEL_OIDC_TOKEN`.
