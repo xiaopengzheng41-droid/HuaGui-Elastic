@@ -17,14 +17,6 @@ const IMAGE_LABEL_PRESETS = [
   { label: 'Application', group: 'Application' }
 ];
 
-const DEFAULT_FEATURES = [
-  'Stable stretch and recovery',
-  'Vivid, wash-resistant printing',
-  'Soft skin-contact comfort',
-  'Custom widths, logos, and colors',
-  'Bulk-ready quality consistency'
-];
-
 const LEGACY_SPEC_LABELS = ['Width', 'Material', 'Printing', 'Handfeel'];
 
 const SESSION_COOKIE = 'huagui_admin';
@@ -102,7 +94,7 @@ function toFeatureArray(value) {
   if (typeof value === 'string') {
     return value.split(/\r?\n/).map(item => item.trim()).filter(Boolean);
   }
-  return [...DEFAULT_FEATURES];
+  return [];
 }
 
 function toSpecRow(item, index = 0) {

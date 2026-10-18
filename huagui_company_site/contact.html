@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <base href="/">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Contact Huagui Elastic to request samples, custom elastic quotation, and product development support.">
@@ -13,8 +14,20 @@
       <section class="section">
         <div class="container">
           <p class="section-label">Contact</p>
-          <h2>Request Samples Or Quotation</h2>
+          <h1>Request Samples Or Quotation</h1>
           <p class="section-lead" style="margin-bottom:44px;">Share your product application, width, artwork, color, material preference, target quantity, and delivery destination. Huagui will reply with suitable sample and quotation options.</p>
+          <div class="partner-callout">
+            <div>
+              <p class="section-label">Global Distributor Partnerships</p>
+              <h2>Looking For Local Distributors, Wholesalers And Agents</h2>
+              <p>We welcome qualified partners worldwide for underwear, lingerie, and intimate apparel elastic webbing. Our sales team replies in English.</p>
+            </div>
+            <ul>
+              <li><strong>Samples:</strong> Free when the customer agrees to pay courier charges</li>
+              <li><strong>Trade terms:</strong> EXW standard; FOB on request</li>
+              <li><strong>Currency:</strong> Quotes available in USD or CNY</li>
+            </ul>
+          </div>
           <div class="contact-grid">
             <form class="contact-form" id="contactForm">
               <div class="contact-product-reference" data-product-reference hidden>
@@ -33,6 +46,16 @@
               </div>
               <div class="form-row">
                 <div class="form-group">
+                  <label for="company">Company Name *</label>
+                  <input type="text" id="company" name="company" placeholder="Your company" required>
+                </div>
+                <div class="form-group">
+                  <label for="country">Country / Region *</label>
+                  <input type="text" id="country" name="country" placeholder="Where your business operates" required>
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group">
                   <label for="email">Email Address *</label>
                   <input type="email" id="email" name="email" placeholder="you@company.com" required>
                 </div>
@@ -40,6 +63,19 @@
                   <label for="phone">Phone / WhatsApp</label>
                   <input type="tel" id="phone" name="phone" placeholder="+86 / +1 / +44 ...">
                 </div>
+              </div>
+              <div class="form-group">
+                <label for="businessRole">Business Role *</label>
+                <select id="businessRole" name="businessRole" required>
+                  <option value="">Select your role</option>
+                  <option value="distributor">Distributor</option>
+                  <option value="wholesaler">Wholesaler</option>
+                  <option value="agent">Sales Agent</option>
+                  <option value="importer">Importer</option>
+                  <option value="manufacturer">Intimate Apparel Manufacturer</option>
+                  <option value="brand">Brand / Buying Office</option>
+                  <option value="other">Other</option>
+                </select>
               </div>
               <div class="form-row">
                 <div class="form-group">
@@ -49,7 +85,7 @@
                     <option value="mens">Men's Underwear Elastics</option>
                     <option value="womens">Women's Underwear Elastics</option>
                     <option value="lingerie">Bra & Lingerie Elastics</option>
-                    <option value="activewear">Activewear Elastics</option>
+                    <option value="binding">Binding & Edge Elastics</option>
                     <option value="other">Other / Multiple</option>
                   </select>
                 </div>
@@ -58,10 +94,32 @@
                   <input type="text" id="quantity" name="quantity" placeholder="Example: 5,000m / 20,000m">
                 </div>
               </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="tradeTerm">Preferred Trade Term</label>
+                  <select id="tradeTerm" name="tradeTerm">
+                    <option value="EXW">EXW</option>
+                    <option value="FOB">FOB</option>
+                    <option value="advice">Need Advice</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="quoteCurrency">Quote Currency</label>
+                  <select id="quoteCurrency" name="quoteCurrency">
+                    <option value="USD">USD</option>
+                    <option value="CNY">CNY</option>
+                    <option value="either">Either USD or CNY</option>
+                  </select>
+                </div>
+              </div>
               <div class="form-group">
                 <label for="message">Message *</label>
                 <textarea id="message" name="message" rows="5" placeholder="Tell us width, artwork, color, material, stretch requirement, packing, and delivery destination..." required></textarea>
               </div>
+              <label class="privacy-consent">
+                <input type="checkbox" name="privacyConsent" value="accepted" required>
+                <span>I agree that Huagui may use the information above to respond to this business inquiry. See the <a href="privacy.html" target="_blank" rel="noopener">Privacy Policy</a>.</span>
+              </label>
               <button type="submit" class="btn btn-primary" data-contact-submit>Send Inquiry</button>
               <p class="contact-form-status" data-contact-status role="status" aria-live="polite"></p>
             </form>
@@ -75,7 +133,7 @@
           <p class="section-label">Helpful Inquiry Details</p>
           <h2>What To Send For A Faster Quote</h2>
           <div class="capabilities-grid">
-            <div class="capability-item"><strong>Application</strong><p>Men's underwear, women's underwear, bra, lingerie, sportswear, or other garment type.</p></div>
+            <div class="capability-item"><strong>Application</strong><p>Men's underwear, women's underwear, bra, lingerie, or other intimate apparel type.</p></div>
             <div class="capability-item"><strong>Specification</strong><p>Width, thickness, material, stretch, logo method, color, and edge finish.</p></div>
             <div class="capability-item"><strong>Reference</strong><p>Product photo, physical sample photo, Pantone color, or artwork file.</p></div>
             <div class="capability-item"><strong>Order Plan</strong><p>Target quantity, sample deadline, delivery country, and packing requirement.</p></div>
@@ -84,6 +142,9 @@
       </section>
     </main>
   </div>
-  <script src="assets/js/main.js?v=site-cms-20260718-inquiries"></script>
+  <script src="assets/js/leaf-translations.js?v=full-site-i18n-20261018bb"></script>
+  <script src="assets/js/page-translations.js?v=full-site-i18n-20261018bb"></script>
+  <script src="assets/js/i18n.js?v=site-i18n-20261018b"></script>
+  <script src="assets/js/main.js?v=product-catalog-20261017"></script>
 </body>
 </html>

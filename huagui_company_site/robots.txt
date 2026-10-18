@@ -1,0 +1,15 @@
+User-agent: *
+Allow: /
+Disallow: /admin
+Disallow: /api/admin/
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+Sitemap: https://www.huaguielastic.com/sitemap.xml

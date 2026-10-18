@@ -1,371 +1,49 @@
 {
   "version": 1,
-  "updatedAt": "2026-07-05T04:47:31.580Z",
+  "updatedAt": "2026-10-18T07:46:08.922Z",
   "products": [
     {
-      "slug": "printed-waistbands",
-      "name": "Printed Waistbands",
-      "category": "mens",
-      "categoryLabel": "Men's Underwear Elastics",
-      "status": "published",
-      "sortOrder": 10,
-      "image": "assets/images/printed-waistband-front-back.webp",
-      "gallery": [
-        {
-          "group": "Product Display",
-          "src": "assets/images/printed-waistband-front-back.webp",
-          "label": "Front",
-          "alt": "Printed Waistbands - Front",
-          "rotate": false
-        },
-        {
-          "group": "Product Display",
-          "src": "assets/images/printed-waistband-front.webp",
-          "label": "Front",
-          "alt": "Printed Waistbands - Front",
-          "rotate": false
-        },
-        {
-          "group": "Product Display",
-          "src": "assets/images/printed-waistband-back.webp",
-          "label": "Back",
-          "alt": "Printed Waistbands - Back",
-          "rotate": false
-        },
-        {
-          "group": "Application",
-          "src": "assets/images/printed-waistband-application.webp",
-          "label": "Application",
-          "alt": "Printed Waistbands - Application",
-          "rotate": false
-        }
-      ],
-      "tags": [
-        "printed",
-        "debossed",
-        "embossed",
-        "lurex",
-        "waistband"
-      ],
-      "specs": [
-        {
-          "label": "Item No.",
-          "value": ""
-        },
-        {
-          "label": "Width",
-          "value": "25-45mm width"
-        },
-        {
-          "label": "Material",
-          "value": "Nylon/Polyester/Spandex"
-        },
-        {
-          "label": "Printing",
-          "value": "Logo print"
-        },
-        {
-          "label": "Handfeel",
-          "value": "Soft handfeel"
-        },
-        {
-          "label": "Color",
-          "value": "Pantone or fabric color matching available"
-        },
-        {
-          "label": "Elasticity",
-          "value": "Custom stretch tension and recovery control"
-        },
-        {
-          "label": "Usage",
-          "value": "Men's boxer briefs, Briefs, Trunks, Loungewear waistbands"
-        },
-        {
-          "label": "Packing",
-          "value": "Roll length and carton packing"
-        }
-      ],
-      "intro": "Custom printed elastic waistbands for men's underwear brands, designed for clean logo presentation, soft skin contact, and stable recovery in repeat production.",
-      "applications": [
-        "Men's boxer briefs",
-        "Briefs",
-        "Trunks",
-        "Loungewear waistbands"
-      ],
-      "customOptions": [
-        "Logo artwork and repeat layout",
-        "Pantone or fabric color matching",
-        "Width, thickness, and stretch tension",
-        "Roll length and carton packing"
-      ],
-      "createdAt": "2026-07-03T17:48:20.749Z",
-      "updatedAt": "2026-07-05T04:47:31.580Z"
-    },
-    {
-      "slug": "jacquard-logo-waistbands",
-      "name": "Jacquard Logo Waistbands",
+      "slug": "46mm",
+      "name": "46 mm Silicone Grip Elastic",
       "category": "mens",
       "categoryLabel": "Men's Underwear Elastics",
       "status": "published",
       "sortOrder": 20,
-      "image": "assets/images/product-jacquard-waistbands-main.webp",
+      "image": "assets/images/products/catalog-2026/46mm/46-mm-silicone-grip-elastic-main-view.jpg",
       "gallery": [
         {
           "group": "Product Display",
-          "src": "assets/images/product-jacquard-waistbands-main.webp",
-          "label": "Front & Back",
-          "alt": "Jacquard Logo Waistbands - Front & Back",
+          "src": "assets/images/products/catalog-2026/46mm/46-mm-silicone-grip-elastic-main-view.jpg",
+          "label": "Main View",
+          "alt": "46 mm Silicone Grip Elastic product view 1",
           "rotate": false
         },
         {
           "group": "Product Display",
-          "src": "assets/images/material-yarn-lines.webp",
-          "label": "Front",
-          "alt": "Jacquard Logo Waistbands - Front",
-          "rotate": false
-        }
-      ],
-      "tags": [
-        "jacquard",
-        "waistband"
-      ],
-      "specs": [
-        "30-50mm width",
-        "Woven logo",
-        "High stretch recovery",
-        "Color matched"
-      ],
-      "intro": "Woven logo waistbands for underwear brands that need durable branding and a premium textile texture.",
-      "applications": [
-        "Men's underwear",
-        "Premium briefs",
-        "Brand logo waistbands"
-      ],
-      "customOptions": [
-        "Jacquard logo design",
-        "Yarn color matching",
-        "Elastic tension control",
-        "Bulk roll packing"
-      ],
-      "createdAt": "2026-07-03T17:48:20.750Z",
-      "updatedAt": "2026-07-05T04:47:31.580Z"
-    },
-    {
-      "slug": "womens-printed-waistbands",
-      "name": "Women's Printed Waistbands",
-      "category": "womens",
-      "categoryLabel": "Women's Underwear Elastics",
-      "status": "published",
-      "sortOrder": 30,
-      "image": "assets/images/product-plain-elastic-main.webp",
-      "gallery": [
-        {
-          "group": "Product Display",
-          "src": "assets/images/product-plain-elastic-main.webp",
-          "label": "Front & Back",
-          "alt": "Women's Printed Waistbands - Front & Back",
+          "src": "assets/images/products/catalog-2026/46mm/46-mm-silicone-grip-elastic-product-view-2.jpg",
+          "label": "Product View 2",
+          "alt": "46 mm Silicone Grip Elastic product view 2",
           "rotate": false
         },
         {
           "group": "Product Display",
-          "src": "assets/images/product-elastic-sample-board.webp",
-          "label": "Front",
-          "alt": "Women's Printed Waistbands - Front",
-          "rotate": false
-        }
-      ],
-      "tags": [
-        "printed",
-        "waistband"
-      ],
-      "specs": [
-        "18-38mm width",
-        "Smooth surface",
-        "Custom color",
-        "Skin-friendly finish"
-      ],
-      "intro": "Soft printed waistbands for women's underwear, with flexible color and logo options for branded collections.",
-      "applications": [
-        "Women's briefs",
-        "Seamless underwear",
-        "Loungewear"
-      ],
-      "customOptions": [
-        "Logo print",
-        "Soft surface finish",
-        "Color matching",
-        "Width customization"
-      ],
-      "createdAt": "2026-07-03T17:48:20.750Z",
-      "updatedAt": "2026-07-05T04:47:31.580Z"
-    },
-    {
-      "slug": "plain-underwear-elastic",
-      "name": "Plain Underwear Elastic",
-      "category": "womens",
-      "categoryLabel": "Women's Underwear Elastics",
-      "status": "published",
-      "sortOrder": 40,
-      "image": "assets/images/product-plain-elastic-main.webp",
-      "gallery": [
-        {
-          "group": "Product Display",
-          "src": "assets/images/product-plain-elastic-main.webp",
-          "label": "Front & Back",
-          "alt": "Plain Underwear Elastic - Front & Back",
+          "src": "assets/images/products/catalog-2026/46mm/46-mm-silicone-grip-elastic-product-view-3.jpg",
+          "label": "Product View 3",
+          "alt": "46 mm Silicone Grip Elastic product view 3",
           "rotate": false
         },
         {
           "group": "Product Display",
-          "src": "assets/images/material-yarn-lines.webp",
-          "label": "Front",
-          "alt": "Plain Underwear Elastic - Front",
-          "rotate": false
-        }
-      ],
-      "tags": [
-        "plain"
-      ],
-      "specs": [
-        "Multiple widths",
-        "Dyed to match",
-        "Stable tension",
-        "Bulk rolls"
-      ],
-      "intro": "Plain elastic webbing for underwear and apparel factories needing reliable stretch, color consistency, and bulk roll supply.",
-      "applications": [
-        "Underwear trims",
-        "Waistbands",
-        "Garment binding"
-      ],
-      "customOptions": [
-        "Width selection",
-        "Dyed-to-match color",
-        "Material blend",
-        "Roll packing"
-      ],
-      "createdAt": "2026-07-03T17:48:20.750Z",
-      "updatedAt": "2026-07-05T04:47:31.580Z"
-    },
-    {
-      "slug": "fold-over-elastic",
-      "name": "Fold Over Elastic",
-      "category": "lingerie",
-      "categoryLabel": "Bra & Lingerie Elastics",
-      "status": "published",
-      "sortOrder": 50,
-      "image": "assets/images/product-fold-over-elastic-main.webp",
-      "gallery": [
-        {
-          "group": "Product Display",
-          "src": "assets/images/product-fold-over-elastic-main.webp",
-          "label": "Front & Back",
-          "alt": "Fold Over Elastic - Front & Back",
+          "src": "assets/images/products/catalog-2026/46mm/46-mm-silicone-grip-elastic-product-view-4.jpg",
+          "label": "Product View 4",
+          "alt": "46 mm Silicone Grip Elastic product view 4",
           "rotate": false
         },
         {
           "group": "Product Display",
-          "src": "assets/images/product-elastic-sample-board.webp",
-          "label": "Front",
-          "alt": "Fold Over Elastic - Front",
-          "rotate": false
-        }
-      ],
-      "tags": [
-        "fold-over",
-        "lingerie"
-      ],
-      "specs": [
-        "10-25mm width",
-        "Soft fold line",
-        "Lingerie trim",
-        "Custom shade"
-      ],
-      "intro": "Fold over elastic for lingerie and underwear edges where a clean folded finish and soft touch are important.",
-      "applications": [
-        "Lingerie edges",
-        "Brief openings",
-        "Soft apparel binding"
-      ],
-      "customOptions": [
-        "Width and fold line",
-        "Color matching",
-        "Matte or glossy finish",
-        "Softness adjustment"
-      ],
-      "createdAt": "2026-07-03T17:48:20.750Z",
-      "updatedAt": "2026-07-05T04:47:31.580Z"
-    },
-    {
-      "slug": "picot-lingerie-elastic",
-      "name": "Picot Lingerie Elastic",
-      "category": "lingerie",
-      "categoryLabel": "Bra & Lingerie Elastics",
-      "status": "published",
-      "sortOrder": 60,
-      "image": "assets/images/product-picot-elastic-main.webp",
-      "gallery": [
-        {
-          "group": "Product Display",
-          "src": "assets/images/product-picot-elastic-main.webp",
-          "label": "Front & Back",
-          "alt": "Picot Lingerie Elastic - Front & Back",
-          "rotate": false
-        },
-        {
-          "group": "Product Display",
-          "src": "assets/images/product-bra-strap-elastic-main.webp",
-          "label": "Front",
-          "alt": "Picot Lingerie Elastic - Front",
-          "rotate": false
-        }
-      ],
-      "tags": [
-        "picot",
-        "lingerie"
-      ],
-      "specs": [
-        "Decorative edge",
-        "Soft stretch",
-        "Bra and briefs",
-        "OEM colors"
-      ],
-      "intro": "Decorative picot elastic for lingerie trims, balancing visual detail with comfortable stretch.",
-      "applications": [
-        "Bra edges",
-        "Lingerie trims",
-        "Brief leg openings"
-      ],
-      "customOptions": [
-        "Picot edge style",
-        "Color matching",
-        "Width customization",
-        "Elastic recovery"
-      ],
-      "createdAt": "2026-07-03T17:48:20.750Z",
-      "updatedAt": "2026-07-05T04:47:31.580Z"
-    },
-    {
-      "slug": "silicone-grip-elastic",
-      "name": "Silicone Grip Elastic",
-      "category": "activewear",
-      "categoryLabel": "Activewear Elastics",
-      "status": "published",
-      "sortOrder": 70,
-      "image": "assets/images/product-tooth-elastic-main.webp",
-      "gallery": [
-        {
-          "group": "Product Display",
-          "src": "assets/images/product-tooth-elastic-main.webp",
-          "label": "Front & Back",
-          "alt": "Silicone Grip Elastic - Front & Back",
-          "rotate": false
-        },
-        {
-          "group": "Product Display",
-          "src": "assets/images/factory-weaving-production.webp",
-          "label": "Front",
-          "alt": "Silicone Grip Elastic - Front",
+          "src": "assets/images/products/catalog-2026/46mm/46-mm-silicone-grip-elastic-product-view-5.jpg",
+          "label": "Product View 5",
+          "alt": "46 mm Silicone Grip Elastic product view 5",
           "rotate": false
         }
       ],
@@ -373,48 +51,1823 @@
         "silicone-grip"
       ],
       "specs": [
-        "Anti-slip silicone",
-        "Sportswear ready",
-        "Strong recovery",
-        "Custom lines"
+        {
+          "label": "Item No.",
+          "value": "46mm 硅胶带"
+        },
+        {
+          "label": "Width",
+          "value": "46 mm"
+        },
+        {
+          "label": "Material",
+          "value": "Polyester & Spandex"
+        },
+        {
+          "label": "Application",
+          "value": "Cycling shorts leg openings"
+        }
       ],
-      "intro": "Silicone grip elastic for garments that need anti-slip performance and dependable stretch recovery.",
+      "intro": "Silicone Grip Elastic for cycling shorts leg openings, available for buyer-specific color, width, stretch, logo, and packing development.",
       "applications": [
-        "Activewear",
-        "Sports bras",
-        "Leg openings",
-        "Performance garments"
+        "Cycling shorts leg openings"
       ],
       "customOptions": [
-        "Silicone line pattern",
-        "Grip strength",
-        "Width and tension",
-        "Base elastic color"
-      ],
-      "createdAt": "2026-07-03T17:48:20.750Z",
-      "updatedAt": "2026-07-05T04:47:31.580Z"
+        "Color matching",
+        "Width and stretch",
+        "Logo or pattern",
+        "Roll and carton packing"
+      ]
     },
     {
-      "slug": "bra-strap-elastic",
-      "name": "Bra Strap Elastic",
-      "category": "lingerie",
-      "categoryLabel": "Bra & Lingerie Elastics",
+      "slug": "46mm-2",
+      "name": "46 mm Ribbed Elastic Webbing",
+      "category": "activewear",
+      "categoryLabel": "Activewear Elastics",
       "status": "published",
-      "sortOrder": 80,
-      "image": "assets/images/product-bra-strap-elastic-main.webp",
+      "sortOrder": 30,
+      "image": "assets/images/products/catalog-2026/46mm-2/46-mm-ribbed-elastic-webbing-main-view.jpg",
       "gallery": [
         {
           "group": "Product Display",
-          "src": "assets/images/product-bra-strap-elastic-main.webp",
-          "label": "Front & Back",
-          "alt": "Bra Strap Elastic - Front & Back",
+          "src": "assets/images/products/catalog-2026/46mm-2/46-mm-ribbed-elastic-webbing-main-view.jpg",
+          "label": "Main View",
+          "alt": "46 mm Ribbed Elastic Webbing product view 1",
           "rotate": false
         },
         {
           "group": "Product Display",
-          "src": "assets/images/product-elastic-sample-board.webp",
-          "label": "Front",
-          "alt": "Bra Strap Elastic - Front",
+          "src": "assets/images/products/catalog-2026/46mm-2/46-mm-ribbed-elastic-webbing-product-view-2.jpg",
+          "label": "Product View 2",
+          "alt": "46 mm Ribbed Elastic Webbing product view 2",
+          "rotate": false
+        },
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/46mm-2/46-mm-ribbed-elastic-webbing-product-view-3.jpg",
+          "label": "Product View 3",
+          "alt": "46 mm Ribbed Elastic Webbing product view 3",
+          "rotate": false
+        },
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/46mm-2/46-mm-ribbed-elastic-webbing-product-view-4.jpg",
+          "label": "Product View 4",
+          "alt": "46 mm Ribbed Elastic Webbing product view 4",
+          "rotate": false
+        },
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/46mm-2/46-mm-ribbed-elastic-webbing-product-view-5.jpg",
+          "label": "Product View 5",
+          "alt": "46 mm Ribbed Elastic Webbing product view 5",
+          "rotate": false
+        }
+      ],
+      "tags": [
+        "activewear"
+      ],
+      "specs": [
+        {
+          "label": "Item No.",
+          "value": "46mm 横纹带"
+        },
+        {
+          "label": "Width",
+          "value": "46 mm"
+        },
+        {
+          "label": "Material",
+          "value": "Polyester & Spandex"
+        },
+        {
+          "label": "Application",
+          "value": "Cycling apparel straps"
+        }
+      ],
+      "intro": "Elastic Webbing for cycling apparel straps, available for buyer-specific color, width, stretch, logo, and packing development.",
+      "applications": [
+        "Cycling apparel straps"
+      ],
+      "customOptions": [
+        "Color matching",
+        "Width and stretch",
+        "Logo or pattern",
+        "Roll and carton packing"
+      ]
+    },
+    {
+      "slug": "5209",
+      "name": "5209 | Fold Over Elastic",
+      "category": "lingerie",
+      "categoryLabel": "Bra & Lingerie Elastics",
+      "status": "published",
+      "sortOrder": 50,
+      "image": "assets/images/products/catalog-2026/5209/5209-fold-over-elastic-main-view.jpg",
+      "gallery": [
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/5209/5209-fold-over-elastic-main-view.jpg",
+          "label": "Main View",
+          "alt": "5209 | Fold Over Elastic product view 1",
+          "rotate": false
+        },
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/5209/5209-fold-over-elastic-product-view-2.jpg",
+          "label": "Product View 2",
+          "alt": "5209 | Fold Over Elastic product view 2",
+          "rotate": false
+        },
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/5209/5209-fold-over-elastic-product-view-3.jpg",
+          "label": "Product View 3",
+          "alt": "5209 | Fold Over Elastic product view 3",
+          "rotate": false
+        },
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/5209/5209-fold-over-elastic-product-view-4.jpg",
+          "label": "Product View 4",
+          "alt": "5209 | Fold Over Elastic product view 4",
+          "rotate": false
+        },
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/5209/5209-fold-over-elastic-product-view-5.jpg",
+          "label": "Product View 5",
+          "alt": "5209 | Fold Over Elastic product view 5",
+          "rotate": false
+        }
+      ],
+      "tags": [
+        "fold-over",
+        "binding"
+      ],
+      "specs": [
+        {
+          "label": "Item No.",
+          "value": "5209"
+        },
+        {
+          "label": "Width",
+          "value": "13 / 15 mm"
+        },
+        {
+          "label": "Material",
+          "value": "Nylon & Spandex / Polyester & Latex / Polyester & Spandex"
+        },
+        {
+          "label": "Application",
+          "value": "Apparel binding"
+        }
+      ],
+      "intro": "Fold Over Elastic for apparel binding, available for buyer-specific color, width, stretch, logo, and packing development.",
+      "applications": [
+        "Apparel binding"
+      ],
+      "customOptions": [
+        "Color matching",
+        "Width and stretch",
+        "Logo or pattern",
+        "Roll and carton packing"
+      ]
+    },
+    {
+      "slug": "5627",
+      "name": "5627 | Picot Elastic",
+      "category": "womens",
+      "categoryLabel": "Women's Underwear Elastics",
+      "status": "published",
+      "sortOrder": 90,
+      "image": "assets/images/products/catalog-2026/5627/5627-picot-elastic-main-view.jpg",
+      "gallery": [
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/5627/5627-picot-elastic-main-view.jpg",
+          "label": "Main View",
+          "alt": "5627 | Picot Elastic product view 1",
+          "rotate": false
+        },
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/5627/5627-picot-elastic-product-view-2.jpg",
+          "label": "Product View 2",
+          "alt": "5627 | Picot Elastic product view 2",
+          "rotate": false
+        },
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/5627/5627-picot-elastic-product-view-3.jpg",
+          "label": "Product View 3",
+          "alt": "5627 | Picot Elastic product view 3",
+          "rotate": false
+        },
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/5627/5627-picot-elastic-product-view-4.jpg",
+          "label": "Product View 4",
+          "alt": "5627 | Picot Elastic product view 4",
+          "rotate": false
+        },
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/5627/5627-picot-elastic-product-view-5.jpg",
+          "label": "Product View 5",
+          "alt": "5627 | Picot Elastic product view 5",
+          "rotate": false
+        }
+      ],
+      "tags": [
+        "picot",
+        "waistband"
+      ],
+      "specs": [
+        {
+          "label": "Item No.",
+          "value": "5627"
+        },
+        {
+          "label": "Width",
+          "value": "9 mm"
+        },
+        {
+          "label": "Material",
+          "value": "Nylon & Spandex"
+        },
+        {
+          "label": "Application",
+          "value": "Women's underwear waist and leg openings"
+        }
+      ],
+      "intro": "Picot Elastic for women's underwear waist and leg openings, available for buyer-specific color, width, stretch, logo, and packing development.",
+      "applications": [
+        "Women's underwear waist and leg openings"
+      ],
+      "customOptions": [
+        "Color matching",
+        "Width and stretch",
+        "Logo or pattern",
+        "Roll and carton packing"
+      ]
+    },
+    {
+      "slug": "5862",
+      "name": "5862 | Picot Elastic",
+      "category": "womens",
+      "categoryLabel": "Women's Underwear Elastics",
+      "status": "published",
+      "sortOrder": 100,
+      "image": "assets/images/products/catalog-2026/5862/5862-picot-elastic-main-view.jpg",
+      "gallery": [
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/5862/5862-picot-elastic-main-view.jpg",
+          "label": "Main View",
+          "alt": "5862 | Picot Elastic product view 1",
+          "rotate": false
+        },
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/5862/5862-picot-elastic-product-view-2.jpg",
+          "label": "Product View 2",
+          "alt": "5862 | Picot Elastic product view 2",
+          "rotate": false
+        },
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/5862/5862-picot-elastic-product-view-3.jpg",
+          "label": "Product View 3",
+          "alt": "5862 | Picot Elastic product view 3",
+          "rotate": false
+        },
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/5862/5862-picot-elastic-product-view-4.jpg",
+          "label": "Product View 4",
+          "alt": "5862 | Picot Elastic product view 4",
+          "rotate": false
+        },
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/5862/5862-picot-elastic-product-view-5.jpg",
+          "label": "Product View 5",
+          "alt": "5862 | Picot Elastic product view 5",
+          "rotate": false
+        }
+      ],
+      "tags": [
+        "picot",
+        "waistband"
+      ],
+      "specs": [
+        {
+          "label": "Item No.",
+          "value": "5862"
+        },
+        {
+          "label": "Width",
+          "value": "8 mm"
+        },
+        {
+          "label": "Material",
+          "value": "Nylon & Spandex"
+        },
+        {
+          "label": "Application",
+          "value": "Women's underwear waist and leg openings"
+        }
+      ],
+      "intro": "Picot Elastic for women's underwear waist and leg openings, available for buyer-specific color, width, stretch, logo, and packing development.",
+      "applications": [
+        "Women's underwear waist and leg openings"
+      ],
+      "customOptions": [
+        "Color matching",
+        "Width and stretch",
+        "Logo or pattern",
+        "Roll and carton packing"
+      ]
+    },
+    {
+      "slug": "6243",
+      "name": "6243 | Fold Over Elastic",
+      "category": "lingerie",
+      "categoryLabel": "Bra & Lingerie Elastics",
+      "status": "published",
+      "sortOrder": 110,
+      "image": "assets/images/products/catalog-2026/6243/6243-fold-over-elastic-main-view.jpg",
+      "gallery": [
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/6243/6243-fold-over-elastic-main-view.jpg",
+          "label": "Main View",
+          "alt": "6243 | Fold Over Elastic product view 1",
+          "rotate": false
+        },
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/6243/6243-fold-over-elastic-product-view-2.jpg",
+          "label": "Product View 2",
+          "alt": "6243 | Fold Over Elastic product view 2",
+          "rotate": false
+        },
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/6243/6243-fold-over-elastic-product-view-3.jpg",
+          "label": "Product View 3",
+          "alt": "6243 | Fold Over Elastic product view 3",
+          "rotate": false
+        },
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/6243/6243-fold-over-elastic-product-view-4.jpg",
+          "label": "Product View 4",
+          "alt": "6243 | Fold Over Elastic product view 4",
+          "rotate": false
+        },
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/6243/6243-fold-over-elastic-product-view-5.jpg",
+          "label": "Product View 5",
+          "alt": "6243 | Fold Over Elastic product view 5",
+          "rotate": false
+        }
+      ],
+      "tags": [
+        "fold-over",
+        "binding"
+      ],
+      "specs": [
+        {
+          "label": "Item No.",
+          "value": "6243"
+        },
+        {
+          "label": "Width",
+          "value": "10–40 mm"
+        },
+        {
+          "label": "Material",
+          "value": "Nylon & Spandex"
+        },
+        {
+          "label": "Application",
+          "value": "Apparel binding"
+        }
+      ],
+      "intro": "Fold Over Elastic for apparel binding, available for buyer-specific color, width, stretch, logo, and packing development.",
+      "applications": [
+        "Apparel binding"
+      ],
+      "customOptions": [
+        "Color matching",
+        "Width and stretch",
+        "Logo or pattern",
+        "Roll and carton packing"
+      ]
+    },
+    {
+      "slug": "9188",
+      "name": "9188 | Jacquard Elastic",
+      "category": "activewear",
+      "categoryLabel": "Activewear Elastics",
+      "status": "published",
+      "sortOrder": 130,
+      "image": "assets/images/products/catalog-2026/9188/9188-jacquard-elastic-main-view.jpg",
+      "gallery": [
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/9188/9188-jacquard-elastic-main-view.jpg",
+          "label": "Main View",
+          "alt": "9188 | Jacquard Elastic product view 1",
+          "rotate": false
+        },
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/9188/9188-jacquard-elastic-product-view-2.jpg",
+          "label": "Product View 2",
+          "alt": "9188 | Jacquard Elastic product view 2",
+          "rotate": false
+        },
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/9188/9188-jacquard-elastic-product-view-3.jpg",
+          "label": "Product View 3",
+          "alt": "9188 | Jacquard Elastic product view 3",
+          "rotate": false
+        },
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/9188/9188-jacquard-elastic-product-view-4.jpg",
+          "label": "Product View 4",
+          "alt": "9188 | Jacquard Elastic product view 4",
+          "rotate": false
+        },
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/9188/9188-jacquard-elastic-product-view-5.jpg",
+          "label": "Product View 5",
+          "alt": "9188 | Jacquard Elastic product view 5",
+          "rotate": false
+        }
+      ],
+      "tags": [
+        "activewear",
+        "jacquard",
+        "waistband"
+      ],
+      "specs": [
+        {
+          "label": "Item No.",
+          "value": "9188"
+        },
+        {
+          "label": "Width",
+          "value": "100 mm"
+        },
+        {
+          "label": "Material",
+          "value": "Nylon & Spandex"
+        },
+        {
+          "label": "Application",
+          "value": "Sportswear waistbands"
+        }
+      ],
+      "intro": "Jacquard Elastic for sportswear waistbands, available for buyer-specific color, width, stretch, logo, and packing development.",
+      "applications": [
+        "Sportswear waistbands"
+      ],
+      "customOptions": [
+        "Color matching",
+        "Width and stretch",
+        "Logo or pattern",
+        "Roll and carton packing"
+      ]
+    },
+    {
+      "slug": "50084",
+      "name": "50084 | Picot Elastic",
+      "category": "activewear",
+      "categoryLabel": "Activewear Elastics",
+      "status": "published",
+      "sortOrder": 150,
+      "image": "assets/images/products/catalog-2026/50084/50084-picot-elastic-main-view.jpg",
+      "gallery": [
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/50084/50084-picot-elastic-main-view.jpg",
+          "label": "Main View",
+          "alt": "50084 | Picot Elastic product view 1",
+          "rotate": false
+        },
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/50084/50084-picot-elastic-product-view-2.jpg",
+          "label": "Product View 2",
+          "alt": "50084 | Picot Elastic product view 2",
+          "rotate": false
+        },
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/50084/50084-picot-elastic-product-view-3.jpg",
+          "label": "Product View 3",
+          "alt": "50084 | Picot Elastic product view 3",
+          "rotate": false
+        },
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/50084/50084-picot-elastic-product-view-4.jpg",
+          "label": "Product View 4",
+          "alt": "50084 | Picot Elastic product view 4",
+          "rotate": false
+        },
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/50084/50084-picot-elastic-product-view-5.jpg",
+          "label": "Product View 5",
+          "alt": "50084 | Picot Elastic product view 5",
+          "rotate": false
+        }
+      ],
+      "tags": [
+        "activewear",
+        "picot"
+      ],
+      "specs": [
+        {
+          "label": "Item No.",
+          "value": "50084"
+        },
+        {
+          "label": "Width",
+          "value": "13/16 mm"
+        },
+        {
+          "label": "Material",
+          "value": "Nylon & Spandex"
+        },
+        {
+          "label": "Application",
+          "value": "Mesh elastic trims"
+        }
+      ],
+      "intro": "Picot Elastic for mesh elastic trims, available for buyer-specific color, width, stretch, logo, and packing development.",
+      "applications": [
+        "Mesh elastic trims"
+      ],
+      "customOptions": [
+        "Color matching",
+        "Width and stretch",
+        "Logo or pattern",
+        "Roll and carton packing"
+      ]
+    },
+    {
+      "slug": "50216",
+      "name": "50216 | Elastic Webbing",
+      "category": "activewear",
+      "categoryLabel": "Activewear Elastics",
+      "status": "published",
+      "sortOrder": 190,
+      "image": "assets/images/products/catalog-2026/50216/50216-elastic-webbing-main-view.jpg",
+      "gallery": [
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/50216/50216-elastic-webbing-main-view.jpg",
+          "label": "Main View",
+          "alt": "50216 | Elastic Webbing product view 1",
+          "rotate": false
+        },
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/50216/50216-elastic-webbing-product-view-2.jpg",
+          "label": "Product View 2",
+          "alt": "50216 | Elastic Webbing product view 2",
+          "rotate": false
+        },
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/50216/50216-elastic-webbing-product-view-3.jpg",
+          "label": "Product View 3",
+          "alt": "50216 | Elastic Webbing product view 3",
+          "rotate": false
+        },
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/50216/50216-elastic-webbing-product-view-4.jpg",
+          "label": "Product View 4",
+          "alt": "50216 | Elastic Webbing product view 4",
+          "rotate": false
+        }
+      ],
+      "tags": [
+        "activewear",
+        "waistband"
+      ],
+      "specs": [
+        {
+          "label": "Item No.",
+          "value": "50216"
+        },
+        {
+          "label": "Width",
+          "value": "31 mm"
+        },
+        {
+          "label": "Material",
+          "value": "Nylon & Spandex"
+        },
+        {
+          "label": "Application",
+          "value": "Women's underwear waistbands"
+        }
+      ],
+      "intro": "Elastic Webbing for women's underwear waistbands, available for buyer-specific color, width, stretch, logo, and packing development.",
+      "applications": [
+        "Women's underwear waistbands"
+      ],
+      "customOptions": [
+        "Color matching",
+        "Width and stretch",
+        "Logo or pattern",
+        "Roll and carton packing"
+      ]
+    },
+    {
+      "slug": "50282",
+      "name": "50282 | Elastic Webbing",
+      "category": "activewear",
+      "categoryLabel": "Activewear Elastics",
+      "status": "published",
+      "sortOrder": 210,
+      "image": "assets/images/products/catalog-2026/50282/50282-elastic-webbing-main-view.jpg",
+      "gallery": [
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/50282/50282-elastic-webbing-main-view.jpg",
+          "label": "Main View",
+          "alt": "50282 | Elastic Webbing product view 1",
+          "rotate": false
+        },
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/50282/50282-elastic-webbing-product-view-2.jpg",
+          "label": "Product View 2",
+          "alt": "50282 | Elastic Webbing product view 2",
+          "rotate": false
+        },
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/50282/50282-elastic-webbing-product-view-3.jpg",
+          "label": "Product View 3",
+          "alt": "50282 | Elastic Webbing product view 3",
+          "rotate": false
+        },
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/50282/50282-elastic-webbing-product-view-4.jpg",
+          "label": "Product View 4",
+          "alt": "50282 | Elastic Webbing product view 4",
+          "rotate": false
+        }
+      ],
+      "tags": [
+        "activewear",
+        "waistband"
+      ],
+      "specs": [
+        {
+          "label": "Item No.",
+          "value": "50282"
+        },
+        {
+          "label": "Width",
+          "value": "26 mm"
+        },
+        {
+          "label": "Material",
+          "value": "Nylon & Spandex"
+        },
+        {
+          "label": "Application",
+          "value": "Women's underwear waistbands"
+        }
+      ],
+      "intro": "Elastic Webbing for women's underwear waistbands, available for buyer-specific color, width, stretch, logo, and packing development.",
+      "applications": [
+        "Women's underwear waistbands"
+      ],
+      "customOptions": [
+        "Color matching",
+        "Width and stretch",
+        "Logo or pattern",
+        "Roll and carton packing"
+      ]
+    },
+    {
+      "slug": "50292",
+      "name": "50292 | Elastic Webbing",
+      "category": "activewear",
+      "categoryLabel": "Activewear Elastics",
+      "status": "published",
+      "sortOrder": 220,
+      "image": "assets/images/products/catalog-2026/50292/50292-elastic-webbing-main-view.jpg",
+      "gallery": [
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/50292/50292-elastic-webbing-main-view.jpg",
+          "label": "Main View",
+          "alt": "50292 | Elastic Webbing product view 1",
+          "rotate": false
+        },
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/50292/50292-elastic-webbing-product-view-2.jpg",
+          "label": "Product View 2",
+          "alt": "50292 | Elastic Webbing product view 2",
+          "rotate": false
+        },
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/50292/50292-elastic-webbing-product-view-3.jpg",
+          "label": "Product View 3",
+          "alt": "50292 | Elastic Webbing product view 3",
+          "rotate": false
+        },
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/50292/50292-elastic-webbing-product-view-4.jpg",
+          "label": "Product View 4",
+          "alt": "50292 | Elastic Webbing product view 4",
+          "rotate": false
+        }
+      ],
+      "tags": [
+        "activewear",
+        "waistband"
+      ],
+      "specs": [
+        {
+          "label": "Item No.",
+          "value": "50292"
+        },
+        {
+          "label": "Width",
+          "value": "43 mm"
+        },
+        {
+          "label": "Material",
+          "value": "Nylon & Spandex"
+        },
+        {
+          "label": "Application",
+          "value": "Women's underwear waistbands"
+        }
+      ],
+      "intro": "Elastic Webbing for women's underwear waistbands, available for buyer-specific color, width, stretch, logo, and packing development.",
+      "applications": [
+        "Women's underwear waistbands"
+      ],
+      "customOptions": [
+        "Color matching",
+        "Width and stretch",
+        "Logo or pattern",
+        "Roll and carton packing"
+      ]
+    },
+    {
+      "slug": "50298",
+      "name": "50298 | Elastic Webbing",
+      "category": "activewear",
+      "categoryLabel": "Activewear Elastics",
+      "status": "published",
+      "sortOrder": 230,
+      "image": "assets/images/products/catalog-2026/50298/50298-elastic-webbing-main-view.jpg",
+      "gallery": [
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/50298/50298-elastic-webbing-main-view.jpg",
+          "label": "Main View",
+          "alt": "50298 | Elastic Webbing product view 1",
+          "rotate": false
+        },
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/50298/50298-elastic-webbing-product-view-2.jpg",
+          "label": "Product View 2",
+          "alt": "50298 | Elastic Webbing product view 2",
+          "rotate": false
+        },
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/50298/50298-elastic-webbing-product-view-3.jpg",
+          "label": "Product View 3",
+          "alt": "50298 | Elastic Webbing product view 3",
+          "rotate": false
+        },
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/50298/50298-elastic-webbing-product-view-4.jpg",
+          "label": "Product View 4",
+          "alt": "50298 | Elastic Webbing product view 4",
+          "rotate": false
+        }
+      ],
+      "tags": [
+        "activewear",
+        "waistband"
+      ],
+      "specs": [
+        {
+          "label": "Item No.",
+          "value": "50298"
+        },
+        {
+          "label": "Width",
+          "value": "34 mm"
+        },
+        {
+          "label": "Material",
+          "value": "Nylon & Spandex"
+        },
+        {
+          "label": "Application",
+          "value": "Women's underwear waistbands"
+        }
+      ],
+      "intro": "Elastic Webbing for women's underwear waistbands, available for buyer-specific color, width, stretch, logo, and packing development.",
+      "applications": [
+        "Women's underwear waistbands"
+      ],
+      "customOptions": [
+        "Color matching",
+        "Width and stretch",
+        "Logo or pattern",
+        "Roll and carton packing"
+      ]
+    },
+    {
+      "slug": "50314",
+      "name": "50314 | Plain Elastic",
+      "category": "activewear",
+      "categoryLabel": "Activewear Elastics",
+      "status": "published",
+      "sortOrder": 240,
+      "image": "assets/images/products/catalog-2026/50314/50314-plain-elastic-main-view.jpg",
+      "gallery": [
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/50314/50314-plain-elastic-main-view.jpg",
+          "label": "Main View",
+          "alt": "50314 | Plain Elastic product view 1",
+          "rotate": false
+        },
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/50314/50314-plain-elastic-product-view-2.jpg",
+          "label": "Product View 2",
+          "alt": "50314 | Plain Elastic product view 2",
+          "rotate": false
+        },
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/50314/50314-plain-elastic-product-view-3.jpg",
+          "label": "Product View 3",
+          "alt": "50314 | Plain Elastic product view 3",
+          "rotate": false
+        },
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/50314/50314-plain-elastic-product-view-4.jpg",
+          "label": "Product View 4",
+          "alt": "50314 | Plain Elastic product view 4",
+          "rotate": false
+        }
+      ],
+      "tags": [
+        "activewear",
+        "plain",
+        "waistband"
+      ],
+      "specs": [
+        {
+          "label": "Item No.",
+          "value": "50314"
+        },
+        {
+          "label": "Width",
+          "value": "31 mm"
+        },
+        {
+          "label": "Material",
+          "value": "Nylon & Spandex"
+        },
+        {
+          "label": "Application",
+          "value": "Women's underwear waistbands"
+        }
+      ],
+      "intro": "Plain Elastic for women's underwear waistbands, available for buyer-specific color, width, stretch, logo, and packing development.",
+      "applications": [
+        "Women's underwear waistbands"
+      ],
+      "customOptions": [
+        "Color matching",
+        "Width and stretch",
+        "Logo or pattern",
+        "Roll and carton packing"
+      ]
+    },
+    {
+      "slug": "50326",
+      "name": "50326 | Picot Elastic",
+      "category": "womens",
+      "categoryLabel": "Women's Underwear Elastics",
+      "status": "published",
+      "sortOrder": 250,
+      "image": "assets/images/products/catalog-2026/50326/50326-picot-elastic-main-view.jpg",
+      "gallery": [
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/50326/50326-picot-elastic-main-view.jpg",
+          "label": "Main View",
+          "alt": "50326 | Picot Elastic product view 1",
+          "rotate": false
+        },
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/50326/50326-picot-elastic-product-view-2.jpg",
+          "label": "Product View 2",
+          "alt": "50326 | Picot Elastic product view 2",
+          "rotate": false
+        },
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/50326/50326-picot-elastic-product-view-3.jpg",
+          "label": "Product View 3",
+          "alt": "50326 | Picot Elastic product view 3",
+          "rotate": false
+        },
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/50326/50326-picot-elastic-product-view-4.jpg",
+          "label": "Product View 4",
+          "alt": "50326 | Picot Elastic product view 4",
+          "rotate": false
+        },
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/50326/50326-picot-elastic-product-view-5.jpg",
+          "label": "Product View 5",
+          "alt": "50326 | Picot Elastic product view 5",
+          "rotate": false
+        }
+      ],
+      "tags": [
+        "picot",
+        "waistband"
+      ],
+      "specs": [
+        {
+          "label": "Item No.",
+          "value": "50326"
+        },
+        {
+          "label": "Width",
+          "value": "9 mm"
+        },
+        {
+          "label": "Material",
+          "value": "Nylon & Spandex"
+        },
+        {
+          "label": "Application",
+          "value": "Women's underwear waist and leg openings"
+        }
+      ],
+      "intro": "Picot Elastic for women's underwear waist and leg openings, available for buyer-specific color, width, stretch, logo, and packing development.",
+      "applications": [
+        "Women's underwear waist and leg openings"
+      ],
+      "customOptions": [
+        "Color matching",
+        "Width and stretch",
+        "Logo or pattern",
+        "Roll and carton packing"
+      ]
+    },
+    {
+      "slug": "reflective-binding",
+      "name": "Reflective Binding Elastic",
+      "category": "activewear",
+      "categoryLabel": "Activewear Elastics",
+      "status": "published",
+      "sortOrder": 270,
+      "image": "assets/images/products/catalog-2026/reflective-binding/reflective-binding-elastic-main-view.jpg",
+      "gallery": [
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/reflective-binding/reflective-binding-elastic-main-view.jpg",
+          "label": "Main View",
+          "alt": "Reflective Binding Elastic product view 1",
+          "rotate": false
+        },
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/reflective-binding/reflective-binding-elastic-product-view-2.jpg",
+          "label": "Product View 2",
+          "alt": "Reflective Binding Elastic product view 2",
+          "rotate": false
+        },
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/reflective-binding/reflective-binding-elastic-product-view-3.jpg",
+          "label": "Product View 3",
+          "alt": "Reflective Binding Elastic product view 3",
+          "rotate": false
+        },
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/reflective-binding/reflective-binding-elastic-product-view-4.jpg",
+          "label": "Product View 4",
+          "alt": "Reflective Binding Elastic product view 4",
+          "rotate": false
+        },
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/reflective-binding/reflective-binding-elastic-product-view-5.jpg",
+          "label": "Product View 5",
+          "alt": "Reflective Binding Elastic product view 5",
+          "rotate": false
+        }
+      ],
+      "tags": [
+        "activewear",
+        "binding",
+        "reflective"
+      ],
+      "specs": [
+        {
+          "label": "Item No.",
+          "value": "反光包边"
+        },
+        {
+          "label": "Width",
+          "value": "20 mm"
+        },
+        {
+          "label": "Material",
+          "value": "Nylon & Spandex"
+        },
+        {
+          "label": "Application",
+          "value": "Outdoor and activewear binding"
+        }
+      ],
+      "intro": "Reflective Binding Elastic for outdoor and activewear binding, available for buyer-specific color, width, stretch, logo, and packing development.",
+      "applications": [
+        "Outdoor and activewear binding"
+      ],
+      "customOptions": [
+        "Color matching",
+        "Width and stretch",
+        "Logo or pattern",
+        "Roll and carton packing"
+      ]
+    },
+    {
+      "slug": "lurex-star-flag",
+      "name": "Metallic Star-and-Stripe Jacquard Elastic",
+      "category": "activewear",
+      "categoryLabel": "Activewear Elastics",
+      "status": "published",
+      "sortOrder": 280,
+      "image": "assets/images/products/catalog-2026/lurex-star-flag/metallic-star-and-stripe-jacquard-elastic-main-view.jpg",
+      "gallery": [
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/lurex-star-flag/metallic-star-and-stripe-jacquard-elastic-main-view.jpg",
+          "label": "Main View",
+          "alt": "Metallic Star-and-Stripe Jacquard Elastic product view 1",
+          "rotate": false
+        },
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/lurex-star-flag/metallic-star-and-stripe-jacquard-elastic-product-view-2.jpg",
+          "label": "Product View 2",
+          "alt": "Metallic Star-and-Stripe Jacquard Elastic product view 2",
+          "rotate": false
+        },
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/lurex-star-flag/metallic-star-and-stripe-jacquard-elastic-product-view-3.jpg",
+          "label": "Product View 3",
+          "alt": "Metallic Star-and-Stripe Jacquard Elastic product view 3",
+          "rotate": false
+        },
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/lurex-star-flag/metallic-star-and-stripe-jacquard-elastic-product-view-4.jpg",
+          "label": "Product View 4",
+          "alt": "Metallic Star-and-Stripe Jacquard Elastic product view 4",
+          "rotate": false
+        },
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/lurex-star-flag/metallic-star-and-stripe-jacquard-elastic-product-view-5.jpg",
+          "label": "Product View 5",
+          "alt": "Metallic Star-and-Stripe Jacquard Elastic product view 5",
+          "rotate": false
+        }
+      ],
+      "tags": [
+        "activewear",
+        "lurex",
+        "jacquard",
+        "waistband"
+      ],
+      "specs": [
+        {
+          "label": "Item No.",
+          "value": "金银丝星条旗"
+        },
+        {
+          "label": "Width",
+          "value": "50 mm"
+        },
+        {
+          "label": "Material",
+          "value": "Polyester & Spandex"
+        },
+        {
+          "label": "Application",
+          "value": "Elastic waistbands"
+        }
+      ],
+      "intro": "Jacquard Elastic for elastic waistbands, available for buyer-specific color, width, stretch, logo, and packing development.",
+      "applications": [
+        "Elastic waistbands"
+      ],
+      "customOptions": [
+        "Color matching",
+        "Width and stretch",
+        "Logo or pattern",
+        "Roll and carton packing"
+      ]
+    },
+    {
+      "slug": "happy-jacquard",
+      "name": "HAPPY Jacquard Elastic",
+      "category": "activewear",
+      "categoryLabel": "Activewear Elastics",
+      "status": "published",
+      "sortOrder": 290,
+      "image": "assets/images/products/catalog-2026/happy-jacquard/happy-jacquard-elastic-main-view.jpg",
+      "gallery": [
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/happy-jacquard/happy-jacquard-elastic-main-view.jpg",
+          "label": "Main View",
+          "alt": "HAPPY Jacquard Elastic product view 1",
+          "rotate": false
+        },
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/happy-jacquard/happy-jacquard-elastic-product-view-2.jpg",
+          "label": "Product View 2",
+          "alt": "HAPPY Jacquard Elastic product view 2",
+          "rotate": false
+        },
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/happy-jacquard/happy-jacquard-elastic-product-view-3.jpg",
+          "label": "Product View 3",
+          "alt": "HAPPY Jacquard Elastic product view 3",
+          "rotate": false
+        },
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/happy-jacquard/happy-jacquard-elastic-product-view-4.jpg",
+          "label": "Product View 4",
+          "alt": "HAPPY Jacquard Elastic product view 4",
+          "rotate": false
+        },
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/happy-jacquard/happy-jacquard-elastic-product-view-5.jpg",
+          "label": "Product View 5",
+          "alt": "HAPPY Jacquard Elastic product view 5",
+          "rotate": false
+        }
+      ],
+      "tags": [
+        "activewear",
+        "jacquard",
+        "waistband"
+      ],
+      "specs": [
+        {
+          "label": "Item No.",
+          "value": "提花带HAPPY"
+        },
+        {
+          "label": "Width",
+          "value": "20 mm"
+        },
+        {
+          "label": "Material",
+          "value": "Polyester & Spandex"
+        },
+        {
+          "label": "Application",
+          "value": "Elastic waistbands"
+        }
+      ],
+      "intro": "Jacquard Elastic for elastic waistbands, available for buyer-specific color, width, stretch, logo, and packing development.",
+      "applications": [
+        "Elastic waistbands"
+      ],
+      "customOptions": [
+        "Color matching",
+        "Width and stretch",
+        "Logo or pattern",
+        "Roll and carton packing"
+      ]
+    },
+    {
+      "slug": "be-patient-printing",
+      "name": "BE PATIENT Printed Elastic",
+      "category": "activewear",
+      "categoryLabel": "Activewear Elastics",
+      "status": "published",
+      "sortOrder": 300,
+      "image": "assets/images/products/catalog-2026/be-patient-printing/be-patient-printed-elastic-main-view.jpg",
+      "gallery": [
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/be-patient-printing/be-patient-printed-elastic-main-view.jpg",
+          "label": "Main View",
+          "alt": "BE PATIENT Printed Elastic product view 1",
+          "rotate": false
+        },
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/be-patient-printing/be-patient-printed-elastic-product-view-2.jpg",
+          "label": "Product View 2",
+          "alt": "BE PATIENT Printed Elastic product view 2",
+          "rotate": false
+        },
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/be-patient-printing/be-patient-printed-elastic-product-view-3.jpg",
+          "label": "Product View 3",
+          "alt": "BE PATIENT Printed Elastic product view 3",
+          "rotate": false
+        },
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/be-patient-printing/be-patient-printed-elastic-product-view-4.jpg",
+          "label": "Product View 4",
+          "alt": "BE PATIENT Printed Elastic product view 4",
+          "rotate": false
+        }
+      ],
+      "tags": [
+        "activewear",
+        "printed",
+        "waistband"
+      ],
+      "specs": [
+        {
+          "label": "Item No.",
+          "value": "BE Patient:printing"
+        },
+        {
+          "label": "Width",
+          "value": "35 mm"
+        },
+        {
+          "label": "Material",
+          "value": "Nylon & Spandex / Polyester & Spandex"
+        },
+        {
+          "label": "Application",
+          "value": "Elastic waistbands"
+        }
+      ],
+      "intro": "Printed Elastic for elastic waistbands, available for buyer-specific color, width, stretch, logo, and packing development.",
+      "applications": [
+        "Elastic waistbands"
+      ],
+      "customOptions": [
+        "Color matching",
+        "Width and stretch",
+        "Logo or pattern",
+        "Roll and carton packing"
+      ]
+    },
+    {
+      "slug": "g7236",
+      "name": "G7236 | Embossed Elastic",
+      "category": "lingerie",
+      "categoryLabel": "Bra & Lingerie Elastics",
+      "status": "published",
+      "sortOrder": 320,
+      "image": "assets/images/products/catalog-2026/g7236/g7236-embossed-elastic-main-view.jpg",
+      "gallery": [
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/g7236/g7236-embossed-elastic-main-view.jpg",
+          "label": "Main View",
+          "alt": "G7236 | Embossed Elastic product view 1",
+          "rotate": false
+        },
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/g7236/g7236-embossed-elastic-product-view-2.jpg",
+          "label": "Product View 2",
+          "alt": "G7236 | Embossed Elastic product view 2",
+          "rotate": false
+        },
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/g7236/g7236-embossed-elastic-product-view-3.jpg",
+          "label": "Product View 3",
+          "alt": "G7236 | Embossed Elastic product view 3",
+          "rotate": false
+        },
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/g7236/g7236-embossed-elastic-product-view-4.jpg",
+          "label": "Product View 4",
+          "alt": "G7236 | Embossed Elastic product view 4",
+          "rotate": false
+        },
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/g7236/g7236-embossed-elastic-product-view-5.jpg",
+          "label": "Product View 5",
+          "alt": "G7236 | Embossed Elastic product view 5",
+          "rotate": false
+        }
+      ],
+      "tags": [
+        "embossed",
+        "bra-strap"
+      ],
+      "specs": [
+        {
+          "label": "Item No.",
+          "value": "G7236"
+        },
+        {
+          "label": "Width",
+          "value": "10 mm"
+        },
+        {
+          "label": "Material",
+          "value": "Polyester"
+        },
+        {
+          "label": "Application",
+          "value": "Lingerie & Intimate Apparel"
+        }
+      ],
+      "intro": "Embossed Elastic for lingerie & intimate apparel, available for buyer-specific color, width, stretch, logo, and packing development.",
+      "applications": [
+        "Lingerie & Intimate Apparel"
+      ],
+      "customOptions": [
+        "Color matching",
+        "Width and stretch",
+        "Logo or pattern",
+        "Roll and carton packing"
+      ]
+    },
+    {
+      "slug": "h6352",
+      "name": "H6352 | Picot Elastic",
+      "category": "lingerie",
+      "categoryLabel": "Bra & Lingerie Elastics",
+      "status": "published",
+      "sortOrder": 330,
+      "image": "assets/images/products/catalog-2026/h6352/h6352-picot-elastic-main-view.jpg",
+      "gallery": [
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/h6352/h6352-picot-elastic-main-view.jpg",
+          "label": "Main View",
+          "alt": "H6352 | Picot Elastic product view 1",
+          "rotate": false
+        },
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/h6352/h6352-picot-elastic-product-view-2.jpg",
+          "label": "Product View 2",
+          "alt": "H6352 | Picot Elastic product view 2",
+          "rotate": false
+        },
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/h6352/h6352-picot-elastic-product-view-3.jpg",
+          "label": "Product View 3",
+          "alt": "H6352 | Picot Elastic product view 3",
+          "rotate": false
+        },
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/h6352/h6352-picot-elastic-product-view-4.jpg",
+          "label": "Product View 4",
+          "alt": "H6352 | Picot Elastic product view 4",
+          "rotate": false
+        },
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/h6352/h6352-picot-elastic-product-view-5.jpg",
+          "label": "Product View 5",
+          "alt": "H6352 | Picot Elastic product view 5",
+          "rotate": false
+        }
+      ],
+      "tags": [
+        "picot"
+      ],
+      "specs": [
+        {
+          "label": "Item No.",
+          "value": "H6352"
+        },
+        {
+          "label": "Width",
+          "value": "8 / 10 / 12 / 13 / 15 / 21 / 25 / 30 mm"
+        },
+        {
+          "label": "Material",
+          "value": "Nylon & Spandex"
+        },
+        {
+          "label": "Application",
+          "value": "Bra bands and picot edging"
+        }
+      ],
+      "intro": "Picot Elastic for bra bands and picot edging, available for buyer-specific color, width, stretch, logo, and packing development.",
+      "applications": [
+        "Bra bands and picot edging"
+      ],
+      "customOptions": [
+        "Color matching",
+        "Width and stretch",
+        "Logo or pattern",
+        "Roll and carton packing"
+      ]
+    },
+    {
+      "slug": "h6377",
+      "name": "H6377 | Picot Elastic",
+      "category": "lingerie",
+      "categoryLabel": "Bra & Lingerie Elastics",
+      "status": "published",
+      "sortOrder": 340,
+      "image": "assets/images/products/catalog-2026/h6377/h6377-picot-elastic-main-view.jpg",
+      "gallery": [
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/h6377/h6377-picot-elastic-main-view.jpg",
+          "label": "Main View",
+          "alt": "H6377 | Picot Elastic product view 1",
+          "rotate": false
+        },
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/h6377/h6377-picot-elastic-product-view-2.jpg",
+          "label": "Product View 2",
+          "alt": "H6377 | Picot Elastic product view 2",
+          "rotate": false
+        },
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/h6377/h6377-picot-elastic-product-view-3.jpg",
+          "label": "Product View 3",
+          "alt": "H6377 | Picot Elastic product view 3",
+          "rotate": false
+        },
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/h6377/h6377-picot-elastic-product-view-4.jpg",
+          "label": "Product View 4",
+          "alt": "H6377 | Picot Elastic product view 4",
+          "rotate": false
+        },
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/h6377/h6377-picot-elastic-product-view-5.jpg",
+          "label": "Product View 5",
+          "alt": "H6377 | Picot Elastic product view 5",
+          "rotate": false
+        }
+      ],
+      "tags": [
+        "picot"
+      ],
+      "specs": [
+        {
+          "label": "Item No.",
+          "value": "H6377"
+        },
+        {
+          "label": "Width",
+          "value": "09/11/12/15 mm"
+        },
+        {
+          "label": "Material",
+          "value": "Nylon & Spandex"
+        },
+        {
+          "label": "Application",
+          "value": "Bra bands and picot edging"
+        }
+      ],
+      "intro": "Picot Elastic for bra bands and picot edging, available for buyer-specific color, width, stretch, logo, and packing development.",
+      "applications": [
+        "Bra bands and picot edging"
+      ],
+      "customOptions": [
+        "Color matching",
+        "Width and stretch",
+        "Logo or pattern",
+        "Roll and carton packing"
+      ]
+    },
+    {
+      "slug": "h6529",
+      "name": "H6529 | Picot Elastic",
+      "category": "lingerie",
+      "categoryLabel": "Bra & Lingerie Elastics",
+      "status": "published",
+      "sortOrder": 350,
+      "image": "assets/images/products/catalog-2026/h6529/h6529-picot-elastic-main-view.jpg",
+      "gallery": [
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/h6529/h6529-picot-elastic-main-view.jpg",
+          "label": "Main View",
+          "alt": "H6529 | Picot Elastic product view 1",
+          "rotate": false
+        },
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/h6529/h6529-picot-elastic-product-view-2.jpg",
+          "label": "Product View 2",
+          "alt": "H6529 | Picot Elastic product view 2",
+          "rotate": false
+        },
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/h6529/h6529-picot-elastic-product-view-3.jpg",
+          "label": "Product View 3",
+          "alt": "H6529 | Picot Elastic product view 3",
+          "rotate": false
+        },
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/h6529/h6529-picot-elastic-product-view-4.jpg",
+          "label": "Product View 4",
+          "alt": "H6529 | Picot Elastic product view 4",
+          "rotate": false
+        },
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/h6529/h6529-picot-elastic-product-view-5.jpg",
+          "label": "Product View 5",
+          "alt": "H6529 | Picot Elastic product view 5",
+          "rotate": false
+        }
+      ],
+      "tags": [
+        "picot"
+      ],
+      "specs": [
+        {
+          "label": "Item No.",
+          "value": "H6529"
+        },
+        {
+          "label": "Width",
+          "value": "9 / 11 / 12 mm"
+        },
+        {
+          "label": "Material",
+          "value": "Nylon & Spandex"
+        },
+        {
+          "label": "Application",
+          "value": "Bra bands and picot edging"
+        }
+      ],
+      "intro": "Picot Elastic for bra bands and picot edging, available for buyer-specific color, width, stretch, logo, and packing development.",
+      "applications": [
+        "Bra bands and picot edging"
+      ],
+      "customOptions": [
+        "Color matching",
+        "Width and stretch",
+        "Logo or pattern",
+        "Roll and carton packing"
+      ]
+    },
+    {
+      "slug": "h6693",
+      "name": "H6693 | Picot Elastic",
+      "category": "lingerie",
+      "categoryLabel": "Bra & Lingerie Elastics",
+      "status": "published",
+      "sortOrder": 370,
+      "image": "assets/images/products/catalog-2026/h6693/h6693-picot-elastic-main-view.jpg",
+      "gallery": [
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/h6693/h6693-picot-elastic-main-view.jpg",
+          "label": "Main View",
+          "alt": "H6693 | Picot Elastic product view 1",
+          "rotate": false
+        },
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/h6693/h6693-picot-elastic-product-view-2.jpg",
+          "label": "Product View 2",
+          "alt": "H6693 | Picot Elastic product view 2",
+          "rotate": false
+        },
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/h6693/h6693-picot-elastic-product-view-3.jpg",
+          "label": "Product View 3",
+          "alt": "H6693 | Picot Elastic product view 3",
+          "rotate": false
+        },
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/h6693/h6693-picot-elastic-product-view-4.jpg",
+          "label": "Product View 4",
+          "alt": "H6693 | Picot Elastic product view 4",
+          "rotate": false
+        },
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/h6693/h6693-picot-elastic-product-view-5.jpg",
+          "label": "Product View 5",
+          "alt": "H6693 | Picot Elastic product view 5",
+          "rotate": false
+        }
+      ],
+      "tags": [
+        "picot"
+      ],
+      "specs": [
+        {
+          "label": "Item No.",
+          "value": "H6693"
+        },
+        {
+          "label": "Width",
+          "value": "10 mm"
+        },
+        {
+          "label": "Material",
+          "value": "Nylon & Spandex"
+        },
+        {
+          "label": "Application",
+          "value": "Bras and underwear"
+        }
+      ],
+      "intro": "Picot Elastic for bras and underwear, available for buyer-specific color, width, stretch, logo, and packing development.",
+      "applications": [
+        "Bras and underwear"
+      ],
+      "customOptions": [
+        "Color matching",
+        "Width and stretch",
+        "Logo or pattern",
+        "Roll and carton packing"
+      ]
+    },
+    {
+      "slug": "h6726",
+      "name": "H6726 | Picot Elastic",
+      "category": "lingerie",
+      "categoryLabel": "Bra & Lingerie Elastics",
+      "status": "published",
+      "sortOrder": 380,
+      "image": "assets/images/products/catalog-2026/h6726/h6726-picot-elastic-main-view.jpg",
+      "gallery": [
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/h6726/h6726-picot-elastic-main-view.jpg",
+          "label": "Main View",
+          "alt": "H6726 | Picot Elastic product view 1",
+          "rotate": false
+        },
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/h6726/h6726-picot-elastic-product-view-2.jpg",
+          "label": "Product View 2",
+          "alt": "H6726 | Picot Elastic product view 2",
+          "rotate": false
+        },
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/h6726/h6726-picot-elastic-product-view-3.jpg",
+          "label": "Product View 3",
+          "alt": "H6726 | Picot Elastic product view 3",
+          "rotate": false
+        },
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/h6726/h6726-picot-elastic-product-view-4.jpg",
+          "label": "Product View 4",
+          "alt": "H6726 | Picot Elastic product view 4",
+          "rotate": false
+        },
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/h6726/h6726-picot-elastic-product-view-5.jpg",
+          "label": "Product View 5",
+          "alt": "H6726 | Picot Elastic product view 5",
+          "rotate": false
+        }
+      ],
+      "tags": [
+        "picot",
+        "decorative-edge"
+      ],
+      "specs": [
+        {
+          "label": "Item No.",
+          "value": "H6726"
+        },
+        {
+          "label": "Width",
+          "value": "12/15 mm"
+        },
+        {
+          "label": "Material",
+          "value": "Nylon & Spandex"
+        },
+        {
+          "label": "Application",
+          "value": "Bra bands and picot edging"
+        }
+      ],
+      "intro": "Picot Elastic for bra bands and picot edging, available for buyer-specific color, width, stretch, logo, and packing development.",
+      "applications": [
+        "Bra bands and picot edging"
+      ],
+      "customOptions": [
+        "Color matching",
+        "Width and stretch",
+        "Logo or pattern",
+        "Roll and carton packing"
+      ]
+    },
+    {
+      "slug": "h6807",
+      "name": "H6807 | Bra Strap Elastic",
+      "category": "lingerie",
+      "categoryLabel": "Bra & Lingerie Elastics",
+      "status": "published",
+      "sortOrder": 390,
+      "image": "assets/images/products/catalog-2026/h6807/h6807-bra-strap-elastic-main-view.jpg",
+      "gallery": [
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/h6807/h6807-bra-strap-elastic-main-view.jpg",
+          "label": "Main View",
+          "alt": "H6807 | Bra Strap Elastic product view 1",
+          "rotate": false
+        },
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/h6807/h6807-bra-strap-elastic-product-view-2.jpg",
+          "label": "Product View 2",
+          "alt": "H6807 | Bra Strap Elastic product view 2",
+          "rotate": false
+        },
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/h6807/h6807-bra-strap-elastic-product-view-3.jpg",
+          "label": "Product View 3",
+          "alt": "H6807 | Bra Strap Elastic product view 3",
+          "rotate": false
+        },
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/h6807/h6807-bra-strap-elastic-product-view-4.jpg",
+          "label": "Product View 4",
+          "alt": "H6807 | Bra Strap Elastic product view 4",
           "rotate": false
         }
       ],
@@ -422,61 +1875,1220 @@
         "bra-strap"
       ],
       "specs": [
-        "8-20mm width",
-        "Adjustable strap use",
-        "Gloss or matte",
-        "Soft touch"
+        {
+          "label": "Item No.",
+          "value": "H6807"
+        },
+        {
+          "label": "Width",
+          "value": "07/8/10/12/15/20/25/30 mm"
+        },
+        {
+          "label": "Material",
+          "value": "Nylon & Spandex"
+        },
+        {
+          "label": "Application",
+          "value": "Bra and lingerie shoulder straps"
+        }
       ],
-      "intro": "Bra strap elastic with smooth handfeel and stable recovery for lingerie and intimate apparel.",
+      "intro": "Bra Strap Elastic for bra and lingerie shoulder straps, available for buyer-specific color, width, stretch, logo, and packing development.",
       "applications": [
-        "Bra straps",
-        "Camisoles",
-        "Lingerie shoulder straps"
+        "Bra and lingerie shoulder straps"
       ],
       "customOptions": [
-        "Width selection",
-        "Gloss or matte surface",
         "Color matching",
-        "Softness and stretch"
-      ],
-      "createdAt": "2026-07-03T17:48:20.750Z",
-      "updatedAt": "2026-07-05T04:47:31.580Z"
+        "Width and stretch",
+        "Logo or pattern",
+        "Roll and carton packing"
+      ]
     },
     {
-      "slug": "activewear-binding-elastic",
-      "name": "Activewear Binding Elastic",
-      "category": "activewear",
-      "categoryLabel": "Activewear Elastics",
+      "slug": "h6896",
+      "name": "H6896 | Bra Strap Elastic",
+      "category": "lingerie",
+      "categoryLabel": "Bra & Lingerie Elastics",
       "status": "published",
-      "sortOrder": 90,
-      "image": "assets/images/product-knitted-elastic-main.webp",
+      "sortOrder": 400,
+      "image": "assets/images/products/catalog-2026/h6896/h6896-bra-strap-elastic-main-view.jpg",
       "gallery": [
         {
           "group": "Product Display",
-          "src": "assets/images/product-knitted-elastic-main.webp",
-          "label": "Front & Back",
-          "alt": "Activewear Binding Elastic - Front & Back",
+          "src": "assets/images/products/catalog-2026/h6896/h6896-bra-strap-elastic-main-view.jpg",
+          "label": "Main View",
+          "alt": "H6896 | Bra Strap Elastic product view 1",
           "rotate": false
         },
         {
           "group": "Product Display",
-          "src": "assets/images/product-fold-over-elastic-main.webp",
-          "label": "Front",
-          "alt": "Activewear Binding Elastic - Front",
+          "src": "assets/images/products/catalog-2026/h6896/h6896-bra-strap-elastic-product-view-2.jpg",
+          "label": "Product View 2",
+          "alt": "H6896 | Bra Strap Elastic product view 2",
           "rotate": false
         },
         {
           "group": "Product Display",
-          "src": "/uploads/products/activewear-binding-elastic/1783226840693-application.webp",
-          "label": "Back",
-          "alt": "Activewear Binding Elastic - Back",
+          "src": "assets/images/products/catalog-2026/h6896/h6896-bra-strap-elastic-product-view-3.jpg",
+          "label": "Product View 3",
+          "alt": "H6896 | Bra Strap Elastic product view 3",
           "rotate": false
         },
         {
           "group": "Product Display",
-          "src": "/uploads/products/activewear-binding-elastic/1783226841328-application2.webp",
-          "label": "Colors",
-          "alt": "Activewear Binding Elastic - Colors",
+          "src": "assets/images/products/catalog-2026/h6896/h6896-bra-strap-elastic-product-view-4.jpg",
+          "label": "Product View 4",
+          "alt": "H6896 | Bra Strap Elastic product view 4",
+          "rotate": false
+        }
+      ],
+      "tags": [
+        "bra-strap"
+      ],
+      "specs": [
+        {
+          "label": "Item No.",
+          "value": "H6896"
+        },
+        {
+          "label": "Width",
+          "value": "07/8/10/12/15/20/25/30 mm"
+        },
+        {
+          "label": "Material",
+          "value": "Nylon & Spandex"
+        },
+        {
+          "label": "Application",
+          "value": "Bra and lingerie shoulder straps"
+        }
+      ],
+      "intro": "Bra Strap Elastic for bra and lingerie shoulder straps, available for buyer-specific color, width, stretch, logo, and packing development.",
+      "applications": [
+        "Bra and lingerie shoulder straps"
+      ],
+      "customOptions": [
+        "Color matching",
+        "Width and stretch",
+        "Logo or pattern",
+        "Roll and carton packing"
+      ]
+    },
+    {
+      "slug": "h6904",
+      "name": "H6904 | Bra Strap Elastic",
+      "category": "lingerie",
+      "categoryLabel": "Bra & Lingerie Elastics",
+      "status": "published",
+      "sortOrder": 410,
+      "image": "assets/images/products/catalog-2026/h6904/h6904-bra-strap-elastic-main-view.jpg",
+      "gallery": [
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/h6904/h6904-bra-strap-elastic-main-view.jpg",
+          "label": "Main View",
+          "alt": "H6904 | Bra Strap Elastic product view 1",
+          "rotate": false
+        },
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/h6904/h6904-bra-strap-elastic-product-view-2.jpg",
+          "label": "Product View 2",
+          "alt": "H6904 | Bra Strap Elastic product view 2",
+          "rotate": false
+        },
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/h6904/h6904-bra-strap-elastic-product-view-3.jpg",
+          "label": "Product View 3",
+          "alt": "H6904 | Bra Strap Elastic product view 3",
+          "rotate": false
+        },
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/h6904/h6904-bra-strap-elastic-product-view-4.jpg",
+          "label": "Product View 4",
+          "alt": "H6904 | Bra Strap Elastic product view 4",
+          "rotate": false
+        }
+      ],
+      "tags": [
+        "bra-strap"
+      ],
+      "specs": [
+        {
+          "label": "Item No.",
+          "value": "H6904"
+        },
+        {
+          "label": "Width",
+          "value": "07/8/10/12/15/20/25/30 mm"
+        },
+        {
+          "label": "Material",
+          "value": "Nylon & Spandex"
+        },
+        {
+          "label": "Application",
+          "value": "Bra and lingerie shoulder straps"
+        }
+      ],
+      "intro": "Bra Strap Elastic for bra and lingerie shoulder straps, available for buyer-specific color, width, stretch, logo, and packing development.",
+      "applications": [
+        "Bra and lingerie shoulder straps"
+      ],
+      "customOptions": [
+        "Color matching",
+        "Width and stretch",
+        "Logo or pattern",
+        "Roll and carton packing"
+      ]
+    },
+    {
+      "slug": "h7000",
+      "name": "H7000 | Bra Strap Elastic",
+      "category": "lingerie",
+      "categoryLabel": "Bra & Lingerie Elastics",
+      "status": "published",
+      "sortOrder": 420,
+      "image": "assets/images/products/catalog-2026/h7000/h7000-bra-strap-elastic-main-view.jpg",
+      "gallery": [
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/h7000/h7000-bra-strap-elastic-main-view.jpg",
+          "label": "Main View",
+          "alt": "H7000 | Bra Strap Elastic product view 1",
+          "rotate": false
+        },
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/h7000/h7000-bra-strap-elastic-product-view-2.jpg",
+          "label": "Product View 2",
+          "alt": "H7000 | Bra Strap Elastic product view 2",
+          "rotate": false
+        },
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/h7000/h7000-bra-strap-elastic-product-view-3.jpg",
+          "label": "Product View 3",
+          "alt": "H7000 | Bra Strap Elastic product view 3",
+          "rotate": false
+        }
+      ],
+      "tags": [
+        "bra-strap"
+      ],
+      "specs": [
+        {
+          "label": "Item No.",
+          "value": "H7000"
+        },
+        {
+          "label": "Width",
+          "value": "12/14 mm"
+        },
+        {
+          "label": "Material",
+          "value": "Nylon & Spandex"
+        },
+        {
+          "label": "Application",
+          "value": "Bra and lingerie shoulder straps"
+        }
+      ],
+      "intro": "Bra Strap Elastic for bra and lingerie shoulder straps, available for buyer-specific color, width, stretch, logo, and packing development.",
+      "applications": [
+        "Bra and lingerie shoulder straps"
+      ],
+      "customOptions": [
+        "Color matching",
+        "Width and stretch",
+        "Logo or pattern",
+        "Roll and carton packing"
+      ]
+    },
+    {
+      "slug": "h7039",
+      "name": "H7039 | Bra Strap Elastic",
+      "category": "lingerie",
+      "categoryLabel": "Bra & Lingerie Elastics",
+      "status": "published",
+      "sortOrder": 430,
+      "image": "assets/images/products/catalog-2026/h7039/h7039-bra-strap-elastic-main-view.jpg",
+      "gallery": [
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/h7039/h7039-bra-strap-elastic-main-view.jpg",
+          "label": "Main View",
+          "alt": "H7039 | Bra Strap Elastic product view 1",
+          "rotate": false
+        },
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/h7039/h7039-bra-strap-elastic-product-view-2.jpg",
+          "label": "Product View 2",
+          "alt": "H7039 | Bra Strap Elastic product view 2",
+          "rotate": false
+        },
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/h7039/h7039-bra-strap-elastic-product-view-3.jpg",
+          "label": "Product View 3",
+          "alt": "H7039 | Bra Strap Elastic product view 3",
+          "rotate": false
+        }
+      ],
+      "tags": [
+        "bra-strap"
+      ],
+      "specs": [
+        {
+          "label": "Item No.",
+          "value": "H7039"
+        },
+        {
+          "label": "Width",
+          "value": "07/8/10/12/15/20/25/30 mm"
+        },
+        {
+          "label": "Material",
+          "value": "Nylon & Spandex"
+        },
+        {
+          "label": "Application",
+          "value": "Bra and lingerie shoulder straps"
+        }
+      ],
+      "intro": "Bra Strap Elastic for bra and lingerie shoulder straps, available for buyer-specific color, width, stretch, logo, and packing development.",
+      "applications": [
+        "Bra and lingerie shoulder straps"
+      ],
+      "customOptions": [
+        "Color matching",
+        "Width and stretch",
+        "Logo or pattern",
+        "Roll and carton packing"
+      ]
+    },
+    {
+      "slug": "h7042",
+      "name": "H7042 | Bra Strap Elastic",
+      "category": "lingerie",
+      "categoryLabel": "Bra & Lingerie Elastics",
+      "status": "published",
+      "sortOrder": 440,
+      "image": "assets/images/products/catalog-2026/h7042/h7042-bra-strap-elastic-main-view.jpg",
+      "gallery": [
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/h7042/h7042-bra-strap-elastic-main-view.jpg",
+          "label": "Main View",
+          "alt": "H7042 | Bra Strap Elastic product view 1",
+          "rotate": false
+        },
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/h7042/h7042-bra-strap-elastic-product-view-2.jpg",
+          "label": "Product View 2",
+          "alt": "H7042 | Bra Strap Elastic product view 2",
+          "rotate": false
+        },
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/h7042/h7042-bra-strap-elastic-product-view-3.jpg",
+          "label": "Product View 3",
+          "alt": "H7042 | Bra Strap Elastic product view 3",
+          "rotate": false
+        },
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/h7042/h7042-bra-strap-elastic-product-view-4.jpg",
+          "label": "Product View 4",
+          "alt": "H7042 | Bra Strap Elastic product view 4",
+          "rotate": false
+        }
+      ],
+      "tags": [
+        "bra-strap"
+      ],
+      "specs": [
+        {
+          "label": "Item No.",
+          "value": "H7042"
+        },
+        {
+          "label": "Width",
+          "value": "21/23 mm"
+        },
+        {
+          "label": "Material",
+          "value": "Nylon & Spandex"
+        },
+        {
+          "label": "Application",
+          "value": "Bra and lingerie shoulder straps"
+        }
+      ],
+      "intro": "Bra Strap Elastic for bra and lingerie shoulder straps, available for buyer-specific color, width, stretch, logo, and packing development.",
+      "applications": [
+        "Bra and lingerie shoulder straps"
+      ],
+      "customOptions": [
+        "Color matching",
+        "Width and stretch",
+        "Logo or pattern",
+        "Roll and carton packing"
+      ]
+    },
+    {
+      "slug": "h7138",
+      "name": "H7138 | Bra Strap Elastic",
+      "category": "lingerie",
+      "categoryLabel": "Bra & Lingerie Elastics",
+      "status": "published",
+      "sortOrder": 450,
+      "image": "assets/images/products/catalog-2026/h7138/h7138-bra-strap-elastic-main-view.jpg",
+      "gallery": [
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/h7138/h7138-bra-strap-elastic-main-view.jpg",
+          "label": "Main View",
+          "alt": "H7138 | Bra Strap Elastic product view 1",
+          "rotate": false
+        },
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/h7138/h7138-bra-strap-elastic-product-view-2.jpg",
+          "label": "Product View 2",
+          "alt": "H7138 | Bra Strap Elastic product view 2",
+          "rotate": false
+        },
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/h7138/h7138-bra-strap-elastic-product-view-3.jpg",
+          "label": "Product View 3",
+          "alt": "H7138 | Bra Strap Elastic product view 3",
+          "rotate": false
+        },
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/h7138/h7138-bra-strap-elastic-product-view-4.jpg",
+          "label": "Product View 4",
+          "alt": "H7138 | Bra Strap Elastic product view 4",
+          "rotate": false
+        },
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/h7138/h7138-bra-strap-elastic-product-view-5.jpg",
+          "label": "Product View 5",
+          "alt": "H7138 | Bra Strap Elastic product view 5",
+          "rotate": false
+        }
+      ],
+      "tags": [
+        "bra-strap"
+      ],
+      "specs": [
+        {
+          "label": "Item No.",
+          "value": "H7138"
+        },
+        {
+          "label": "Width",
+          "value": "7/10/13 mm"
+        },
+        {
+          "label": "Material",
+          "value": "Nylon & Spandex"
+        },
+        {
+          "label": "Application",
+          "value": "Bra and lingerie shoulder straps"
+        }
+      ],
+      "intro": "Bra Strap Elastic for bra and lingerie shoulder straps, available for buyer-specific color, width, stretch, logo, and packing development.",
+      "applications": [
+        "Bra and lingerie shoulder straps"
+      ],
+      "customOptions": [
+        "Color matching",
+        "Width and stretch",
+        "Logo or pattern",
+        "Roll and carton packing"
+      ]
+    },
+    {
+      "slug": "h7162",
+      "name": "H7162 | Bra Strap Elastic",
+      "category": "lingerie",
+      "categoryLabel": "Bra & Lingerie Elastics",
+      "status": "published",
+      "sortOrder": 460,
+      "image": "assets/images/products/catalog-2026/h7162/h7162-bra-strap-elastic-main-view.jpg",
+      "gallery": [
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/h7162/h7162-bra-strap-elastic-main-view.jpg",
+          "label": "Main View",
+          "alt": "H7162 | Bra Strap Elastic product view 1",
+          "rotate": false
+        },
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/h7162/h7162-bra-strap-elastic-product-view-2.jpg",
+          "label": "Product View 2",
+          "alt": "H7162 | Bra Strap Elastic product view 2",
+          "rotate": false
+        },
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/h7162/h7162-bra-strap-elastic-product-view-3.jpg",
+          "label": "Product View 3",
+          "alt": "H7162 | Bra Strap Elastic product view 3",
+          "rotate": false
+        },
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/h7162/h7162-bra-strap-elastic-product-view-4.jpg",
+          "label": "Product View 4",
+          "alt": "H7162 | Bra Strap Elastic product view 4",
+          "rotate": false
+        },
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/h7162/h7162-bra-strap-elastic-product-view-5.jpg",
+          "label": "Product View 5",
+          "alt": "H7162 | Bra Strap Elastic product view 5",
+          "rotate": false
+        }
+      ],
+      "tags": [
+        "bra-strap"
+      ],
+      "specs": [
+        {
+          "label": "Item No.",
+          "value": "H7162"
+        },
+        {
+          "label": "Width",
+          "value": "10 / 11 / 15 mm"
+        },
+        {
+          "label": "Material",
+          "value": "Nylon & Spandex"
+        },
+        {
+          "label": "Application",
+          "value": "Bra and lingerie shoulder straps"
+        }
+      ],
+      "intro": "Bra Strap Elastic for bra and lingerie shoulder straps, available for buyer-specific color, width, stretch, logo, and packing development.",
+      "applications": [
+        "Bra and lingerie shoulder straps"
+      ],
+      "customOptions": [
+        "Color matching",
+        "Width and stretch",
+        "Logo or pattern",
+        "Roll and carton packing"
+      ]
+    },
+    {
+      "slug": "h7181",
+      "name": "H7181 | Bra Strap Elastic",
+      "category": "lingerie",
+      "categoryLabel": "Bra & Lingerie Elastics",
+      "status": "published",
+      "sortOrder": 470,
+      "image": "assets/images/products/catalog-2026/h7181/h7181-bra-strap-elastic-main-view.jpg",
+      "gallery": [
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/h7181/h7181-bra-strap-elastic-main-view.jpg",
+          "label": "Main View",
+          "alt": "H7181 | Bra Strap Elastic product view 1",
+          "rotate": false
+        },
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/h7181/h7181-bra-strap-elastic-product-view-2.jpg",
+          "label": "Product View 2",
+          "alt": "H7181 | Bra Strap Elastic product view 2",
+          "rotate": false
+        },
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/h7181/h7181-bra-strap-elastic-product-view-3.jpg",
+          "label": "Product View 3",
+          "alt": "H7181 | Bra Strap Elastic product view 3",
+          "rotate": false
+        },
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/h7181/h7181-bra-strap-elastic-product-view-4.jpg",
+          "label": "Product View 4",
+          "alt": "H7181 | Bra Strap Elastic product view 4",
+          "rotate": false
+        }
+      ],
+      "tags": [
+        "bra-strap"
+      ],
+      "specs": [
+        {
+          "label": "Item No.",
+          "value": "H7181"
+        },
+        {
+          "label": "Width",
+          "value": "15/17/20/25 mm"
+        },
+        {
+          "label": "Material",
+          "value": "Nylon & Spandex"
+        },
+        {
+          "label": "Application",
+          "value": "Bra and lingerie shoulder straps"
+        }
+      ],
+      "intro": "Bra Strap Elastic for bra and lingerie shoulder straps, available for buyer-specific color, width, stretch, logo, and packing development.",
+      "applications": [
+        "Bra and lingerie shoulder straps"
+      ],
+      "customOptions": [
+        "Color matching",
+        "Width and stretch",
+        "Logo or pattern",
+        "Roll and carton packing"
+      ]
+    },
+    {
+      "slug": "h7189",
+      "name": "H7189 | Bra Strap Elastic",
+      "category": "lingerie",
+      "categoryLabel": "Bra & Lingerie Elastics",
+      "status": "published",
+      "sortOrder": 480,
+      "image": "assets/images/products/catalog-2026/h7189/h7189-bra-strap-elastic-main-view.jpg",
+      "gallery": [
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/h7189/h7189-bra-strap-elastic-main-view.jpg",
+          "label": "Main View",
+          "alt": "H7189 | Bra Strap Elastic product view 1",
+          "rotate": false
+        },
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/h7189/h7189-bra-strap-elastic-product-view-2.jpg",
+          "label": "Product View 2",
+          "alt": "H7189 | Bra Strap Elastic product view 2",
+          "rotate": false
+        },
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/h7189/h7189-bra-strap-elastic-product-view-3.jpg",
+          "label": "Product View 3",
+          "alt": "H7189 | Bra Strap Elastic product view 3",
+          "rotate": false
+        },
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/h7189/h7189-bra-strap-elastic-product-view-4.jpg",
+          "label": "Product View 4",
+          "alt": "H7189 | Bra Strap Elastic product view 4",
+          "rotate": false
+        }
+      ],
+      "tags": [
+        "bra-strap"
+      ],
+      "specs": [
+        {
+          "label": "Item No.",
+          "value": "H7189"
+        },
+        {
+          "label": "Width",
+          "value": "13/17 mm"
+        },
+        {
+          "label": "Material",
+          "value": "Nylon & Spandex"
+        },
+        {
+          "label": "Application",
+          "value": "Bra and lingerie shoulder straps"
+        }
+      ],
+      "intro": "Bra Strap Elastic for bra and lingerie shoulder straps, available for buyer-specific color, width, stretch, logo, and packing development.",
+      "applications": [
+        "Bra and lingerie shoulder straps"
+      ],
+      "customOptions": [
+        "Color matching",
+        "Width and stretch",
+        "Logo or pattern",
+        "Roll and carton packing"
+      ]
+    },
+    {
+      "slug": "h7203",
+      "name": "H7203 | Bra Strap Elastic",
+      "category": "lingerie",
+      "categoryLabel": "Bra & Lingerie Elastics",
+      "status": "published",
+      "sortOrder": 490,
+      "image": "assets/images/products/catalog-2026/h7203/h7203-bra-strap-elastic-main-view.jpg",
+      "gallery": [
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/h7203/h7203-bra-strap-elastic-main-view.jpg",
+          "label": "Main View",
+          "alt": "H7203 | Bra Strap Elastic product view 1",
+          "rotate": false
+        },
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/h7203/h7203-bra-strap-elastic-product-view-2.jpg",
+          "label": "Product View 2",
+          "alt": "H7203 | Bra Strap Elastic product view 2",
+          "rotate": false
+        },
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/h7203/h7203-bra-strap-elastic-product-view-3.jpg",
+          "label": "Product View 3",
+          "alt": "H7203 | Bra Strap Elastic product view 3",
+          "rotate": false
+        },
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/h7203/h7203-bra-strap-elastic-product-view-4.jpg",
+          "label": "Product View 4",
+          "alt": "H7203 | Bra Strap Elastic product view 4",
+          "rotate": false
+        }
+      ],
+      "tags": [
+        "bra-strap"
+      ],
+      "specs": [
+        {
+          "label": "Item No.",
+          "value": "H7203"
+        },
+        {
+          "label": "Width",
+          "value": "15/20 mm"
+        },
+        {
+          "label": "Material",
+          "value": "Nylon & Spandex"
+        },
+        {
+          "label": "Application",
+          "value": "Bra and lingerie shoulder straps"
+        }
+      ],
+      "intro": "Bra Strap Elastic for bra and lingerie shoulder straps, available for buyer-specific color, width, stretch, logo, and packing development.",
+      "applications": [
+        "Bra and lingerie shoulder straps"
+      ],
+      "customOptions": [
+        "Color matching",
+        "Width and stretch",
+        "Logo or pattern",
+        "Roll and carton packing"
+      ]
+    },
+    {
+      "slug": "h7214",
+      "name": "H7214 | Bra Strap Elastic",
+      "category": "lingerie",
+      "categoryLabel": "Bra & Lingerie Elastics",
+      "status": "published",
+      "sortOrder": 500,
+      "image": "assets/images/products/catalog-2026/h7214/h7214-bra-strap-elastic-main-view.jpg",
+      "gallery": [
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/h7214/h7214-bra-strap-elastic-main-view.jpg",
+          "label": "Main View",
+          "alt": "H7214 | Bra Strap Elastic product view 1",
+          "rotate": false
+        },
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/h7214/h7214-bra-strap-elastic-product-view-2.jpg",
+          "label": "Product View 2",
+          "alt": "H7214 | Bra Strap Elastic product view 2",
+          "rotate": false
+        },
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/h7214/h7214-bra-strap-elastic-product-view-3.jpg",
+          "label": "Product View 3",
+          "alt": "H7214 | Bra Strap Elastic product view 3",
+          "rotate": false
+        },
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/h7214/h7214-bra-strap-elastic-product-view-4.jpg",
+          "label": "Product View 4",
+          "alt": "H7214 | Bra Strap Elastic product view 4",
+          "rotate": false
+        }
+      ],
+      "tags": [
+        "bra-strap"
+      ],
+      "specs": [
+        {
+          "label": "Item No.",
+          "value": "H7214"
+        },
+        {
+          "label": "Width",
+          "value": "21 mm"
+        },
+        {
+          "label": "Material",
+          "value": "Nylon & Spandex"
+        },
+        {
+          "label": "Application",
+          "value": "Bra and lingerie shoulder straps"
+        }
+      ],
+      "intro": "Bra Strap Elastic for bra and lingerie shoulder straps, available for buyer-specific color, width, stretch, logo, and packing development.",
+      "applications": [
+        "Bra and lingerie shoulder straps"
+      ],
+      "customOptions": [
+        "Color matching",
+        "Width and stretch",
+        "Logo or pattern",
+        "Roll and carton packing"
+      ]
+    },
+    {
+      "slug": "h7231",
+      "name": "H7231 | Bra Strap Elastic",
+      "category": "lingerie",
+      "categoryLabel": "Bra & Lingerie Elastics",
+      "status": "published",
+      "sortOrder": 510,
+      "image": "assets/images/products/catalog-2026/h7231/h7231-bra-strap-elastic-main-view.jpg",
+      "gallery": [
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/h7231/h7231-bra-strap-elastic-main-view.jpg",
+          "label": "Main View",
+          "alt": "H7231 | Bra Strap Elastic product view 1",
+          "rotate": false
+        },
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/h7231/h7231-bra-strap-elastic-product-view-2.jpg",
+          "label": "Product View 2",
+          "alt": "H7231 | Bra Strap Elastic product view 2",
+          "rotate": false
+        },
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/h7231/h7231-bra-strap-elastic-product-view-3.jpg",
+          "label": "Product View 3",
+          "alt": "H7231 | Bra Strap Elastic product view 3",
+          "rotate": false
+        },
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/h7231/h7231-bra-strap-elastic-product-view-4.jpg",
+          "label": "Product View 4",
+          "alt": "H7231 | Bra Strap Elastic product view 4",
+          "rotate": false
+        },
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/h7231/h7231-bra-strap-elastic-product-view-5.jpg",
+          "label": "Product View 5",
+          "alt": "H7231 | Bra Strap Elastic product view 5",
+          "rotate": false
+        }
+      ],
+      "tags": [
+        "bra-strap"
+      ],
+      "specs": [
+        {
+          "label": "Item No.",
+          "value": "H7231"
+        },
+        {
+          "label": "Width",
+          "value": "12 mm"
+        },
+        {
+          "label": "Material",
+          "value": "Nylon & Spandex"
+        },
+        {
+          "label": "Application",
+          "value": "Bra and lingerie shoulder straps"
+        }
+      ],
+      "intro": "Bra Strap Elastic for bra and lingerie shoulder straps, available for buyer-specific color, width, stretch, logo, and packing development.",
+      "applications": [
+        "Bra and lingerie shoulder straps"
+      ],
+      "customOptions": [
+        "Color matching",
+        "Width and stretch",
+        "Logo or pattern",
+        "Roll and carton packing"
+      ]
+    },
+    {
+      "slug": "h7235silicone",
+      "name": "H7235Silicone | Silicone Printed Elastic",
+      "category": "lingerie",
+      "categoryLabel": "Bra & Lingerie Elastics",
+      "status": "published",
+      "sortOrder": 520,
+      "image": "assets/images/products/catalog-2026/h7235silicone/h7235silicone-silicone-printed-elastic-main-view.jpg",
+      "gallery": [
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/h7235silicone/h7235silicone-silicone-printed-elastic-main-view.jpg",
+          "label": "Main View",
+          "alt": "H7235Silicone | Silicone Printed Elastic product view 1",
+          "rotate": false
+        },
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/h7235silicone/h7235silicone-silicone-printed-elastic-product-view-2.jpg",
+          "label": "Product View 2",
+          "alt": "H7235Silicone | Silicone Printed Elastic product view 2",
+          "rotate": false
+        },
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/h7235silicone/h7235silicone-silicone-printed-elastic-product-view-3.jpg",
+          "label": "Product View 3",
+          "alt": "H7235Silicone | Silicone Printed Elastic product view 3",
+          "rotate": false
+        },
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/h7235silicone/h7235silicone-silicone-printed-elastic-product-view-4.jpg",
+          "label": "Product View 4",
+          "alt": "H7235Silicone | Silicone Printed Elastic product view 4",
+          "rotate": false
+        },
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/h7235silicone/h7235silicone-silicone-printed-elastic-product-view-5.jpg",
+          "label": "Product View 5",
+          "alt": "H7235Silicone | Silicone Printed Elastic product view 5",
+          "rotate": false
+        }
+      ],
+      "tags": [
+        "silicone-grip",
+        "printed",
+        "bra-strap"
+      ],
+      "specs": [
+        {
+          "label": "Item No.",
+          "value": "H7235Silicone"
+        },
+        {
+          "label": "Width",
+          "value": "15 mm"
+        },
+        {
+          "label": "Material",
+          "value": "Nylon & Spandex"
+        },
+        {
+          "label": "Application",
+          "value": "Lingerie Shoulder Straps & Intimate Apparel"
+        }
+      ],
+      "intro": "Silicone Printed Elastic for lingerie shoulder straps & intimate apparel, available for buyer-specific color, width, stretch, logo, and packing development.",
+      "applications": [
+        "Lingerie Shoulder Straps & Intimate Apparel"
+      ],
+      "customOptions": [
+        "Color matching",
+        "Width and stretch",
+        "Logo or pattern",
+        "Roll and carton packing"
+      ]
+    },
+    {
+      "slug": "h60019",
+      "name": "H60019 | Elastic Webbing",
+      "category": "activewear",
+      "categoryLabel": "Activewear Elastics",
+      "status": "published",
+      "sortOrder": 530,
+      "image": "assets/images/products/catalog-2026/h60019/h60019-elastic-webbing-main-view.jpg",
+      "gallery": [
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/h60019/h60019-elastic-webbing-main-view.jpg",
+          "label": "Main View",
+          "alt": "H60019 | Elastic Webbing product view 1",
+          "rotate": false
+        },
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/h60019/h60019-elastic-webbing-product-view-2.jpg",
+          "label": "Product View 2",
+          "alt": "H60019 | Elastic Webbing product view 2",
+          "rotate": false
+        },
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/h60019/h60019-elastic-webbing-product-view-3.jpg",
+          "label": "Product View 3",
+          "alt": "H60019 | Elastic Webbing product view 3",
+          "rotate": false
+        }
+      ],
+      "tags": [
+        "activewear"
+      ],
+      "specs": [
+        {
+          "label": "Item No.",
+          "value": "H60019"
+        },
+        {
+          "label": "Width",
+          "value": "6/10 mm"
+        },
+        {
+          "label": "Material",
+          "value": "Nylon & Spandex / Nylon"
+        },
+        {
+          "label": "Application",
+          "value": "Bra and shapewear underwire casing"
+        }
+      ],
+      "intro": "Elastic Webbing for bra and shapewear underwire casing, available for buyer-specific color, width, stretch, logo, and packing development.",
+      "applications": [
+        "Bra and shapewear underwire casing"
+      ],
+      "customOptions": [
+        "Color matching",
+        "Width and stretch",
+        "Logo or pattern",
+        "Roll and carton packing"
+      ]
+    },
+    {
+      "slug": "h60045",
+      "name": "H60045 | Picot Elastic",
+      "category": "lingerie",
+      "categoryLabel": "Bra & Lingerie Elastics",
+      "status": "published",
+      "sortOrder": 540,
+      "image": "assets/images/products/catalog-2026/h60045/h60045-picot-elastic-main-view.jpg",
+      "gallery": [
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/h60045/h60045-picot-elastic-main-view.jpg",
+          "label": "Main View",
+          "alt": "H60045 | Picot Elastic product view 1",
+          "rotate": false
+        },
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/h60045/h60045-picot-elastic-product-view-2.jpg",
+          "label": "Product View 2",
+          "alt": "H60045 | Picot Elastic product view 2",
+          "rotate": false
+        },
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/h60045/h60045-picot-elastic-product-view-3.jpg",
+          "label": "Product View 3",
+          "alt": "H60045 | Picot Elastic product view 3",
+          "rotate": false
+        },
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/h60045/h60045-picot-elastic-product-view-4.jpg",
+          "label": "Product View 4",
+          "alt": "H60045 | Picot Elastic product view 4",
+          "rotate": false
+        },
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/h60045/h60045-picot-elastic-product-view-5.jpg",
+          "label": "Product View 5",
+          "alt": "H60045 | Picot Elastic product view 5",
+          "rotate": false
+        }
+      ],
+      "tags": [
+        "picot",
+        "decorative-edge"
+      ],
+      "specs": [
+        {
+          "label": "Item No.",
+          "value": "H60045"
+        },
+        {
+          "label": "Width",
+          "value": "11/13/14/17/20 mm"
+        },
+        {
+          "label": "Material",
+          "value": "Nylon & Spandex / Polyester & Latex"
+        },
+        {
+          "label": "Application",
+          "value": "Bra bands and picot edging"
+        }
+      ],
+      "intro": "Picot Elastic for bra bands and picot edging, available for buyer-specific color, width, stretch, logo, and packing development.",
+      "applications": [
+        "Bra bands and picot edging"
+      ],
+      "customOptions": [
+        "Color matching",
+        "Width and stretch",
+        "Logo or pattern",
+        "Roll and carton packing"
+      ]
+    },
+    {
+      "slug": "h60066",
+      "name": "H60066 | Picot Elastic",
+      "category": "lingerie",
+      "categoryLabel": "Bra & Lingerie Elastics",
+      "status": "published",
+      "sortOrder": 550,
+      "image": "assets/images/products/catalog-2026/h60066/h60066-picot-elastic-main-view.jpg",
+      "gallery": [
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/h60066/h60066-picot-elastic-main-view.jpg",
+          "label": "Main View",
+          "alt": "H60066 | Picot Elastic product view 1",
+          "rotate": false
+        },
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/h60066/h60066-picot-elastic-product-view-2.jpg",
+          "label": "Product View 2",
+          "alt": "H60066 | Picot Elastic product view 2",
+          "rotate": false
+        },
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/h60066/h60066-picot-elastic-product-view-3.jpg",
+          "label": "Product View 3",
+          "alt": "H60066 | Picot Elastic product view 3",
+          "rotate": false
+        },
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/h60066/h60066-picot-elastic-product-view-4.jpg",
+          "label": "Product View 4",
+          "alt": "H60066 | Picot Elastic product view 4",
+          "rotate": false
+        },
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/h60066/h60066-picot-elastic-product-view-5.jpg",
+          "label": "Product View 5",
+          "alt": "H60066 | Picot Elastic product view 5",
+          "rotate": false
+        }
+      ],
+      "tags": [
+        "picot"
+      ],
+      "specs": [
+        {
+          "label": "Item No.",
+          "value": "H60066"
+        },
+        {
+          "label": "Width",
+          "value": "12/13 mm"
+        },
+        {
+          "label": "Material",
+          "value": "Nylon & Spandex"
+        },
+        {
+          "label": "Application",
+          "value": "Bra bands and picot edging"
+        }
+      ],
+      "intro": "Picot Elastic for bra bands and picot edging, available for buyer-specific color, width, stretch, logo, and packing development.",
+      "applications": [
+        "Bra bands and picot edging"
+      ],
+      "customOptions": [
+        "Color matching",
+        "Width and stretch",
+        "Logo or pattern",
+        "Roll and carton packing"
+      ]
+    },
+    {
+      "slug": "h60128",
+      "name": "H60128 | Plain Elastic",
+      "category": "lingerie",
+      "categoryLabel": "Bra & Lingerie Elastics",
+      "status": "published",
+      "sortOrder": 560,
+      "image": "assets/images/products/catalog-2026/h60128/h60128-plain-elastic-main-view.jpg",
+      "gallery": [
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/h60128/h60128-plain-elastic-main-view.jpg",
+          "label": "Main View",
+          "alt": "H60128 | Plain Elastic product view 1",
+          "rotate": false
+        },
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/h60128/h60128-plain-elastic-product-view-2.jpg",
+          "label": "Product View 2",
+          "alt": "H60128 | Plain Elastic product view 2",
+          "rotate": false
+        },
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/h60128/h60128-plain-elastic-product-view-3.jpg",
+          "label": "Product View 3",
+          "alt": "H60128 | Plain Elastic product view 3",
+          "rotate": false
+        },
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/h60128/h60128-plain-elastic-product-view-4.jpg",
+          "label": "Product View 4",
+          "alt": "H60128 | Plain Elastic product view 4",
+          "rotate": false
+        },
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/h60128/h60128-plain-elastic-product-view-5.jpg",
+          "label": "Product View 5",
+          "alt": "H60128 | Plain Elastic product view 5",
           "rotate": false
         }
       ],
@@ -484,87 +3096,877 @@
         "plain"
       ],
       "specs": [
-        "Durable stretch",
-        "Sweat resistant",
-        "Color matching",
-        "Roll packing"
+        {
+          "label": "Item No.",
+          "value": "H60128"
+        },
+        {
+          "label": "Width",
+          "value": "8/10/12/15 mm"
+        },
+        {
+          "label": "Material",
+          "value": "Nylon & Spandex"
+        },
+        {
+          "label": "Application",
+          "value": "Bra bands and picot edging"
+        }
       ],
-      "intro": "Binding elastic for activewear and sports garments needing durability, color matching, and production-ready roll supply.",
+      "intro": "Plain Elastic for bra bands and picot edging, available for buyer-specific color, width, stretch, logo, and packing development.",
       "applications": [
-        "Activewear binding",
-        "Sportswear trims",
-        "Performance apparel"
+        "Bra bands and picot edging"
       ],
       "customOptions": [
-        "Durable construction",
         "Color matching",
-        "Width and tension",
-        "Bulk packing"
-      ],
-      "createdAt": "2026-07-03T17:48:20.750Z",
-      "updatedAt": "2026-07-05T04:47:31.580Z"
+        "Width and stretch",
+        "Logo or pattern",
+        "Roll and carton packing"
+      ]
     },
     {
-      "slug": "new-product",
-      "name": "New Product",
-      "category": "mens",
-      "categoryLabel": "Men's Underwear Elastics",
+      "slug": "h60131",
+      "name": "H60131 | Picot Elastic",
+      "category": "lingerie",
+      "categoryLabel": "Bra & Lingerie Elastics",
       "status": "published",
-      "sortOrder": 100,
-      "image": "/uploads/products/new-product/1783136523794-front-rotated.webp",
+      "sortOrder": 570,
+      "image": "assets/images/products/catalog-2026/h60131/h60131-picot-elastic-main-view.jpg",
       "gallery": [
         {
           "group": "Product Display",
-          "src": "/uploads/products/new-product/1783136523794-front-rotated.webp",
-          "label": "Front",
-          "alt": "New Product - Front",
+          "src": "assets/images/products/catalog-2026/h60131/h60131-picot-elastic-main-view.jpg",
+          "label": "Main View",
+          "alt": "H60131 | Picot Elastic product view 1",
           "rotate": false
         },
         {
           "group": "Product Display",
-          "src": "/uploads/products/new-product/1783136544531-back-rotated.webp",
-          "label": "Colors",
-          "alt": "New Product - Colors",
+          "src": "assets/images/products/catalog-2026/h60131/h60131-picot-elastic-product-view-2.jpg",
+          "label": "Product View 2",
+          "alt": "H60131 | Picot Elastic product view 2",
           "rotate": false
         },
         {
           "group": "Product Display",
-          "src": "/uploads/products/new-product/1783136552908-colors-rotated.webp",
-          "label": "Front",
-          "alt": "New Product - Front",
+          "src": "assets/images/products/catalog-2026/h60131/h60131-picot-elastic-product-view-3.jpg",
+          "label": "Product View 3",
+          "alt": "H60131 | Picot Elastic product view 3",
           "rotate": false
         },
         {
           "group": "Product Display",
-          "src": "/uploads/products/new-product/1783136549779-application-rotated.webp",
-          "label": "Back",
-          "alt": "New Product - Back",
-          "rotate": false
-        },
-        {
-          "group": "Product Display",
-          "src": "/uploads/products/new-product/1783136557042-application-rotated.webp",
-          "label": "Colors",
-          "alt": "New Product - Colors",
-          "rotate": false
-        },
-        {
-          "group": "Product Display",
-          "src": "/uploads/products/new-product/1783138184621-front-and-back.webp",
-          "label": "Front & Back",
-          "alt": "New Product - Front & Back",
+          "src": "assets/images/products/catalog-2026/h60131/h60131-picot-elastic-product-view-4.jpg",
+          "label": "Product View 4",
+          "alt": "H60131 | Picot Elastic product view 4",
           "rotate": false
         }
       ],
       "tags": [
-        "printed"
+        "picot",
+        "decorative-edge"
       ],
-      "specs": [],
-      "intro": "",
-      "applications": [],
-      "customOptions": [],
-      "createdAt": "2026-07-04T03:41:03.203Z",
-      "updatedAt": "2026-07-05T04:47:31.580Z"
+      "specs": [
+        {
+          "label": "Item No.",
+          "value": "H60131"
+        },
+        {
+          "label": "Width",
+          "value": "11/13 mm"
+        },
+        {
+          "label": "Material",
+          "value": "Nylon & Spandex"
+        },
+        {
+          "label": "Application",
+          "value": "Bra bands and picot edging"
+        }
+      ],
+      "intro": "Picot Elastic for bra bands and picot edging, available for buyer-specific color, width, stretch, logo, and packing development.",
+      "applications": [
+        "Bra bands and picot edging"
+      ],
+      "customOptions": [
+        "Color matching",
+        "Width and stretch",
+        "Logo or pattern",
+        "Roll and carton packing"
+      ]
+    },
+    {
+      "slug": "h60190",
+      "name": "H60190 | Jacquard Bra Strap Elastic",
+      "category": "activewear",
+      "categoryLabel": "Activewear Elastics",
+      "status": "published",
+      "sortOrder": 590,
+      "image": "assets/images/products/catalog-2026/h60190/h60190-jacquard-bra-strap-elastic-main-view.jpg",
+      "gallery": [
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/h60190/h60190-jacquard-bra-strap-elastic-main-view.jpg",
+          "label": "Main View",
+          "alt": "H60190 | Jacquard Bra Strap Elastic product view 1",
+          "rotate": false
+        },
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/h60190/h60190-jacquard-bra-strap-elastic-product-view-2.jpg",
+          "label": "Product View 2",
+          "alt": "H60190 | Jacquard Bra Strap Elastic product view 2",
+          "rotate": false
+        },
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/h60190/h60190-jacquard-bra-strap-elastic-product-view-3.jpg",
+          "label": "Product View 3",
+          "alt": "H60190 | Jacquard Bra Strap Elastic product view 3",
+          "rotate": false
+        },
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/h60190/h60190-jacquard-bra-strap-elastic-product-view-4.jpg",
+          "label": "Product View 4",
+          "alt": "H60190 | Jacquard Bra Strap Elastic product view 4",
+          "rotate": false
+        },
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/h60190/h60190-jacquard-bra-strap-elastic-product-view-5.jpg",
+          "label": "Product View 5",
+          "alt": "H60190 | Jacquard Bra Strap Elastic product view 5",
+          "rotate": false
+        }
+      ],
+      "tags": [
+        "activewear",
+        "jacquard",
+        "bra-strap",
+        "binding"
+      ],
+      "specs": [
+        {
+          "label": "Item No.",
+          "value": "H60190"
+        },
+        {
+          "label": "Width",
+          "value": "15 mm"
+        },
+        {
+          "label": "Material",
+          "value": "Nylon & Spandex"
+        },
+        {
+          "label": "Application",
+          "value": "Bra bands, picot edging, and shoulder straps"
+        }
+      ],
+      "intro": "Jacquard Bra Strap Elastic for bra bands, picot edging, and shoulder straps, available for buyer-specific color, width, stretch, logo, and packing development.",
+      "applications": [
+        "Bra bands, picot edging, and shoulder straps"
+      ],
+      "customOptions": [
+        "Color matching",
+        "Width and stretch",
+        "Logo or pattern",
+        "Roll and carton packing"
+      ]
+    },
+    {
+      "slug": "h60198",
+      "name": "H60198 | Jacquard Bra Strap Elastic",
+      "category": "lingerie",
+      "categoryLabel": "Bra & Lingerie Elastics",
+      "status": "published",
+      "sortOrder": 600,
+      "image": "assets/images/products/catalog-2026/h60198/h60198-jacquard-bra-strap-elastic-main-view.jpg",
+      "gallery": [
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/h60198/h60198-jacquard-bra-strap-elastic-main-view.jpg",
+          "label": "Main View",
+          "alt": "H60198 | Jacquard Bra Strap Elastic product view 1",
+          "rotate": false
+        },
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/h60198/h60198-jacquard-bra-strap-elastic-product-view-2.jpg",
+          "label": "Product View 2",
+          "alt": "H60198 | Jacquard Bra Strap Elastic product view 2",
+          "rotate": false
+        },
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/h60198/h60198-jacquard-bra-strap-elastic-product-view-3.jpg",
+          "label": "Product View 3",
+          "alt": "H60198 | Jacquard Bra Strap Elastic product view 3",
+          "rotate": false
+        },
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/h60198/h60198-jacquard-bra-strap-elastic-product-view-4.jpg",
+          "label": "Product View 4",
+          "alt": "H60198 | Jacquard Bra Strap Elastic product view 4",
+          "rotate": false
+        },
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/h60198/h60198-jacquard-bra-strap-elastic-product-view-5.jpg",
+          "label": "Product View 5",
+          "alt": "H60198 | Jacquard Bra Strap Elastic product view 5",
+          "rotate": false
+        }
+      ],
+      "tags": [
+        "jacquard",
+        "bra-strap",
+        "waistband"
+      ],
+      "specs": [
+        {
+          "label": "Item No.",
+          "value": "H60198"
+        },
+        {
+          "label": "Width",
+          "value": "16 mm"
+        },
+        {
+          "label": "Material",
+          "value": "Nylon & Spandex"
+        },
+        {
+          "label": "Application",
+          "value": "Lingerie Shoulder Straps & Lace Underwear Waistbands"
+        }
+      ],
+      "intro": "Jacquard Bra Strap Elastic for lingerie shoulder straps & lace underwear waistbands, available for buyer-specific color, width, stretch, logo, and packing development.",
+      "applications": [
+        "Lingerie Shoulder Straps & Lace Underwear Waistbands"
+      ],
+      "customOptions": [
+        "Color matching",
+        "Width and stretch",
+        "Logo or pattern",
+        "Roll and carton packing"
+      ]
+    },
+    {
+      "slug": "hg50354",
+      "name": "HG50354 | Jacquard Elastic",
+      "category": "activewear",
+      "categoryLabel": "Activewear Elastics",
+      "status": "published",
+      "sortOrder": 610,
+      "image": "assets/images/products/catalog-2026/hg50354/hg50354-jacquard-elastic-main-view.jpg",
+      "gallery": [
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/hg50354/hg50354-jacquard-elastic-main-view.jpg",
+          "label": "Main View",
+          "alt": "HG50354 | Jacquard Elastic product view 1",
+          "rotate": false
+        },
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/hg50354/hg50354-jacquard-elastic-product-view-2.jpg",
+          "label": "Product View 2",
+          "alt": "HG50354 | Jacquard Elastic product view 2",
+          "rotate": false
+        },
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/hg50354/hg50354-jacquard-elastic-product-view-3.jpg",
+          "label": "Product View 3",
+          "alt": "HG50354 | Jacquard Elastic product view 3",
+          "rotate": false
+        },
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/hg50354/hg50354-jacquard-elastic-product-view-4.jpg",
+          "label": "Product View 4",
+          "alt": "HG50354 | Jacquard Elastic product view 4",
+          "rotate": false
+        },
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/hg50354/hg50354-jacquard-elastic-product-view-5.jpg",
+          "label": "Product View 5",
+          "alt": "HG50354 | Jacquard Elastic product view 5",
+          "rotate": false
+        }
+      ],
+      "tags": [
+        "activewear",
+        "jacquard",
+        "waistband"
+      ],
+      "specs": [
+        {
+          "label": "Item No.",
+          "value": "HG50354"
+        },
+        {
+          "label": "Width",
+          "value": "50 mm"
+        },
+        {
+          "label": "Material",
+          "value": "Polyester & Spandex"
+        },
+        {
+          "label": "Application",
+          "value": "Football, basketball, and sportswear waistbands"
+        }
+      ],
+      "intro": "Jacquard Elastic for football, basketball, and sportswear waistbands, available for buyer-specific color, width, stretch, logo, and packing development.",
+      "applications": [
+        "Football, basketball, and sportswear waistbands"
+      ],
+      "customOptions": [
+        "Color matching",
+        "Width and stretch",
+        "Logo or pattern",
+        "Roll and carton packing"
+      ]
+    },
+    {
+      "slug": "ht20-4222",
+      "name": "HT20-4222 | Silicone Grip Elastic",
+      "category": "mens",
+      "categoryLabel": "Men's Underwear Elastics",
+      "status": "published",
+      "sortOrder": 620,
+      "image": "assets/images/products/catalog-2026/ht20-4222/ht20-4222-silicone-grip-elastic-main-view.jpg",
+      "gallery": [
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/ht20-4222/ht20-4222-silicone-grip-elastic-main-view.jpg",
+          "label": "Main View",
+          "alt": "HT20-4222 | Silicone Grip Elastic product view 1",
+          "rotate": false
+        },
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/ht20-4222/ht20-4222-silicone-grip-elastic-product-view-2.jpg",
+          "label": "Product View 2",
+          "alt": "HT20-4222 | Silicone Grip Elastic product view 2",
+          "rotate": false
+        },
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/ht20-4222/ht20-4222-silicone-grip-elastic-product-view-3.jpg",
+          "label": "Product View 3",
+          "alt": "HT20-4222 | Silicone Grip Elastic product view 3",
+          "rotate": false
+        },
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/ht20-4222/ht20-4222-silicone-grip-elastic-product-view-4.jpg",
+          "label": "Product View 4",
+          "alt": "HT20-4222 | Silicone Grip Elastic product view 4",
+          "rotate": false
+        },
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/ht20-4222/ht20-4222-silicone-grip-elastic-product-view-5.jpg",
+          "label": "Product View 5",
+          "alt": "HT20-4222 | Silicone Grip Elastic product view 5",
+          "rotate": false
+        }
+      ],
+      "tags": [
+        "silicone-grip"
+      ],
+      "specs": [
+        {
+          "label": "Item No.",
+          "value": "HT20-4222"
+        },
+        {
+          "label": "Width",
+          "value": "10 / 15 mm"
+        },
+        {
+          "label": "Material",
+          "value": "Polyester"
+        },
+        {
+          "label": "Application",
+          "value": "Non-slip elastic applications"
+        }
+      ],
+      "intro": "Silicone Grip Elastic for non-slip elastic applications, available for buyer-specific color, width, stretch, logo, and packing development.",
+      "applications": [
+        "Non-slip elastic applications"
+      ],
+      "customOptions": [
+        "Color matching",
+        "Width and stretch",
+        "Logo or pattern",
+        "Roll and carton packing"
+      ]
+    },
+    {
+      "slug": "jq124",
+      "name": "JQ124 | Jacquard Elastic",
+      "category": "mens",
+      "categoryLabel": "Men's Underwear Elastics",
+      "status": "published",
+      "sortOrder": 630,
+      "image": "assets/images/products/catalog-2026/jq124/jq124-jacquard-elastic-main-view.jpg",
+      "gallery": [
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/jq124/jq124-jacquard-elastic-main-view.jpg",
+          "label": "Main View",
+          "alt": "JQ124 | Jacquard Elastic product view 1",
+          "rotate": false
+        },
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/jq124/jq124-jacquard-elastic-product-view-2.jpg",
+          "label": "Product View 2",
+          "alt": "JQ124 | Jacquard Elastic product view 2",
+          "rotate": false
+        },
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/jq124/jq124-jacquard-elastic-product-view-3.jpg",
+          "label": "Product View 3",
+          "alt": "JQ124 | Jacquard Elastic product view 3",
+          "rotate": false
+        },
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/jq124/jq124-jacquard-elastic-product-view-4.jpg",
+          "label": "Product View 4",
+          "alt": "JQ124 | Jacquard Elastic product view 4",
+          "rotate": false
+        },
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/jq124/jq124-jacquard-elastic-product-view-5.jpg",
+          "label": "Product View 5",
+          "alt": "JQ124 | Jacquard Elastic product view 5",
+          "rotate": false
+        }
+      ],
+      "tags": [
+        "jacquard",
+        "printed",
+        "waistband"
+      ],
+      "specs": [
+        {
+          "label": "Item No.",
+          "value": "JQ124"
+        },
+        {
+          "label": "Width",
+          "value": "25 mm"
+        },
+        {
+          "label": "Material",
+          "value": "Polyester & Spandex"
+        },
+        {
+          "label": "Application",
+          "value": "Elastic waistbands"
+        }
+      ],
+      "intro": "Jacquard Elastic for elastic waistbands, available for buyer-specific color, width, stretch, logo, and packing development.",
+      "applications": [
+        "Elastic waistbands"
+      ],
+      "customOptions": [
+        "Color matching",
+        "Width and stretch",
+        "Logo or pattern",
+        "Roll and carton packing"
+      ]
+    },
+    {
+      "slug": "jq129",
+      "name": "JQ129 | Jacquard Elastic",
+      "category": "mens",
+      "categoryLabel": "Men's Underwear Elastics",
+      "status": "published",
+      "sortOrder": 640,
+      "image": "assets/images/products/catalog-2026/jq129/jq129-jacquard-elastic-main-view.jpg",
+      "gallery": [
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/jq129/jq129-jacquard-elastic-main-view.jpg",
+          "label": "Main View",
+          "alt": "JQ129 | Jacquard Elastic product view 1",
+          "rotate": false
+        },
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/jq129/jq129-jacquard-elastic-product-view-2.jpg",
+          "label": "Product View 2",
+          "alt": "JQ129 | Jacquard Elastic product view 2",
+          "rotate": false
+        },
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/jq129/jq129-jacquard-elastic-product-view-3.jpg",
+          "label": "Product View 3",
+          "alt": "JQ129 | Jacquard Elastic product view 3",
+          "rotate": false
+        },
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/jq129/jq129-jacquard-elastic-product-view-4.jpg",
+          "label": "Product View 4",
+          "alt": "JQ129 | Jacquard Elastic product view 4",
+          "rotate": false
+        },
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/jq129/jq129-jacquard-elastic-product-view-5.jpg",
+          "label": "Product View 5",
+          "alt": "JQ129 | Jacquard Elastic product view 5",
+          "rotate": false
+        }
+      ],
+      "tags": [
+        "jacquard",
+        "printed",
+        "waistband"
+      ],
+      "specs": [
+        {
+          "label": "Item No.",
+          "value": "JQ129"
+        },
+        {
+          "label": "Width",
+          "value": "30 mm"
+        },
+        {
+          "label": "Material",
+          "value": "Polyester & Spandex"
+        },
+        {
+          "label": "Application",
+          "value": "Elastic waistbands"
+        }
+      ],
+      "intro": "Jacquard Elastic for elastic waistbands, available for buyer-specific color, width, stretch, logo, and packing development.",
+      "applications": [
+        "Elastic waistbands"
+      ],
+      "customOptions": [
+        "Color matching",
+        "Width and stretch",
+        "Logo or pattern",
+        "Roll and carton packing"
+      ]
+    },
+    {
+      "slug": "jq130",
+      "name": "JQ130 | Jacquard Elastic",
+      "category": "mens",
+      "categoryLabel": "Men's Underwear Elastics",
+      "status": "published",
+      "sortOrder": 650,
+      "image": "assets/images/products/catalog-2026/jq130/jq130-jacquard-elastic-main-view.jpg",
+      "gallery": [
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/jq130/jq130-jacquard-elastic-main-view.jpg",
+          "label": "Main View",
+          "alt": "JQ130 | Jacquard Elastic product view 1",
+          "rotate": false
+        },
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/jq130/jq130-jacquard-elastic-product-view-2.jpg",
+          "label": "Product View 2",
+          "alt": "JQ130 | Jacquard Elastic product view 2",
+          "rotate": false
+        },
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/jq130/jq130-jacquard-elastic-product-view-3.jpg",
+          "label": "Product View 3",
+          "alt": "JQ130 | Jacquard Elastic product view 3",
+          "rotate": false
+        },
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/jq130/jq130-jacquard-elastic-product-view-4.jpg",
+          "label": "Product View 4",
+          "alt": "JQ130 | Jacquard Elastic product view 4",
+          "rotate": false
+        },
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/jq130/jq130-jacquard-elastic-product-view-5.jpg",
+          "label": "Product View 5",
+          "alt": "JQ130 | Jacquard Elastic product view 5",
+          "rotate": false
+        }
+      ],
+      "tags": [
+        "jacquard",
+        "printed",
+        "waistband"
+      ],
+      "specs": [
+        {
+          "label": "Item No.",
+          "value": "JQ130"
+        },
+        {
+          "label": "Width",
+          "value": "35 mm"
+        },
+        {
+          "label": "Material",
+          "value": "Polyester & Spandex"
+        },
+        {
+          "label": "Application",
+          "value": "Elastic waistbands"
+        }
+      ],
+      "intro": "Jacquard Elastic for elastic waistbands, available for buyer-specific color, width, stretch, logo, and packing development.",
+      "applications": [
+        "Elastic waistbands"
+      ],
+      "customOptions": [
+        "Color matching",
+        "Width and stretch",
+        "Logo or pattern",
+        "Roll and carton packing"
+      ]
+    },
+    {
+      "slug": "n6294",
+      "name": "N6294 | Bra Strap Elastic",
+      "category": "lingerie",
+      "categoryLabel": "Bra & Lingerie Elastics",
+      "status": "published",
+      "sortOrder": 660,
+      "image": "assets/images/products/catalog-2026/n6294/n6294-bra-strap-elastic-main-view.jpg",
+      "gallery": [
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/n6294/n6294-bra-strap-elastic-main-view.jpg",
+          "label": "Main View",
+          "alt": "N6294 | Bra Strap Elastic product view 1",
+          "rotate": false
+        },
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/n6294/n6294-bra-strap-elastic-product-view-2.jpg",
+          "label": "Product View 2",
+          "alt": "N6294 | Bra Strap Elastic product view 2",
+          "rotate": false
+        },
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/n6294/n6294-bra-strap-elastic-product-view-3.jpg",
+          "label": "Product View 3",
+          "alt": "N6294 | Bra Strap Elastic product view 3",
+          "rotate": false
+        },
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/n6294/n6294-bra-strap-elastic-product-view-4.jpg",
+          "label": "Product View 4",
+          "alt": "N6294 | Bra Strap Elastic product view 4",
+          "rotate": false
+        }
+      ],
+      "tags": [
+        "bra-strap"
+      ],
+      "specs": [
+        {
+          "label": "Item No.",
+          "value": "N6294"
+        },
+        {
+          "label": "Width",
+          "value": "25/30 mm"
+        },
+        {
+          "label": "Material",
+          "value": "Nylon & Spandex"
+        },
+        {
+          "label": "Application",
+          "value": "Bra and lingerie shoulder straps"
+        }
+      ],
+      "intro": "Bra Strap Elastic for bra and lingerie shoulder straps, available for buyer-specific color, width, stretch, logo, and packing development.",
+      "applications": [
+        "Bra and lingerie shoulder straps"
+      ],
+      "customOptions": [
+        "Color matching",
+        "Width and stretch",
+        "Logo or pattern",
+        "Roll and carton packing"
+      ]
+    },
+    {
+      "slug": "onitademas",
+      "name": "onitadeMas | Jacquard Elastic",
+      "category": "activewear",
+      "categoryLabel": "Activewear Elastics",
+      "status": "published",
+      "sortOrder": 670,
+      "image": "assets/images/products/catalog-2026/onitademas/onitademas-jacquard-elastic-main-view.jpg",
+      "gallery": [
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/onitademas/onitademas-jacquard-elastic-main-view.jpg",
+          "label": "Main View",
+          "alt": "onitadeMas | Jacquard Elastic product view 1",
+          "rotate": false
+        },
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/onitademas/onitademas-jacquard-elastic-product-view-2.jpg",
+          "label": "Product View 2",
+          "alt": "onitadeMas | Jacquard Elastic product view 2",
+          "rotate": false
+        },
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/onitademas/onitademas-jacquard-elastic-product-view-3.jpg",
+          "label": "Product View 3",
+          "alt": "onitadeMas | Jacquard Elastic product view 3",
+          "rotate": false
+        },
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/onitademas/onitademas-jacquard-elastic-product-view-4.jpg",
+          "label": "Product View 4",
+          "alt": "onitadeMas | Jacquard Elastic product view 4",
+          "rotate": false
+        }
+      ],
+      "tags": [
+        "activewear",
+        "jacquard",
+        "waistband"
+      ],
+      "specs": [
+        {
+          "label": "Item No.",
+          "value": "onitadeMas"
+        },
+        {
+          "label": "Width",
+          "value": "25 mm"
+        },
+        {
+          "label": "Material",
+          "value": "Nylon & Spandex"
+        },
+        {
+          "label": "Application",
+          "value": "Elastic waistbands"
+        }
+      ],
+      "intro": "Jacquard Elastic for elastic waistbands, available for buyer-specific color, width, stretch, logo, and packing development.",
+      "applications": [
+        "Elastic waistbands"
+      ],
+      "customOptions": [
+        "Color matching",
+        "Width and stretch",
+        "Logo or pattern",
+        "Roll and carton packing"
+      ]
+    },
+    {
+      "slug": "spooky-babe-slicone",
+      "name": "SPOOKY BABE Silicone Printed Elastic",
+      "category": "mens",
+      "categoryLabel": "Men's Underwear Elastics",
+      "status": "published",
+      "sortOrder": 680,
+      "image": "assets/images/products/catalog-2026/spooky-babe-slicone/spooky-babe-silicone-printed-elastic-main-view.jpg",
+      "gallery": [
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/spooky-babe-slicone/spooky-babe-silicone-printed-elastic-main-view.jpg",
+          "label": "Main View",
+          "alt": "SPOOKY BABE Silicone Printed Elastic product view 1",
+          "rotate": false
+        },
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/spooky-babe-slicone/spooky-babe-silicone-printed-elastic-product-view-2.jpg",
+          "label": "Product View 2",
+          "alt": "SPOOKY BABE Silicone Printed Elastic product view 2",
+          "rotate": false
+        },
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/spooky-babe-slicone/spooky-babe-silicone-printed-elastic-product-view-3.jpg",
+          "label": "Product View 3",
+          "alt": "SPOOKY BABE Silicone Printed Elastic product view 3",
+          "rotate": false
+        },
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/spooky-babe-slicone/spooky-babe-silicone-printed-elastic-product-view-4.jpg",
+          "label": "Product View 4",
+          "alt": "SPOOKY BABE Silicone Printed Elastic product view 4",
+          "rotate": false
+        },
+        {
+          "group": "Product Display",
+          "src": "assets/images/products/catalog-2026/spooky-babe-slicone/spooky-babe-silicone-printed-elastic-product-view-5.jpg",
+          "label": "Product View 5",
+          "alt": "SPOOKY BABE Silicone Printed Elastic product view 5",
+          "rotate": false
+        }
+      ],
+      "tags": [
+        "silicone-grip",
+        "printed",
+        "waistband"
+      ],
+      "specs": [
+        {
+          "label": "Item No.",
+          "value": "SPOOKY BABE:SLICONE"
+        },
+        {
+          "label": "Width",
+          "value": "35 mm"
+        },
+        {
+          "label": "Material",
+          "value": "Nylon & Spandex"
+        },
+        {
+          "label": "Application",
+          "value": "Elastic waistbands"
+        }
+      ],
+      "intro": "Silicone Printed Elastic for elastic waistbands, available for buyer-specific color, width, stretch, logo, and packing development.",
+      "applications": [
+        "Elastic waistbands"
+      ],
+      "customOptions": [
+        "Color matching",
+        "Width and stretch",
+        "Logo or pattern",
+        "Roll and carton packing"
+      ]
     }
   ]
 }

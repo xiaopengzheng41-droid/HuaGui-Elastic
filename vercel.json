@@ -34,6 +34,26 @@
       "destination": "/api/$1"
     },
     {
+      "source": "/sitemap.xml",
+      "destination": "/api/sitemap"
+    },
+    {
+      "source": "/:locale(es|pt-br|ru|ar)",
+      "destination": "/huagui_company_site/index.html"
+    },
+    {
+      "source": "/:locale(es|pt-br|ru|ar)/products/:slug",
+      "destination": "/huagui_company_site/product-detail.html?slug=:slug"
+    },
+    {
+      "source": "/products/:slug",
+      "destination": "/huagui_company_site/product-detail.html?slug=:slug"
+    },
+    {
+      "source": "/:locale(es|pt-br|ru|ar)/:page.html",
+      "destination": "/huagui_company_site/:page.html"
+    },
+    {
       "source": "/admin",
       "destination": "/huagui_company_site/admin.html"
     },

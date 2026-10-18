@@ -61,23 +61,34 @@ function cleanText(value, maxLength) {
 function validateInquiryInput(input) {
   const inquiry = {
     name: cleanText(input.name, 120),
+    company: cleanText(input.company, 180),
+    country: cleanText(input.country, 120),
+    businessRole: cleanText(input.businessRole, 80),
     email: cleanText(input.email, 254).toLowerCase(),
     phone: cleanText(input.phone, 80),
     product: cleanText(input.product, 40),
     productName: cleanText(input.productName, 160),
     itemNo: cleanText(input.itemNo, 100),
     quantity: cleanText(input.quantity, 120),
+    tradeTerm: cleanText(input.tradeTerm, 20),
+    quoteCurrency: cleanText(input.quoteCurrency, 20),
     message: cleanText(input.message, 5000),
-    sourceUrl: cleanText(input.sourceUrl, 500)
+    sourceUrl: cleanText(input.sourceUrl, 500),
+    privacyConsent: input.privacyConsent === 'accepted'
   };
 
-  if (!inquiry.name || !inquiry.email || !inquiry.message) {
-    const error = new Error('Name, email, and message are required.');
+  if (!inquiry.name || !inquiry.company || !inquiry.country || !inquiry.businessRole || !inquiry.email || !inquiry.message) {
+    const error = new Error('Name, company, country, business role, email, and message are required.');
     error.statusCode = 400;
     throw error;
   }
   if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(inquiry.email)) {
     const error = new Error('Please enter a valid email address.');
+    error.statusCode = 400;
+    throw error;
+  }
+  if (!inquiry.privacyConsent) {
+    const error = new Error('Please accept the Privacy Policy before sending your inquiry.');
     error.statusCode = 400;
     throw error;
   }
@@ -107,14 +118,20 @@ function normalizeStoredInquiry(value) {
     id: cleanText(source.id, 40),
     status,
     name: cleanText(source.name, 120),
+    company: cleanText(source.company, 180),
+    country: cleanText(source.country, 120),
+    businessRole: cleanText(source.businessRole, 80),
     email: cleanText(source.email, 254),
     phone: cleanText(source.phone, 80),
     product: cleanText(source.product, 40),
     productName: cleanText(source.productName, 160),
     itemNo: cleanText(source.itemNo, 100),
     quantity: cleanText(source.quantity, 120),
+    tradeTerm: cleanText(source.tradeTerm, 20),
+    quoteCurrency: cleanText(source.quoteCurrency, 20),
     message: cleanText(source.message, 5000),
     sourceUrl: cleanText(source.sourceUrl, 500),
+    privacyConsent: source.privacyConsent === true,
     createdAt: source.createdAt || new Date().toISOString(),
     updatedAt: source.updatedAt || source.createdAt || new Date().toISOString(),
     resolvedAt: source.resolvedAt || null

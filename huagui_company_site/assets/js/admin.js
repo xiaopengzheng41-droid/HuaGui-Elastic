@@ -18,16 +18,16 @@ const TAG_LABELS = {
   'bra-strap': 'Bra Strap',
   waistband: 'Waistband',
   lingerie: 'Lingerie',
-  activewear: 'Activewear'
+  activewear: 'Activewear',
+  binding: 'Binding',
+  'decorative-edge': 'Decorative Edge',
+  reflective: 'Reflective',
+  'elastic-tape': 'Elastic Tape',
+  knitted: 'Knitted',
+  'womens-underwear': "Women's Underwear"
 };
 
-const DEFAULT_FEATURES = [
-  'Stable stretch and recovery',
-  'Vivid, wash-resistant printing',
-  'Soft skin-contact comfort',
-  'Custom widths, logos, and colors',
-  'Bulk-ready quality consistency'
-];
+const DEFAULT_FEATURES = [];
 
 const LEGACY_SPEC_LABELS = ['Width', 'Material', 'Printing', 'Handfeel'];
 
@@ -39,7 +39,7 @@ const IMAGE_LABEL_PRESETS = [
   { label: 'Application', group: 'Application' }
 ];
 
-const PLACEHOLDER_IMAGE = 'assets/images/product-elastic-sample-board.webp';
+const PLACEHOLDER_IMAGE = 'assets/images/products/product-elastic-sample-board/product-elastic-sample-board.webp';
 const LOCAL_ADMIN_URL = 'http://127.0.0.1:3000/admin';
 const ADMIN_SCRIPT_VERSION = 'admin-cms-20260718-inquiries';
 
@@ -605,12 +605,17 @@ function normalizeInquiry(value) {
     id: String(source.id || ''),
     status,
     name: String(source.name || ''),
+    company: String(source.company || ''),
+    country: String(source.country || ''),
+    businessRole: String(source.businessRole || ''),
     email: String(source.email || ''),
     phone: String(source.phone || ''),
     product: String(source.product || ''),
     productName: String(source.productName || ''),
     itemNo: String(source.itemNo || ''),
     quantity: String(source.quantity || ''),
+    tradeTerm: String(source.tradeTerm || ''),
+    quoteCurrency: String(source.quoteCurrency || ''),
     message: String(source.message || ''),
     sourceUrl: String(source.sourceUrl || ''),
     createdAt: source.createdAt || '',
@@ -662,6 +667,9 @@ function renderInquiryList() {
     const haystack = [
       inquiry.id,
       inquiry.name,
+      inquiry.company,
+      inquiry.country,
+      inquiry.businessRole,
       inquiry.email,
       inquiry.phone,
       inquiry.productName,
@@ -744,11 +752,16 @@ function renderInquiryDetail() {
         <div class="admin-inquiry-meta">
           <div><span>Status</span><strong>${escapeHtml(inquiryStatusLabel(inquiry.status))}</strong></div>
           <div><span>Email</span><a href="mailto:${escapeHtml(inquiry.email)}">${escapeHtml(inquiry.email)}</a></div>
+          <div><span>Company</span><strong>${escapeHtml(inquiry.company || 'Not provided')}</strong></div>
+          <div><span>Country / Region</span><strong>${escapeHtml(inquiry.country || 'Not provided')}</strong></div>
+          <div><span>Business Role</span><strong>${escapeHtml(inquiry.businessRole || 'Not provided')}</strong></div>
           <div><span>Phone / WhatsApp</span>${inquiry.phone ? `<a href="tel:${escapeHtml(inquiry.phone)}">${escapeHtml(inquiry.phone)}</a>` : '<strong>Not provided</strong>'}</div>
           <div><span>Product Category</span><strong>${escapeHtml(productLabel)}</strong></div>
           <div><span>Product Reference</span><strong>${escapeHtml(inquiry.productName || 'Not provided')}</strong></div>
           <div><span>Item No.</span><strong>${escapeHtml(inquiry.itemNo || 'Not provided')}</strong></div>
           <div><span>Target Quantity</span><strong>${escapeHtml(inquiry.quantity || 'Not provided')}</strong></div>
+          <div><span>Trade Term</span><strong>${escapeHtml(inquiry.tradeTerm || 'Not provided')}</strong></div>
+          <div><span>Quote Currency</span><strong>${escapeHtml(inquiry.quoteCurrency || 'Not provided')}</strong></div>
           <div><span>Source Page</span><strong>${escapeHtml(inquiry.sourceUrl || 'Not recorded')}</strong></div>
         </div>
         <div class="admin-inquiry-message">
