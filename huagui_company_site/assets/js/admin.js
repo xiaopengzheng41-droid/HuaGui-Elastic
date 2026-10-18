@@ -39,7 +39,7 @@ const IMAGE_LABEL_PRESETS = [
   { label: 'Application', group: 'Application' }
 ];
 
-const PLACEHOLDER_IMAGE = 'assets/images/products/product-elastic-sample-board/product-elastic-sample-board.webp';
+const PLACEHOLDER_IMAGE = 'assets/images/products/catalog-2026/jq124/jq124-jacquard-elastic-main-view.jpg';
 const LOCAL_ADMIN_URL = 'http://127.0.0.1:3000/admin';
 const ADMIN_SCRIPT_VERSION = 'admin-cms-20260718-inquiries';
 

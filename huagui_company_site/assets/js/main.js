@@ -4706,7 +4706,7 @@ function initProductDetailPage() {
   if (!gallery.length) {
     gallery.push({
       group: 'Gallery',
-      src: 'assets/images/products/product-elastic-sample-board/product-elastic-sample-board.webp',
+      src: 'assets/images/products/catalog-2026/jq124/jq124-jacquard-elastic-main-view.jpg',
       label: 'Preview Image',
       alt: `${product.name} preview image`,
       rotate: false
