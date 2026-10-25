@@ -305,7 +305,7 @@ const DEFAULT_PRODUCTS = [
     "specs": [
       {
         "label": "Item No.",
-        "value": "46mm 硅胶带"
+        "value": "46 mm Silicone Grip Elastic"
       },
       {
         "label": "Width",
@@ -382,7 +382,7 @@ const DEFAULT_PRODUCTS = [
     "specs": [
       {
         "label": "Item No.",
-        "value": "46mm 横纹带"
+        "value": "46 mm Ribbed Elastic Webbing"
       },
       {
         "label": "Width",
@@ -1364,7 +1364,7 @@ const DEFAULT_PRODUCTS = [
     "specs": [
       {
         "label": "Item No.",
-        "value": "反光包边"
+        "value": "Reflective Binding Elastic"
       },
       {
         "label": "Width",
@@ -1444,7 +1444,7 @@ const DEFAULT_PRODUCTS = [
     "specs": [
       {
         "label": "Item No.",
-        "value": "金银丝星条旗"
+        "value": "Metallic Star-and-Stripe Jacquard Elastic"
       },
       {
         "label": "Width",
@@ -1523,7 +1523,7 @@ const DEFAULT_PRODUCTS = [
     "specs": [
       {
         "label": "Item No.",
-        "value": "提花带HAPPY"
+        "value": "HAPPY Jacquard Elastic"
       },
       {
         "label": "Width",
