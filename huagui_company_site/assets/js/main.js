@@ -4521,8 +4521,15 @@ function upsertMeta(selector, attributes) {
 function setProductSeo(product) {
   const translate = window.HUAGUI_I18N?.translate || (value => value);
   const localizedName = translate(product.name);
+  const locale = window.HUAGUI_I18N?.locale || 'en';
+  const localizedTitle = ({
+    es: `Fabricante de ${localizedName}`,
+    'pt-br': `Fabricante de ${localizedName}`,
+    ru: `Производитель ${localizedName}`,
+    ar: `مصنع ${localizedName}`
+  })[locale] || `${localizedName} Manufacturer`;
   const description = translate(product.intro || `${product.name} manufactured by Huagui Elastic for underwear, lingerie, bras, and intimate apparel production.`);
-  document.title = `${localizedName} Manufacturer | Huagui Elastic`;
+  document.title = `${localizedTitle} | Huagui Elastic`;
   upsertMeta('meta[name="description"]', { name: 'description', content: description });
   upsertMeta('meta[property="og:title"]', { property: 'og:title', content: document.title });
   upsertMeta('meta[property="og:description"]', { property: 'og:description', content: description });
