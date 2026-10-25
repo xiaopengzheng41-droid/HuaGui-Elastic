@@ -260,10 +260,17 @@
     return productTerms[text] || productTermsLower.get(text.toLowerCase()) || '';
   }
 
+  function preserveEmailAddresses(source, translated) {
+    const emailPattern = /[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}/gi;
+    const sourceEmails = String(source).match(emailPattern) || [];
+    let index = 0;
+    return String(translated).replace(emailPattern, match => sourceEmails[index++] || match);
+  }
+
   function translateValue(value) {
     const text = String(value ?? '');
     if (locale === 'en' || !text) return text;
-    if (dictionary[text]) return dictionary[text];
+    if (dictionary[text]) return preserveEmailAddresses(text, dictionary[text]);
     const exact = productTerm(text);
     if (exact) return exact;
 
