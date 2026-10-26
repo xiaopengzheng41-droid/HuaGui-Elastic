@@ -3390,13 +3390,6 @@
           "label": "Product View 4",
           "alt": "HG50354 | Jacquard Elastic product view 4",
           "rotate": false
-        },
-        {
-          "group": "Product Display",
-          "src": "assets/images/products/catalog-2026/hg50354/hg50354-jacquard-elastic-product-view-5.jpg",
-          "label": "Product View 5",
-          "alt": "HG50354 | Jacquard Elastic product view 5",
-          "rotate": false
         }
       ],
       "tags": [
@@ -3675,41 +3668,34 @@
       "categoryLabel": "Men's Underwear Elastics",
       "status": "published",
       "sortOrder": 650,
-      "image": "assets/images/products/catalog-2026/jq130/jq130-jacquard-elastic-main-view.jpg",
+      "image": "assets/images/products/catalog-2026/jq130/jq130-jacquard-elastic-product-view-2.jpg",
       "gallery": [
         {
           "group": "Product Display",
-          "src": "assets/images/products/catalog-2026/jq130/jq130-jacquard-elastic-main-view.jpg",
+          "src": "assets/images/products/catalog-2026/jq130/jq130-jacquard-elastic-product-view-2.jpg",
           "label": "Main View",
           "alt": "JQ130 | Jacquard Elastic product view 1",
           "rotate": false
         },
         {
           "group": "Product Display",
-          "src": "assets/images/products/catalog-2026/jq130/jq130-jacquard-elastic-product-view-2.jpg",
+          "src": "assets/images/products/catalog-2026/jq130/jq130-jacquard-elastic-product-view-3.jpg",
           "label": "Product View 2",
           "alt": "JQ130 | Jacquard Elastic product view 2",
           "rotate": false
         },
         {
           "group": "Product Display",
-          "src": "assets/images/products/catalog-2026/jq130/jq130-jacquard-elastic-product-view-3.jpg",
+          "src": "assets/images/products/catalog-2026/jq130/jq130-jacquard-elastic-product-view-4.jpg",
           "label": "Product View 3",
           "alt": "JQ130 | Jacquard Elastic product view 3",
           "rotate": false
         },
         {
           "group": "Product Display",
-          "src": "assets/images/products/catalog-2026/jq130/jq130-jacquard-elastic-product-view-4.jpg",
+          "src": "assets/images/products/catalog-2026/jq130/jq130-jacquard-elastic-product-view-5.jpg",
           "label": "Product View 4",
           "alt": "JQ130 | Jacquard Elastic product view 4",
-          "rotate": false
-        },
-        {
-          "group": "Product Display",
-          "src": "assets/images/products/catalog-2026/jq130/jq130-jacquard-elastic-product-view-5.jpg",
-          "label": "Product View 5",
-          "alt": "JQ130 | Jacquard Elastic product view 5",
           "rotate": false
         }
       ],
