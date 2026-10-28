@@ -88,6 +88,7 @@ function injectFavicons() {
 }
 
 function injectHeader() {
+  if (document.querySelector('#app > header[data-seo-shell="header"]')) return;
   const path = window.location.pathname;
   const isActive = (page) => path.endsWith(page) || (page === 'index.html' && path.endsWith('/')) ? ' class="active"' : '';
   const header = document.createElement('header');
@@ -118,6 +119,7 @@ function injectHeader() {
 }
 
 function injectFooter() {
+  if (document.querySelector('#app > footer[data-seo-shell="footer"]')) return;
   const footer = document.createElement('footer');
   footer.innerHTML = `
     <div class="footer">
@@ -4534,7 +4536,9 @@ function setProductSeo(product) {
   upsertMeta('meta[property="og:title"]', { property: 'og:title', content: document.title });
   upsertMeta('meta[property="og:description"]', { property: 'og:description', content: description });
   upsertMeta('meta[property="og:type"]', { property: 'og:type', content: 'product' });
-  upsertMeta('meta[property="og:url"]', { property: 'og:url', content: window.location.href });
+  const canonicalUrl = document.head.querySelector('link[rel="canonical"]')?.href
+    || new URL(window.location.pathname, window.location.origin).href;
+  upsertMeta('meta[property="og:url"]', { property: 'og:url', content: canonicalUrl });
   if (product.image) upsertMeta('meta[property="og:image"]', { property: 'og:image', content: new URL(product.image, window.location.origin).href });
 
   const itemNo = product.specs.find(spec => /^item\s*(no\.?|number)$/i.test(spec.label.trim()))?.value || '';
@@ -4546,6 +4550,7 @@ function setProductSeo(product) {
   structuredData.textContent = JSON.stringify({
     '@context': 'https://schema.org',
     '@type': 'Product',
+    url: canonicalUrl,
     name: localizedName,
     description,
     image: product.gallery.map(item => new URL(item.src, window.location.origin).href),
@@ -4676,6 +4681,7 @@ function initProductDetailPage() {
   const product = products.find(p => p.slug === slug) || (isPreviewMode ? products[0] : null);
   if (!product) {
     document.title = 'Huagui Elastic - Product Not Found';
+    upsertMeta('meta[name="robots"]', { name: 'robots', content: 'noindex, nofollow' });
     page.innerHTML = `
       <section class="section">
         <div class="container">

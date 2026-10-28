@@ -1,4 +1,13 @@
 {
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "functions": {
+    "api/seo.js": {
+      "includeFiles": "huagui_company_site/{*.html,assets/js/*.js,data/products.json}"
+    },
+    "api/sitemap.js": {
+      "includeFiles": "huagui_company_site/data/products.json"
+    }
+  },
   "headers": [
     {
       "source": "/assets/(.*)",
@@ -39,19 +48,23 @@
     },
     {
       "source": "/:locale(es|pt-br|ru|ar)",
-      "destination": "/huagui_company_site/index.html"
+      "destination": "/api/seo?locale=:locale&page=index"
     },
     {
       "source": "/:locale(es|pt-br|ru|ar)/products/:slug",
-      "destination": "/huagui_company_site/product-detail.html?slug=:slug"
+      "destination": "/api/seo?locale=:locale&page=product&slug=:slug"
     },
     {
       "source": "/products/:slug",
-      "destination": "/huagui_company_site/product-detail.html?slug=:slug"
+      "destination": "/api/seo?locale=en&page=product&slug=:slug"
+    },
+    {
+      "source": "/product-detail.html",
+      "destination": "/api/seo?locale=en&page=product"
     },
     {
       "source": "/:locale(es|pt-br|ru|ar)/:page.html",
-      "destination": "/huagui_company_site/:page.html"
+      "destination": "/api/seo?locale=:locale&page=:page"
     },
     {
       "source": "/admin",
@@ -70,12 +83,12 @@
       "destination": "/huagui_company_site/assets/$1"
     },
     {
-      "source": "/(.*).html",
-      "destination": "/huagui_company_site/$1.html"
+      "source": "/:page(index|products|service|factory|exhibitions|faq|about|contact|privacy).html",
+      "destination": "/api/seo?locale=en&page=:page"
     },
     {
       "source": "/",
-      "destination": "/huagui_company_site/index.html"
+      "destination": "/api/seo?locale=en&page=index"
     },
     {
       "source": "/(.*)",

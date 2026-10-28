@@ -251,8 +251,8 @@
   function localizedPath(targetLocale) {
     const parts = location.pathname.split('/').filter(Boolean);
     if (LOCALES.includes(parts[0])) parts.shift();
-    const suffix = parts.length ? `/${parts.join('/')}` : '/';
-    return targetLocale === 'en' ? suffix : `/${targetLocale}${suffix}`;
+    const suffix = parts.length ? `/${parts.join('/')}` : '';
+    return targetLocale === 'en' ? (suffix || '/') : `/${targetLocale}${suffix}`;
   }
 
   function productTerm(value) {
@@ -320,10 +320,9 @@
   }
 
   function setupSeoLinks() {
-    const suffix = location.search;
-    setOrCreateLink('canonical', '', `${localizedPath(locale)}${suffix}`);
-    LOCALES.forEach(code => setOrCreateLink('alternate', META[code].lang, `${localizedPath(code)}${suffix}`));
-    setOrCreateLink('alternate', 'x-default', `${localizedPath('en')}${suffix}`);
+    setOrCreateLink('canonical', '', localizedPath(locale));
+    LOCALES.forEach(code => setOrCreateLink('alternate', META[code].lang, localizedPath(code)));
+    setOrCreateLink('alternate', 'x-default', localizedPath('en'));
   }
 
   function translateText(root = document.body) {

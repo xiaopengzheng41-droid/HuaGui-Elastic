@@ -251,8 +251,8 @@ function normalizeProduct(product, index = 0) {
     intro: String(source.intro || '').trim(),
     applications: toStringArray(source.applications),
     customOptions: toStringArray(source.customOptions),
-    createdAt: source.createdAt || new Date().toISOString(),
-    updatedAt: new Date().toISOString()
+    createdAt: source.createdAt || '',
+    updatedAt: source.updatedAt || source.createdAt || ''
   };
 }
 
@@ -348,10 +348,18 @@ async function saveProductsDocument(products) {
   return document;
 }
 
-async function loadProducts({ includeDrafts = false } = {}) {
+async function loadProductsSnapshot({ includeDrafts = false } = {}) {
   const document = await loadProductsDocument();
   const products = normalizeProducts(document.products || document);
-  return includeDrafts ? products : publicProducts(products);
+  return {
+    products: includeDrafts ? products : publicProducts(products),
+    updatedAt: String(document.updatedAt || '').trim()
+  };
+}
+
+async function loadProducts({ includeDrafts = false } = {}) {
+  const snapshot = await loadProductsSnapshot({ includeDrafts });
+  return snapshot.products;
 }
 
 function parseCookies(req) {
@@ -514,6 +522,7 @@ module.exports = {
   isAdminPasswordConfigured,
   isAuthenticated,
   loadProducts,
+  loadProductsSnapshot,
   normalizeProduct,
   normalizeProducts,
   parseJsonBody,
