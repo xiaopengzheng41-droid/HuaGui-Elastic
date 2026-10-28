@@ -18,7 +18,7 @@
       'Apparel binding': 'Ribete para prendas', 'Bra and lingerie shoulder straps': 'Tirantes para sujetadores y lencería', 'Bra and shapewear underwire casing': 'Canal para aro de sujetadores y prendas moldeadoras', 'Bra bands and picot edging': 'Contornos de sujetador y ribetes picot', 'Bra bands, picot edging, and shoulder straps': 'Contornos de sujetador, ribetes picot y tirantes', 'Bras and underwear': 'Sujetadores y ropa interior', 'Cycling apparel straps': 'Tirantes para ropa de ciclismo', 'Cycling shorts leg openings': 'Bajos de pantalones de ciclismo', 'Elastic waistbands': 'Cinturillas elásticas', 'Football, basketball, and sportswear waistbands': 'Cinturillas para fútbol, baloncesto y ropa deportiva', 'Lingerie & Intimate Apparel': 'Lencería y ropa íntima', 'Lingerie Shoulder Straps & Intimate Apparel': 'Tirantes de lencería y ropa íntima', 'Lingerie Shoulder Straps & Lace Underwear Waistbands': 'Tirantes de lencería y cinturillas para ropa interior de encaje', 'Mesh elastic trims': 'Acabados elásticos de malla', 'Non-slip elastic applications': 'Aplicaciones elásticas antideslizantes', 'Outdoor and activewear binding': 'Ribetes para prendas de exterior y deportivas', 'Sportswear waistbands': 'Cinturillas para ropa deportiva', "Women's underwear waist and leg openings": 'Cinturas y aberturas de pierna para ropa interior femenina', "Women's underwear waistbands": 'Cinturillas para ropa interior femenina',
       'Color matching': 'Igualación de color', 'Width and stretch': 'Ancho y elasticidad', 'Logo or pattern': 'Logo o diseño', 'Roll and carton packing': 'Embalaje en rollos y cajas',
       Activewear: 'Ropa deportiva', Binding: 'Ribete', 'Bra Strap': 'Tirante de sujetador', 'Decorative Edge': 'Borde decorativo', Embossed: 'Relieve', 'Fold Over': 'Ribete plegable', Jacquard: 'Jacquard', Lurex: 'Hilo metálico', Picot: 'Picot', Plain: 'Liso', Printed: 'Estampado', Reflective: 'Reflectante', 'Silicone Grip': 'Silicona antideslizante', Waistband: 'Cinturilla',
-      'Product Display': 'Vistas del producto', 'Front & Back': 'Anverso y reverso', Front: 'Anverso', Back: 'Reverso', Colors: 'Colores', 'Click thumbnails to view available product angles.': 'Haga clic en las miniaturas para ver los ángulos disponibles.', 'Buyer-focused product features and fabric parameters for quotation review.': 'Características y parámetros del producto para revisar la cotización.', 'Product specifications': 'Especificaciones del producto', 'Customize Your Elastic': 'Personalice su elástico', 'Color Matching': 'Igualación de color', 'Stretch To Spec': 'Elasticidad según especificación', 'Send width, color, logo artwork, target quantity, and garment application for a faster quotation.': 'Envíe el ancho, color, archivo del logo, cantidad prevista y aplicación para recibir una cotización más rápida.'
+      'Product Display': 'Vistas del producto', 'Main View': 'Vista principal', 'Front & Back': 'Anverso y reverso', Front: 'Anverso', Back: 'Reverso', Colors: 'Colores', 'Click thumbnails to view available product angles.': 'Haga clic en las miniaturas para ver los ángulos disponibles.', 'Buyer-focused product features and fabric parameters for quotation review.': 'Características y parámetros del producto para revisar la cotización.', 'Product specifications': 'Especificaciones del producto', 'Customize Your Elastic': 'Personalice su elástico', 'Color Matching': 'Igualación de color', 'Stretch To Spec': 'Elasticidad según especificación', 'Send width, color, logo artwork, target quantity, and garment application for a faster quotation.': 'Envíe el ancho, color, archivo del logo, cantidad prevista y aplicación para recibir una cotización más rápida.'
     },
     'pt-br': {
       'Elastic Webbing': 'Fita elástica', 'Silicone Grip Elastic': 'Elástico com silicone antiderrapante', 'Fold Over Elastic': 'Elástico de debrum', 'Picot Elastic': 'Elástico picot', 'Plain Elastic': 'Elástico liso', 'Jacquard Elastic': 'Elástico jacquard', 'Printed Elastic': 'Elástico estampado', 'Embossed Elastic': 'Elástico em alto-relevo', 'Debossed Elastic': 'Elástico em baixo-relevo', 'Bra Strap Elastic': 'Elástico para alça de sutiã', 'Jacquard Bra Strap Elastic': 'Elástico jacquard para alça de sutiã', 'Silicone Printed Elastic': 'Elástico estampado com silicone', 'Reflective Binding Elastic': 'Elástico refletivo para debrum',
@@ -27,7 +27,7 @@
       'Apparel binding': 'Debrum para vestuário', 'Bra and lingerie shoulder straps': 'Alças para sutiãs e lingerie', 'Bra and shapewear underwire casing': 'Canaleta para aro de sutiã e modeladores', 'Bra bands and picot edging': 'Faixas de sutiã e acabamento picot', 'Bra bands, picot edging, and shoulder straps': 'Faixas de sutiã, acabamento picot e alças', 'Bras and underwear': 'Sutiãs e roupa íntima', 'Cycling apparel straps': 'Alças para vestuário de ciclismo', 'Cycling shorts leg openings': 'Barras de shorts de ciclismo', 'Elastic waistbands': 'Cós elásticos', 'Football, basketball, and sportswear waistbands': 'Cós para futebol, basquete e moda esportiva', 'Lingerie & Intimate Apparel': 'Lingerie e roupa íntima', 'Lingerie Shoulder Straps & Intimate Apparel': 'Alças de lingerie e roupa íntima', 'Lingerie Shoulder Straps & Lace Underwear Waistbands': 'Alças de lingerie e cós para roupa íntima de renda', 'Mesh elastic trims': 'Acabamentos elásticos em tela', 'Non-slip elastic applications': 'Aplicações elásticas antiderrapantes', 'Outdoor and activewear binding': 'Debrum para roupas outdoor e esportivas', 'Sportswear waistbands': 'Cós para moda esportiva', "Women's underwear waist and leg openings": 'Cinturas e aberturas de perna para roupa íntima feminina', "Women's underwear waistbands": 'Cós para roupa íntima feminina',
       'Color matching': 'Correspondência de cores', 'Width and stretch': 'Largura e elasticidade', 'Logo or pattern': 'Logo ou desenho', 'Roll and carton packing': 'Embalagem em rolos e caixas',
       Activewear: 'Moda fitness', Binding: 'Debrum', 'Bra Strap': 'Alça de sutiã', 'Decorative Edge': 'Borda decorativa', Embossed: 'Alto-relevo', 'Fold Over': 'Debrum dobrável', Jacquard: 'Jacquard', Lurex: 'Fio metálico', Picot: 'Picot', Plain: 'Liso', Printed: 'Estampado', Reflective: 'Refletivo', 'Silicone Grip': 'Silicone antiderrapante', Waistband: 'Cós',
-      'Product Display': 'Vistas do produto', 'Front & Back': 'Frente e verso', Front: 'Frente', Back: 'Verso', Colors: 'Cores', 'Click thumbnails to view available product angles.': 'Clique nas miniaturas para ver os ângulos disponíveis.', 'Buyer-focused product features and fabric parameters for quotation review.': 'Características e parâmetros do produto para análise da cotação.', 'Product specifications': 'Especificações do produto', 'Customize Your Elastic': 'Personalize seu elástico', 'Color Matching': 'Correspondência de cores', 'Stretch To Spec': 'Elasticidade conforme especificação', 'Send width, color, logo artwork, target quantity, and garment application for a faster quotation.': 'Envie largura, cor, arquivo do logo, quantidade desejada e aplicação para receber uma cotação mais rápida.'
+      'Product Display': 'Vistas do produto', 'Main View': 'Vista principal', 'Front & Back': 'Frente e verso', Front: 'Frente', Back: 'Verso', Colors: 'Cores', 'Click thumbnails to view available product angles.': 'Clique nas miniaturas para ver os ângulos disponíveis.', 'Buyer-focused product features and fabric parameters for quotation review.': 'Características e parâmetros do produto para análise da cotação.', 'Product specifications': 'Especificações do produto', 'Customize Your Elastic': 'Personalize seu elástico', 'Color Matching': 'Correspondência de cores', 'Stretch To Spec': 'Elasticidade conforme especificação', 'Send width, color, logo artwork, target quantity, and garment application for a faster quotation.': 'Envie largura, cor, arquivo do logo, quantidade desejada e aplicação para receber uma cotação mais rápida.'
     },
     ru: {
       'Elastic Webbing': 'Эластичная лента', 'Silicone Grip Elastic': 'Эластичная лента с противоскользящим силиконом', 'Fold Over Elastic': 'Окантовочная эластичная лента', 'Picot Elastic': 'Эластичная лента с пико', 'Plain Elastic': 'Гладкая эластичная лента', 'Jacquard Elastic': 'Жаккардовая эластичная лента', 'Printed Elastic': 'Эластичная лента с печатью', 'Embossed Elastic': 'Рельефная эластичная лента', 'Debossed Elastic': 'Эластичная лента с тиснением', 'Bra Strap Elastic': 'Эластичная лента для бретелей', 'Jacquard Bra Strap Elastic': 'Жаккардовая лента для бретелей', 'Silicone Printed Elastic': 'Эластичная лента с силиконовой печатью', 'Reflective Binding Elastic': 'Светоотражающая окантовочная лента',
@@ -36,7 +36,7 @@
       'Apparel binding': 'Окантовка одежды', 'Bra and lingerie shoulder straps': 'Бретели для бюстгальтеров и белья', 'Bra and shapewear underwire casing': 'Туннельная лента для косточек бюстгальтеров и корсетного белья', 'Bra bands and picot edging': 'Пояса бюстгальтеров и отделка пико', 'Bra bands, picot edging, and shoulder straps': 'Пояса бюстгальтеров, отделка пико и бретели', 'Bras and underwear': 'Бюстгальтеры и нижнее белье', 'Cycling apparel straps': 'Бретели для велоодежды', 'Cycling shorts leg openings': 'Манжеты велошорт', 'Elastic waistbands': 'Эластичные пояса', 'Football, basketball, and sportswear waistbands': 'Пояса для футбольной, баскетбольной и спортивной одежды', 'Lingerie & Intimate Apparel': 'Белье и интимная одежда', 'Lingerie Shoulder Straps & Intimate Apparel': 'Бретели для белья и интимная одежда', 'Lingerie Shoulder Straps & Lace Underwear Waistbands': 'Бретели для белья и пояса для кружевного белья', 'Mesh elastic trims': 'Эластичная сетчатая отделка', 'Non-slip elastic applications': 'Нескользящие эластичные изделия', 'Outdoor and activewear binding': 'Окантовка для уличной и спортивной одежды', 'Sportswear waistbands': 'Пояса для спортивной одежды', "Women's underwear waist and leg openings": 'Пояса и вырезы для ног женского белья', "Women's underwear waistbands": 'Пояса для женского белья',
       'Color matching': 'Подбор цвета', 'Width and stretch': 'Ширина и растяжимость', 'Logo or pattern': 'Логотип или узор', 'Roll and carton packing': 'Упаковка в рулоны и коробки',
       Activewear: 'Спортивная одежда', Binding: 'Окантовка', 'Bra Strap': 'Бретель', 'Decorative Edge': 'Декоративный край', Embossed: 'Рельеф', 'Fold Over': 'Окантовочная', Jacquard: 'Жаккард', Lurex: 'Металлизированная нить', Picot: 'Пико', Plain: 'Гладкая', Printed: 'Печать', Reflective: 'Светоотражающая', 'Silicone Grip': 'Противоскользящий силикон', Waistband: 'Пояс',
-      'Product Display': 'Виды изделия', 'Front & Back': 'Лицевая и изнаночная стороны', Front: 'Лицевая сторона', Back: 'Изнаночная сторона', Colors: 'Цвета', 'Click thumbnails to view available product angles.': 'Нажмите на миниатюры, чтобы посмотреть доступные ракурсы.', 'Buyer-focused product features and fabric parameters for quotation review.': 'Характеристики и параметры для подготовки ценового предложения.', 'Product specifications': 'Характеристики товара', 'Customize Your Elastic': 'Настройте эластичную ленту', 'Color Matching': 'Подбор цвета', 'Stretch To Spec': 'Растяжимость по техзаданию', 'Send width, color, logo artwork, target quantity, and garment application for a faster quotation.': 'Укажите ширину, цвет, макет логотипа, количество и применение для быстрого расчёта.'
+      'Product Display': 'Виды изделия', 'Main View': 'Основной вид', 'Front & Back': 'Лицевая и изнаночная стороны', Front: 'Лицевая сторона', Back: 'Изнаночная сторона', Colors: 'Цвета', 'Click thumbnails to view available product angles.': 'Нажмите на миниатюры, чтобы посмотреть доступные ракурсы.', 'Buyer-focused product features and fabric parameters for quotation review.': 'Характеристики и параметры для подготовки ценового предложения.', 'Product specifications': 'Характеристики товара', 'Customize Your Elastic': 'Настройте эластичную ленту', 'Color Matching': 'Подбор цвета', 'Stretch To Spec': 'Растяжимость по техзаданию', 'Send width, color, logo artwork, target quantity, and garment application for a faster quotation.': 'Укажите ширину, цвет, макет логотипа, количество и применение для быстрого расчёта.'
     },
     ar: {
       'Elastic Webbing': 'شريط مطاطي', 'Silicone Grip Elastic': 'شريط مطاطي سيليكون مانع للانزلاق', 'Fold Over Elastic': 'شريط مطاطي للحواف', 'Picot Elastic': 'شريط مطاطي بيكو', 'Plain Elastic': 'شريط مطاطي سادة', 'Jacquard Elastic': 'شريط مطاطي جاكارد', 'Printed Elastic': 'شريط مطاطي مطبوع', 'Embossed Elastic': 'شريط مطاطي بنقش بارز', 'Debossed Elastic': 'شريط مطاطي بنقش غائر', 'Bra Strap Elastic': 'شريط مطاطي لحمالات الصدر', 'Jacquard Bra Strap Elastic': 'شريط جاكارد مطاطي لحمالات الصدر', 'Silicone Printed Elastic': 'شريط مطاطي مطبوع بالسيليكون', 'Reflective Binding Elastic': 'شريط حواف مطاطي عاكس',
@@ -45,7 +45,7 @@
       'Apparel binding': 'حواف الملابس', 'Bra and lingerie shoulder straps': 'حمالات الصدر والملابس الداخلية', 'Bra and shapewear underwire casing': 'قناة سلك حمالات الصدر وملابس تشكيل الجسم', 'Bra bands and picot edging': 'أحزمة حمالات الصدر وحواف بيكو', 'Bra bands, picot edging, and shoulder straps': 'أحزمة حمالات الصدر وحواف بيكو والحمالات', 'Bras and underwear': 'حمالات الصدر والملابس الداخلية', 'Cycling apparel straps': 'حمالات ملابس ركوب الدراجات', 'Cycling shorts leg openings': 'فتحات أرجل سراويل ركوب الدراجات', 'Elastic waistbands': 'أحزمة خصر مطاطية', 'Football, basketball, and sportswear waistbands': 'أحزمة خصر لكرة القدم والسلة والملابس الرياضية', 'Lingerie & Intimate Apparel': 'اللانجري والملابس الداخلية', 'Lingerie Shoulder Straps & Intimate Apparel': 'حمالات اللانجري والملابس الداخلية', 'Lingerie Shoulder Straps & Lace Underwear Waistbands': 'حمالات اللانجري وأحزمة خصر للملابس الداخلية الدانتيل', 'Mesh elastic trims': 'حواف مطاطية شبكية', 'Non-slip elastic applications': 'تطبيقات مطاطية مانعة للانزلاق', 'Outdoor and activewear binding': 'حواف للملابس الخارجية والرياضية', 'Sportswear waistbands': 'أحزمة خصر للملابس الرياضية', "Women's underwear waist and leg openings": 'خصر وفتحات أرجل الملابس الداخلية النسائية', "Women's underwear waistbands": 'أحزمة خصر للملابس الداخلية النسائية',
       'Color matching': 'مطابقة الألوان', 'Width and stretch': 'العرض والتمدد', 'Logo or pattern': 'الشعار أو النقشة', 'Roll and carton packing': 'تعبئة بكرات وكراتين',
       Activewear: 'ملابس رياضية', Binding: 'حواف', 'Bra Strap': 'حمالة صدر', 'Decorative Edge': 'حافة زخرفية', Embossed: 'نقش بارز', 'Fold Over': 'حواف قابلة للطي', Jacquard: 'جاكارد', Lurex: 'خيط معدني', Picot: 'بيكو', Plain: 'سادة', Printed: 'مطبوع', Reflective: 'عاكس', 'Silicone Grip': 'سيليكون مانع للانزلاق', Waistband: 'حزام خصر',
-      'Product Display': 'عرض المنتج', 'Front & Back': 'الوجه والظهر', Front: 'الوجه', Back: 'الظهر', Colors: 'الألوان', 'Click thumbnails to view available product angles.': 'انقر على الصور المصغرة لعرض زوايا المنتج المتاحة.', 'Buyer-focused product features and fabric parameters for quotation review.': 'خصائص المنتج ومعلماته لمراجعة عرض السعر.', 'Product specifications': 'مواصفات المنتج', 'Customize Your Elastic': 'خصص شريطك المطاطي', 'Color Matching': 'مطابقة الألوان', 'Stretch To Spec': 'التمدد حسب المواصفات', 'Send width, color, logo artwork, target quantity, and garment application for a faster quotation.': 'أرسل العرض واللون وملف الشعار والكمية المطلوبة والتطبيق للحصول على عرض سعر أسرع.'
+      'Product Display': 'عرض المنتج', 'Main View': 'العرض الرئيسي', 'Front & Back': 'الوجه والظهر', Front: 'الوجه', Back: 'الظهر', Colors: 'الألوان', 'Click thumbnails to view available product angles.': 'انقر على الصور المصغرة لعرض زوايا المنتج المتاحة.', 'Buyer-focused product features and fabric parameters for quotation review.': 'خصائص المنتج ومعلماته لمراجعة عرض السعر.', 'Product specifications': 'مواصفات المنتج', 'Customize Your Elastic': 'خصص شريطك المطاطي', 'Color Matching': 'مطابقة الألوان', 'Stretch To Spec': 'التمدد حسب المواصفات', 'Send width, color, logo artwork, target quantity, and garment application for a faster quotation.': 'أرسل العرض واللون وملف الشعار والكمية المطلوبة والتطبيق للحصول على عرض سعر أسرع.'
     }
   };
 
@@ -53,22 +53,34 @@
     es: {
       intro: (type, application) => `${type} para ${application}, disponible con desarrollo personalizado de color, ancho, elasticidad, logo y embalaje.`,
       count: count => `${count} soluciones elásticas`,
-      need: name => `¿Necesita ${name} con los detalles de su marca?`
+      need: name => `¿Necesita ${name} con los detalles de su marca?`,
+      productView: count => `Vista del producto ${count}`,
+      productImageAlt: (name, count) => `${name}, vista del producto ${count}`,
+      viewLabel: label => `Ver ${label}`
     },
     'pt-br': {
       intro: (type, application) => `${type} para ${application}, disponível com desenvolvimento personalizado de cor, largura, elasticidade, logo e embalagem.`,
       count: count => `${count} soluções elásticas`,
-      need: name => `Precisa de ${name} com os detalhes da sua marca?`
+      need: name => `Precisa de ${name} com os detalhes da sua marca?`,
+      productView: count => `Vista do produto ${count}`,
+      productImageAlt: (name, count) => `${name}, vista do produto ${count}`,
+      viewLabel: label => `Ver ${label}`
     },
     ru: {
       intro: (type, application) => `${type} для ${application}; цвет, ширина, растяжимость, логотип и упаковка изготавливаются по требованиям заказчика.`,
       count: count => `${count} варианта(ов) эластичных лент`,
-      need: name => `Нужен ${name} с параметрами вашего бренда?`
+      need: name => `Нужен ${name} с параметрами вашего бренда?`,
+      productView: count => `Вид изделия ${count}`,
+      productImageAlt: (name, count) => `${name}, вид изделия ${count}`,
+      viewLabel: label => `Открыть: ${label}`
     },
     ar: {
       intro: (type, application) => `${type} لـ ${application}، مع إمكانية تخصيص اللون والعرض والتمدد والشعار والتعبئة.`,
       count: count => `${count} حلاً مطاطياً`,
-      need: name => `هل تحتاج إلى ${name} بتفاصيل علامتك التجارية؟`
+      need: name => `هل تحتاج إلى ${name} بتفاصيل علامتك التجارية؟`,
+      productView: count => `عرض المنتج ${count}`,
+      productImageAlt: (name, count) => `${name}، عرض المنتج ${count}`,
+      viewLabel: label => `عرض ${label}`
     }
   };
 
@@ -76,6 +88,8 @@
     es: {
       HOME: 'INICIO', PRODUCTS: 'PRODUCTOS', 'CUSTOM SOLUTIONS': 'SOLUCIONES A MEDIDA', FACTORY: 'FÁBRICA', EXHIBITIONS: 'FERIAS', 'ABOUT US': 'NOSOTROS', CONTACT: 'CONTACTO',
       Home: 'Inicio', Products: 'Productos', 'Custom Solutions': 'Soluciones a medida', Factory: 'Fábrica', Contact: 'Contacto', 'Quick Links': 'Enlaces rápidos',
+      'Toggle menu': 'Abrir o cerrar el menú', 'Product highlights': 'Características destacadas del producto', 'Product details': 'Detalles del producto', 'Product image gallery': 'Galería de imágenes del producto',
+      'Bra strap elastic for lingerie': 'Elástico para tirantes de sujetador y lencería', 'Fold over binding elastic for intimate apparel': 'Elástico de ribete plegable para ropa íntima', 'Elastic yarn and color customization options': 'Opciones de personalización de hilo elástico y color',
       'View Products': 'Ver productos', 'Request Samples': 'Solicitar muestras', 'Start Inquiry': 'Enviar consulta', 'Get Quote': 'Solicitar cotización', 'Request A Quote': 'Solicitar cotización',
       'Product Catalog': 'Catálogo de productos', 'Elastic Webbing Products': 'Cintas elásticas para confección', 'Main Categories': 'Categorías principales', 'Product Tags': 'Tipos de producto', 'All Tags': 'Todos los tipos', All: 'Todos',
       "Men's Underwear Elastics": 'Elásticos para ropa interior masculina', "Women's Underwear Elastics": 'Elásticos para ropa interior femenina', 'Bra & Lingerie Elastics': 'Elásticos para sujetadores y lencería', 'Activewear Elastics': 'Elásticos para ropa deportiva',
@@ -102,6 +116,8 @@
     'pt-br': {
       HOME: 'INÍCIO', PRODUCTS: 'PRODUTOS', 'CUSTOM SOLUTIONS': 'SOLUÇÕES SOB MEDIDA', FACTORY: 'FÁBRICA', EXHIBITIONS: 'FEIRAS', 'ABOUT US': 'SOBRE NÓS', CONTACT: 'CONTATO',
       Home: 'Início', Products: 'Produtos', 'Custom Solutions': 'Soluções sob medida', Factory: 'Fábrica', Contact: 'Contato', 'Quick Links': 'Links rápidos',
+      'Toggle menu': 'Abrir ou fechar o menu', 'Product highlights': 'Destaques do produto', 'Product details': 'Detalhes do produto', 'Product image gallery': 'Galeria de imagens do produto',
+      'Bra strap elastic for lingerie': 'Elástico para alças de sutiã e lingerie', 'Fold over binding elastic for intimate apparel': 'Elástico de debrum dobrável para moda íntima', 'Elastic yarn and color customization options': 'Opções de personalização de fios elásticos e cores',
       'View Products': 'Ver produtos', 'Request Samples': 'Solicitar amostras', 'Start Inquiry': 'Enviar consulta', 'Get Quote': 'Solicitar cotação', 'Request A Quote': 'Solicitar cotação',
       'Product Catalog': 'Catálogo de produtos', 'Elastic Webbing Products': 'Fitas elásticas para vestuário', 'Main Categories': 'Categorias principais', 'Product Tags': 'Tipos de produto', 'All Tags': 'Todos os tipos', All: 'Todos',
       "Men's Underwear Elastics": 'Elásticos para roupa íntima masculina', "Women's Underwear Elastics": 'Elásticos para roupa íntima feminina', 'Bra & Lingerie Elastics': 'Elásticos para sutiãs e lingerie', 'Activewear Elastics': 'Elásticos para moda fitness',
@@ -128,6 +144,8 @@
     ru: {
       HOME: 'ГЛАВНАЯ', PRODUCTS: 'ПРОДУКЦИЯ', 'CUSTOM SOLUTIONS': 'ИЗГОТОВЛЕНИЕ НА ЗАКАЗ', FACTORY: 'ПРОИЗВОДСТВО', EXHIBITIONS: 'ВЫСТАВКИ', 'ABOUT US': 'О КОМПАНИИ', CONTACT: 'КОНТАКТЫ',
       Home: 'Главная', Products: 'Продукция', 'Custom Solutions': 'Изготовление на заказ', Factory: 'Производство', Contact: 'Контакты', 'Quick Links': 'Быстрые ссылки',
+      'Toggle menu': 'Открыть или закрыть меню', 'Product highlights': 'Ключевые характеристики изделия', 'Product details': 'Сведения об изделии', 'Product image gallery': 'Галерея изображений изделия',
+      'Bra strap elastic for lingerie': 'Эластичная лента для бретелей бюстгальтеров и белья', 'Fold over binding elastic for intimate apparel': 'Складная окантовочная эластичная лента для нижнего белья', 'Elastic yarn and color customization options': 'Варианты индивидуального подбора эластичной нити и цвета',
       'View Products': 'Смотреть продукцию', 'Request Samples': 'Запросить образцы', 'Start Inquiry': 'Отправить запрос', 'Get Quote': 'Запросить цену', 'Request A Quote': 'Запросить цену',
       'Product Catalog': 'Каталог продукции', 'Elastic Webbing Products': 'Эластичные ленты для одежды', 'Main Categories': 'Основные категории', 'Product Tags': 'Типы продукции', 'All Tags': 'Все типы', All: 'Все',
       "Men's Underwear Elastics": 'Резинки для мужского белья', "Women's Underwear Elastics": 'Резинки для женского белья', 'Bra & Lingerie Elastics': 'Резинки для бюстгальтеров и белья', 'Activewear Elastics': 'Резинки для спортивной одежды',
@@ -154,6 +172,8 @@
     ar: {
       HOME: 'الرئيسية', PRODUCTS: 'المنتجات', 'CUSTOM SOLUTIONS': 'حلول مخصصة', FACTORY: 'المصنع', EXHIBITIONS: 'المعارض', 'ABOUT US': 'من نحن', CONTACT: 'اتصل بنا',
       Home: 'الرئيسية', Products: 'المنتجات', 'Custom Solutions': 'حلول مخصصة', Factory: 'المصنع', Contact: 'اتصل بنا', 'Quick Links': 'روابط سريعة',
+      'Toggle menu': 'فتح أو إغلاق القائمة', 'Product highlights': 'أبرز مواصفات المنتج', 'Product details': 'تفاصيل المنتج', 'Product image gallery': 'معرض صور المنتج',
+      'Bra strap elastic for lingerie': 'شريط مطاطي لحمالات الصدر واللانجري', 'Fold over binding elastic for intimate apparel': 'شريط مطاطي قابل للطي لحواف الملابس الداخلية', 'Elastic yarn and color customization options': 'خيارات تخصيص الخيوط المطاطية والألوان',
       'View Products': 'عرض المنتجات', 'Request Samples': 'طلب عينات', 'Start Inquiry': 'إرسال استفسار', 'Get Quote': 'طلب عرض سعر', 'Request A Quote': 'طلب عرض سعر',
       'Product Catalog': 'كتالوج المنتجات', 'Elastic Webbing Products': 'أشرطة مطاطية للملابس', 'Main Categories': 'الفئات الرئيسية', 'Product Tags': 'أنواع المنتجات', 'All Tags': 'كل الأنواع', All: 'الكل',
       "Men's Underwear Elastics": 'مطاط للملابس الداخلية الرجالية', "Women's Underwear Elastics": 'مطاط للملابس الداخلية النسائية', 'Bra & Lingerie Elastics': 'مطاط لحمالات الصدر واللانجري', 'Activewear Elastics': 'مطاط للملابس الرياضية',
@@ -274,6 +294,23 @@
     const exact = productTerm(text);
     if (exact) return exact;
 
+    const productImageView = text.match(/^(.+?)\s+product view\s+(\d+)$/i);
+    if (productImageView && productTemplates.productImageAlt) {
+      return productTemplates.productImageAlt(translateValue(productImageView[1]), productImageView[2]);
+    }
+
+    const productView = text.match(/^Product View\s+(\d+)$/i);
+    if (productView && productTemplates.productView) return productTemplates.productView(productView[1]);
+
+    const viewLabel = text.match(/^View\s+(.+)$/i);
+    if (viewLabel && productTemplates.viewLabel) return productTemplates.viewLabel(translateValue(viewLabel[1]));
+
+    const directionalImage = text.match(/^(.+?)(?:\s+-)?\s+(Front & Back|Front|Back|Colors)$/i);
+    if (directionalImage) {
+      const translatedDirection = productTerm(directionalImage[2]);
+      if (translatedDirection) return `${translateValue(directionalImage[1])} - ${translatedDirection}`;
+    }
+
     const namedProduct = text.match(/^(.+?)\s+\|\s+(.+)$/);
     if (namedProduct) {
       const translatedType = productTerm(namedProduct[2]);
@@ -345,6 +382,22 @@
     });
   }
 
+  function translateAttributes(root = document) {
+    if (locale === 'en' || !root) return;
+    const selector = '[alt], [title], [placeholder], [aria-label]';
+    const elements = [];
+    if (root.nodeType === Node.ELEMENT_NODE && root.matches(selector)) elements.push(root);
+    root.querySelectorAll?.(selector).forEach(element => elements.push(element));
+    elements.forEach(element => {
+      ['alt', 'title', 'placeholder', 'aria-label'].forEach(attribute => {
+        if (!element.hasAttribute(attribute)) return;
+        const value = element.getAttribute(attribute);
+        const translated = translateValue(value);
+        if (translated !== value) element.setAttribute(attribute, translated);
+      });
+    });
+  }
+
   function localizeLinks(root = document) {
     if (locale === 'en') return;
     root.querySelectorAll?.('a[href]').forEach(anchor => {
@@ -392,6 +445,7 @@
 
   function apply(root = document) {
     translateText(root === document ? document.body : root);
+    translateAttributes(root);
     localizeLinks(root === document ? document : root);
     injectLanguageSwitcher();
     translateMetadata();

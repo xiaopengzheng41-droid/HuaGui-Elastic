@@ -106,6 +106,53 @@ test('localized pages expose localized source text and locale-prefixed internal 
   }
 });
 
+test('non-English source localizes key image alternatives and accessibility labels', () => {
+  const product = products.find(item => item.slug === 'h6896');
+  assert.ok(product, 'H6896 fixture is missing');
+  const expected = {
+    es: {
+      toggle: 'Abrir o cerrar el menú', highlights: 'Características destacadas del producto', details: 'Detalles del producto', gallery: 'Galería de imágenes del producto',
+      homeAlts: ['Elástico para tirantes de sujetador y lencería', 'Elástico de ribete plegable para ropa íntima', 'Opciones de personalización de hilo elástico y color'],
+      galleryAlt: 'H6896 | Elástico para tirantes de sujetador - Anverso y reverso'
+    },
+    'pt-br': {
+      toggle: 'Abrir ou fechar o menu', highlights: 'Destaques do produto', details: 'Detalhes do produto', gallery: 'Galeria de imagens do produto',
+      homeAlts: ['Elástico para alças de sutiã e lingerie', 'Elástico de debrum dobrável para moda íntima', 'Opções de personalização de fios elásticos e cores'],
+      galleryAlt: 'H6896 | Elástico para alça de sutiã - Frente e verso'
+    },
+    ru: {
+      toggle: 'Открыть или закрыть меню', highlights: 'Ключевые характеристики изделия', details: 'Сведения об изделии', gallery: 'Галерея изображений изделия',
+      homeAlts: ['Эластичная лента для бретелей бюстгальтеров и белья', 'Складная окантовочная эластичная лента для нижнего белья', 'Варианты индивидуального подбора эластичной нити и цвета'],
+      galleryAlt: 'H6896 | Эластичная лента для бретелей - Лицевая и изнаночная стороны'
+    },
+    ar: {
+      toggle: 'فتح أو إغلاق القائمة', highlights: 'أبرز مواصفات المنتج', details: 'تفاصيل المنتج', gallery: 'معرض صور المنتج',
+      homeAlts: ['شريط مطاطي لحمالات الصدر واللانجري', 'شريط مطاطي قابل للطي لحواف الملابس الداخلية', 'خيارات تخصيص الخيوط المطاطية والألوان'],
+      galleryAlt: 'H6896 | شريط مطاطي لحمالات الصدر - الوجه والظهر'
+    }
+  };
+
+  for (const [locale, labels] of Object.entries(expected)) {
+    const home = renderStaticPage({ page: 'index', locale, products });
+    assert.ok(home.includes(`aria-label="${labels.toggle}"`), `${locale} menu aria-label is not localized`);
+    labels.homeAlts.forEach(alt => assert.ok(home.includes(`alt="${alt}"`), `${locale} missing localized home alt: ${alt}`));
+    assert.doesNotMatch(home, /aria-label=["']Toggle menu["']/i);
+    assert.doesNotMatch(home, /alt=["'](?:Bra strap elastic for lingerie|Fold over binding elastic for intimate apparel|Elastic yarn and color customization options)["']/i);
+
+    const detail = renderProductPage({ product, locale });
+    for (const ariaLabel of [labels.toggle, labels.highlights, labels.details, labels.gallery]) {
+      assert.ok(detail.includes(`aria-label="${ariaLabel}"`), `${locale} missing localized aria-label: ${ariaLabel}`);
+    }
+    assert.ok(detail.includes(`alt="${labels.galleryAlt}"`), `${locale} missing localized H6896 gallery alt`);
+    assert.doesNotMatch(detail, /aria-label=["'](?:Toggle menu|Product highlights|Product details|Product image gallery)["']/i);
+    assert.doesNotMatch(detail, /alt=["'][^"']*H6896[^"']*(?:Front(?:\s*&amp;\s*Back)?|Back|Colors)[^"']*["']/i);
+
+    const translate = createTranslator(locale);
+    assert.doesNotMatch(translate('H6896 | Bra Strap Elastic product view 2'), /Bra Strap Elastic|product view/i);
+    assert.doesNotMatch(translate('Product View 2'), /Product View/i);
+  }
+});
+
 test('catalog source contains every published product exactly once as a server-rendered card', () => {
   const html = renderStaticPage({ page: 'products', locale: 'en', products });
   assert.match(html, new RegExp(`>${products.length} elastic solutions<`, 'i'));
