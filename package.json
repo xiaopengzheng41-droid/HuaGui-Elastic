@@ -9,6 +9,10 @@
     "test:seo:live": "node scripts/live-seo-smoke.mjs"
   },
   "dependencies": {
-    "@vercel/blob": "^2.5.0"
+    "@vercel/blob": "^2.8.2"
+  },
+  "overrides": {
+    "undici": "6.29.1",
+    "zod": "4.6.7"
   }
 }
