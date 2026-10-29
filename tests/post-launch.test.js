@@ -4,7 +4,7 @@ const fs = require('node:fs');
 const path = require('node:path');
 const vm = require('node:vm');
 
-const { createInquiryId, inquiryPathForId, validateInquiryInput } = require('../api/_inquiries');
+const { createInquiryId, existingInquiryForRetry, inquiryPathForId, validateInquiryInput } = require('../api/_inquiries');
 const { buildInquiryNotification, notifyNewInquiry } = require('../api/_notifications');
 const { checkRateLimit } = require('../api/_rate-limit');
 const { publicAnalyticsConfig } = require('../api/public-config');
@@ -130,6 +130,33 @@ test('inquiry validation preserves only bounded attribution fields and submissio
   assert.notEqual(id, createInquiryId(now, `${input.submissionId}-new`));
   assert.equal(inquiryPathForId('HG-20261029-ABCDEF12'), 'inquiries/2026/10/HG-20261029-ABCDEF12.json');
   assert.equal(inquiryPathForId('HG-20261029-ABCDEF1234567890'), 'inquiries/2026/10/HG-20261029-ABCDEF1234567890.json');
+});
+
+test('submission retries preserve the first stored inquiry and notification payload', () => {
+  const original = {
+    ...validInquiry(),
+    id: 'HG-20261029-ABCDEF1234567890',
+    status: 'read',
+    createdAt: '2026-10-29T01:00:00.000Z',
+    updatedAt: '2026-10-29T01:05:00.000Z',
+    resolvedAt: null,
+    message: 'Original buyer message'
+  };
+  const attempted = {
+    ...original,
+    status: 'new',
+    createdAt: '2026-10-29T02:00:00.000Z',
+    updatedAt: '2026-10-29T02:00:00.000Z',
+    message: 'Changed retry payload'
+  };
+  const reused = existingInquiryForRetry(original, attempted);
+  assert.equal(reused.id, original.id);
+  assert.equal(reused.status, 'read');
+  assert.equal(reused.createdAt, original.createdAt);
+  assert.equal(reused.updatedAt, original.updatedAt);
+  assert.equal(reused.message, 'Original buyer message');
+  assert.equal(existingInquiryForRetry(null, attempted), null);
+  assert.equal(existingInquiryForRetry(original, { ...attempted, id: 'HG-20261029-FFFFFFFFFFFFFFFF' }), null);
 });
 
 test('notification content escapes customer HTML and uses an idempotency key', async () => {

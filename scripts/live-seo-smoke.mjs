@@ -19,7 +19,9 @@ const cases = [
   ['/ar', 200, 'ar', 'rtl'],
   ['/products/h6896', 200, 'en', 'ltr'],
   ['/es/products/h6896', 200, 'es', 'ltr'],
-  ['/products/not-real', 404, 'en', 'ltr']
+  ['/products/not-real', 404, 'en', 'ltr'],
+  ['/missing-page', 404, 'en', 'ltr'],
+  ['/ar/missing-page', 404, 'ar', 'rtl']
 ];
 
 for (const [pathname, status, lang, dir] of cases) {
@@ -34,6 +36,8 @@ for (const [pathname, status, lang, dir] of cases) {
     assert.match(html, /<meta\b[^>]*(?:property=["']og:title["']|name=["']twitter:card["'])/i, `${pathname}: social metadata`);
   } else {
     assert.match(html, /noindex/i, `${pathname}: noindex`);
+    assert.match(response.headers.get('x-robots-tag') || '', /noindex/i, `${pathname}: X-Robots-Tag`);
+    assert.match(html, /data-seo-shell=["']header["']/i, `${pathname}: branded header`);
   }
   console.log(`PASS ${status} ${pathname}`);
 }
@@ -52,5 +56,11 @@ const sitemap = await sitemapResponse.text();
 assert.equal(sitemapResponse.status, 200);
 assert.match(sitemap, /xmlns:xhtml=/i);
 assert.ok([...sitemap.matchAll(/<url>/gi)].length > 45, 'sitemap URL count is unexpectedly small');
+
+const robotsResponse = await fetch(new URL('/robots.txt', base));
+const robots = await robotsResponse.text();
+assert.equal(robotsResponse.status, 200, '/robots.txt: status');
+assert.match(robotsResponse.headers.get('content-type') || '', /^text\/plain/i, '/robots.txt: content type');
+assert.match(robots, /Sitemap:\s*https:\/\/www\.huaguielastic\.com\/sitemap\.xml/i, '/robots.txt: sitemap');
 
 console.log(`SEO live smoke test passed for ${base.origin}`);

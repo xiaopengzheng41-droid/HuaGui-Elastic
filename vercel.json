@@ -96,6 +96,14 @@
       "destination": "/huagui_company_site/admin.html"
     },
     {
+      "source": "/admin.html",
+      "destination": "/huagui_company_site/admin.html"
+    },
+    {
+      "source": "/robots.txt",
+      "destination": "/huagui_company_site/robots.txt"
+    },
+    {
       "source": "/data/(.*)",
       "destination": "/huagui_company_site/data/$1"
     },
@@ -116,8 +124,12 @@
       "destination": "/api/seo?locale=en&page=index"
     },
     {
+      "source": "/:locale(es|pt-br|ru|ar)/(.*)",
+      "destination": "/api/seo?locale=:locale&page=not-found"
+    },
+    {
       "source": "/(.*)",
-      "destination": "/huagui_company_site/$1"
+      "destination": "/api/seo?locale=en&page=not-found"
     }
   ]
 }

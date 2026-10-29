@@ -506,9 +506,39 @@ function renderProductPage({ product, locale }) {
 }
 
 function renderNotFound({ locale = 'en' } = {}) {
-  const title = locale === 'en' ? 'Page Not Found | Huagui Elastic' : createTranslator(locale)('Product Not Found');
-  const message = locale === 'en' ? 'The requested product or page is not available.' : createTranslator(locale)('This product is not currently published.');
-  const html = `<!DOCTYPE html><html lang="${LOCALE_META[locale].lang}" dir="${LOCALE_META[locale].dir}"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="robots" content="noindex, nofollow"><title>${escapeHtml(title)}</title><link rel="stylesheet" href="/assets/css/style.css?v=site-cms-20260718-inquiries"></head><body><div id="app">${headerHtml('')}<main><section class="section"><div class="container"><p class="section-label">404</p><h1>${escapeHtml(title)}</h1><p>${escapeHtml(message)}</p><a href="${pagePath(locale, 'products')}" class="btn btn-primary">${escapeHtml(createTranslator(locale)('View Products'))}</a></div></section></main>${footerHtml()}</div></body></html>`;
+  const copy = {
+    en: {
+      title: 'Page Not Found | Huagui Elastic',
+      heading: 'Page Not Found',
+      message: 'The requested product or page is not available.'
+    },
+    es: {
+      title: 'Página no encontrada | Huagui Elastic',
+      heading: 'Página no encontrada',
+      message: 'La página o el producto solicitado no está disponible.'
+    },
+    'pt-br': {
+      title: 'Página não encontrada | Huagui Elastic',
+      heading: 'Página não encontrada',
+      message: 'A página ou o produto solicitado não está disponível.'
+    },
+    ru: {
+      title: 'Страница не найдена | Huagui Elastic',
+      heading: 'Страница не найдена',
+      message: 'Запрошенная страница или товар недоступны.'
+    },
+    ar: {
+      title: 'الصفحة غير موجودة | Huagui Elastic',
+      heading: 'الصفحة غير موجودة',
+      message: 'الصفحة أو المنتج المطلوب غير متاح.'
+    }
+  }[locale] || null;
+  const text = copy || {
+    title: 'Page Not Found | Huagui Elastic',
+    heading: 'Page Not Found',
+    message: 'The requested product or page is not available.'
+  };
+  const html = `<!DOCTYPE html><html lang="${LOCALE_META[locale].lang}" dir="${LOCALE_META[locale].dir}"><head><base href="/"><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="robots" content="noindex, nofollow"><title>${escapeHtml(text.title)}</title><link rel="icon" type="image/png" href="/assets/images/huagui-logo.png"><meta name="theme-color" content="#880830"><link rel="stylesheet" href="/assets/css/style.css?v=completion-20261029b"></head><body><div id="app">${headerHtml('')}<main><section class="section"><div class="container"><p class="section-label">404</p><h1>${escapeHtml(text.heading)}</h1><p>${escapeHtml(text.message)}</p><a href="${pagePath(locale, 'products')}" class="btn btn-primary">${escapeHtml(createTranslator(locale)('View Products'))}</a></div></section></main>${footerHtml()}</div><script src="/assets/js/main.js?v=postlaunch-20261029a"></script></body></html>`;
   return localizeAnchorHrefs(translateHtml(html, locale), locale);
 }
 

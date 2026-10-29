@@ -158,6 +158,11 @@ function normalizeStoredInquiry(value) {
   };
 }
 
+function existingInquiryForRetry(existing, attempted) {
+  if (!existing || !attempted || existing.id !== attempted.id) return null;
+  return normalizeStoredInquiry(existing);
+}
+
 function sortInquiries(inquiries) {
   return [...inquiries].sort((a, b) => {
     const dateOrder = String(b.createdAt || '').localeCompare(String(a.createdAt || ''));
@@ -276,6 +281,11 @@ async function createInquiry(input) {
   });
 
   if (hasInquiryBlobStorage()) {
+    const existing = existingInquiryForRetry(
+      await readPrivateInquiry(inquiryPathForId(inquiry.id)),
+      inquiry
+    );
+    if (existing) return existing;
     await writePrivateInquiry(inquiry);
     return inquiry;
   }
@@ -283,8 +293,10 @@ async function createInquiry(input) {
 
   const document = await readLocalDocument();
   const existingIndex = document.inquiries.findIndex(item => item.id === inquiry.id);
-  if (existingIndex === -1) document.inquiries.push(inquiry);
-  else document.inquiries[existingIndex] = inquiry;
+  if (existingIndex !== -1) {
+    return existingInquiryForRetry(document.inquiries[existingIndex], inquiry);
+  }
+  document.inquiries.push(inquiry);
   await writeLocalDocument(document.inquiries);
   return inquiry;
 }
@@ -344,6 +356,7 @@ module.exports = {
   INQUIRY_STATUSES,
   createInquiryId,
   createInquiry,
+  existingInquiryForRetry,
   inquiryPathForId,
   listInquiries,
   storageMode,
