@@ -67,6 +67,14 @@ function renderGlobalContactInfo() {
   }
 }
 
+function createSubmissionId() {
+  if (window.crypto && typeof window.crypto.randomUUID === 'function') return window.crypto.randomUUID();
+  const random = window.crypto && typeof window.crypto.getRandomValues === 'function'
+    ? window.crypto.getRandomValues(new Uint32Array(4))
+    : [Date.now(), Math.random() * 1e9, Math.random() * 1e9, Math.random() * 1e9];
+  return Array.from(random, value => Math.floor(value).toString(16).padStart(8, '0')).join('-');
+}
+
 // ========== Header/Footer Injection ==========
 function injectFavicons() {
   const icons = [
@@ -4889,6 +4897,12 @@ function initProductDetailPage() {
       if (caption) caption.textContent = button.dataset.galleryLabel;
     });
   });
+
+  window.HUAGUI_ANALYTICS?.track('view_product', {
+    product_slug: product.slug,
+    item_no: itemNo,
+    category: product.category
+  });
 }
 
 function applyContactQueryContext(contactForm) {
@@ -4921,12 +4935,15 @@ function initContactForm() {
 
   const submitButton = contactForm.querySelector('[data-contact-submit]');
   const status = contactForm.querySelector('[data-contact-status]');
+  let submissionId = createSubmissionId();
   applyContactQueryContext(contactForm);
 
   contactForm.addEventListener('submit', async event => {
     event.preventDefault();
     const payload = Object.fromEntries(new FormData(contactForm).entries());
     payload.sourceUrl = window.location.href;
+    payload.submissionId = submissionId;
+    Object.assign(payload, window.HUAGUI_ANALYTICS?.getAttribution?.() || {});
 
     submitButton.disabled = true;
     submitButton.textContent = 'Sending...';
@@ -4951,7 +4968,13 @@ function initContactForm() {
         ? `Thank you. Your inquiry ${inquiryId} has been saved. Huagui will contact you soon.`
         : 'Thank you. Your inquiry has been received.';
       status.dataset.tone = 'success';
+      window.HUAGUI_ANALYTICS?.track('generate_lead', {
+        category: payload.product || '',
+        item_no: payload.itemNo || '',
+        cta_placement: payload.productName ? 'product_inquiry_form' : 'contact_form'
+      });
       contactForm.reset();
+      submissionId = createSubmissionId();
       applyContactQueryContext(contactForm);
     } catch (error) {
       status.textContent = error.message || 'Unable to send your inquiry. Please try again.';

@@ -76,6 +76,14 @@ function validateInquiryInput(input) {
     quoteCurrency: cleanText(input.quoteCurrency, 20),
     message: cleanText(input.message, 5000),
     sourceUrl: cleanText(input.sourceUrl, 500),
+    submissionId: cleanText(input.submissionId, 120),
+    landingPath: cleanText(input.landingPath, 500),
+    referrerHost: cleanText(input.referrerHost, 255),
+    utmSource: cleanText(input.utmSource, 160),
+    utmMedium: cleanText(input.utmMedium, 160),
+    utmCampaign: cleanText(input.utmCampaign, 200),
+    utmContent: cleanText(input.utmContent, 200),
+    utmTerm: cleanText(input.utmTerm, 200),
     privacyConsent: input.privacyConsent === 'accepted'
   };
 
@@ -97,14 +105,17 @@ function validateInquiryInput(input) {
   return inquiry;
 }
 
-function createInquiryId(now = new Date()) {
+function createInquiryId(now = new Date(), submissionId = '') {
   const date = now.toISOString().slice(0, 10).replace(/-/g, '');
-  const suffix = crypto.randomBytes(4).toString('hex').toUpperCase();
+  const safeSubmissionId = cleanText(submissionId, 120);
+  const suffix = safeSubmissionId
+    ? crypto.createHash('sha256').update(safeSubmissionId).digest('hex').slice(0, 16).toUpperCase()
+    : crypto.randomBytes(8).toString('hex').toUpperCase();
   return `HG-${date}-${suffix}`;
 }
 
 function inquiryPathForId(id) {
-  const match = String(id || '').match(/^HG-(\d{4})(\d{2})(\d{2})-[A-F0-9]{8}$/);
+  const match = String(id || '').match(/^HG-(\d{4})(\d{2})(\d{2})-[A-F0-9]{8}(?:[A-F0-9]{8})?$/);
   if (!match) {
     const error = new Error('Invalid inquiry ID.');
     error.statusCode = 400;
@@ -133,6 +144,13 @@ function normalizeStoredInquiry(value) {
     quoteCurrency: cleanText(source.quoteCurrency, 20),
     message: cleanText(source.message, 5000),
     sourceUrl: cleanText(source.sourceUrl, 500),
+    landingPath: cleanText(source.landingPath, 500),
+    referrerHost: cleanText(source.referrerHost, 255),
+    utmSource: cleanText(source.utmSource, 160),
+    utmMedium: cleanText(source.utmMedium, 160),
+    utmCampaign: cleanText(source.utmCampaign, 200),
+    utmContent: cleanText(source.utmContent, 200),
+    utmTerm: cleanText(source.utmTerm, 200),
     privacyConsent: source.privacyConsent === true,
     createdAt: source.createdAt || new Date().toISOString(),
     updatedAt: source.updatedAt || source.createdAt || new Date().toISOString(),
@@ -250,7 +268,7 @@ async function createInquiry(input) {
   const now = new Date();
   const inquiry = normalizeStoredInquiry({
     ...validated,
-    id: createInquiryId(now),
+    id: createInquiryId(now, validated.submissionId),
     status: 'new',
     createdAt: now.toISOString(),
     updatedAt: now.toISOString(),
@@ -264,7 +282,9 @@ async function createInquiry(input) {
   if (!canUseLocalStorage()) throw storageUnavailableError();
 
   const document = await readLocalDocument();
-  document.inquiries.push(inquiry);
+  const existingIndex = document.inquiries.findIndex(item => item.id === inquiry.id);
+  if (existingIndex === -1) document.inquiries.push(inquiry);
+  else document.inquiries[existingIndex] = inquiry;
   await writeLocalDocument(document.inquiries);
   return inquiry;
 }
@@ -322,7 +342,9 @@ async function updateInquiryStatus(id, status) {
 
 module.exports = {
   INQUIRY_STATUSES,
+  createInquiryId,
   createInquiry,
+  inquiryPathForId,
   listInquiries,
   storageMode,
   updateInquiryStatus,

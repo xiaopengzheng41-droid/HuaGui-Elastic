@@ -6,11 +6,20 @@ const {
   sendJson,
   verifyAdminPassword
 } = require('../_cms');
+const { applyRateLimit } = require('../_rate-limit');
 
 module.exports = async function loginHandler(req, res) {
   if (req.method !== 'POST') {
     res.setHeader('Allow', 'POST');
     return sendError(res, 405, 'Method not allowed');
+  }
+
+  const rateLimit = applyRateLimit(req, res, 'admin-login', {
+    limit: 5,
+    windowMs: 15 * 60 * 1000
+  });
+  if (!rateLimit.allowed) {
+    return sendError(res, 429, 'Too many sign-in attempts. Please wait and try again.');
   }
 
   try {

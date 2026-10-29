@@ -6,3 +6,4 @@ huagui_company_site/data/inquiries.json
 .DS_Store
 .env.local
 .env.*.local
+.vercel

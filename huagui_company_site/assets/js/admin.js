@@ -618,6 +618,13 @@ function normalizeInquiry(value) {
     quoteCurrency: String(source.quoteCurrency || ''),
     message: String(source.message || ''),
     sourceUrl: String(source.sourceUrl || ''),
+    landingPath: String(source.landingPath || ''),
+    referrerHost: String(source.referrerHost || ''),
+    utmSource: String(source.utmSource || ''),
+    utmMedium: String(source.utmMedium || ''),
+    utmCampaign: String(source.utmCampaign || ''),
+    utmContent: String(source.utmContent || ''),
+    utmTerm: String(source.utmTerm || ''),
     createdAt: source.createdAt || '',
     updatedAt: source.updatedAt || '',
     resolvedAt: source.resolvedAt || null
@@ -676,6 +683,8 @@ function renderInquiryList() {
       CATEGORY_LABELS[inquiry.product] || '',
       inquiry.itemNo,
       inquiry.quantity,
+      inquiry.utmSource,
+      inquiry.utmCampaign,
       inquiry.message
     ].join(' ').toLowerCase();
     return statusMatch && (!query || haystack.includes(query));
@@ -763,6 +772,13 @@ function renderInquiryDetail() {
           <div><span>Trade Term</span><strong>${escapeHtml(inquiry.tradeTerm || 'Not provided')}</strong></div>
           <div><span>Quote Currency</span><strong>${escapeHtml(inquiry.quoteCurrency || 'Not provided')}</strong></div>
           <div><span>Source Page</span><strong>${escapeHtml(inquiry.sourceUrl || 'Not recorded')}</strong></div>
+          <div><span>First Landing Page</span><strong>${escapeHtml(inquiry.landingPath || 'Not recorded')}</strong></div>
+          <div><span>Referrer Host</span><strong>${escapeHtml(inquiry.referrerHost || 'Direct / not recorded')}</strong></div>
+          <div><span>UTM Source</span><strong>${escapeHtml(inquiry.utmSource || 'Not recorded')}</strong></div>
+          <div><span>UTM Medium</span><strong>${escapeHtml(inquiry.utmMedium || 'Not recorded')}</strong></div>
+          <div><span>UTM Campaign</span><strong>${escapeHtml(inquiry.utmCampaign || 'Not recorded')}</strong></div>
+          <div><span>UTM Content</span><strong>${escapeHtml(inquiry.utmContent || 'Not recorded')}</strong></div>
+          <div><span>UTM Term</span><strong>${escapeHtml(inquiry.utmTerm || 'Not recorded')}</strong></div>
         </div>
         <div class="admin-inquiry-message">
           <span>Customer Message</span>
