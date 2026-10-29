@@ -1,5 +1,6 @@
 (() => {
-  const CONSENT_KEY = 'huagui_analytics_consent_v1';
+  const CONSENT_KEY = 'huagui_measurement_consent_v2';
+  const LEGACY_ANALYTICS_CONSENT_KEY = 'huagui_analytics_consent_v1';
   const ATTRIBUTION_KEY = 'huagui_session_attribution_v1';
   const ALLOWED_EVENTS = new Set([
     'generate_lead',
@@ -14,54 +15,87 @@
     'product_slug',
     'item_no',
     'category',
-    'cta_placement'
+    'cta_placement',
+    'event_id'
   ]);
+  const META_EVENT_MAP = Object.freeze({
+    generate_lead: 'Lead',
+    view_product: 'ViewContent'
+  });
   const COPY = {
     en: {
-      title: 'Help us improve this website',
-      body: 'With your permission, we use Google Analytics to understand anonymous page visits and inquiry actions. We never send names, email addresses, phone numbers, companies, or messages to analytics.',
-      accept: 'Accept analytics',
-      decline: 'Decline',
+      title: 'Choose your measurement preferences',
+      body: 'You can allow anonymous analytics and separately allow Meta advertising measurement. Essential website and inquiry functions always remain available.',
+      analyticsTitle: 'Analytics',
+      analyticsBody: 'Google Analytics measures anonymous page visits and inquiry actions.',
+      marketingTitle: 'Marketing measurement',
+      marketingBody: 'Meta Pixel measures advertising visits and inquiry conversions. Server events are sent only after a consented inquiry is saved.',
+      save: 'Save choices',
+      acceptAll: 'Accept all',
+      decline: 'Reject non-essential',
       privacy: 'Privacy Policy',
-      preferences: 'Analytics preferences'
+      preferences: 'Measurement preferences'
     },
     es: {
-      title: 'Ayúdenos a mejorar este sitio web',
-      body: 'Con su permiso, usamos Google Analytics para comprender las visitas anónimas a las páginas y las acciones de consulta. Nunca enviamos nombres, correos electrónicos, números de teléfono, empresas ni mensajes a Analytics.',
-      accept: 'Aceptar analíticas',
-      decline: 'Rechazar',
+      title: 'Elija sus preferencias de medición',
+      body: 'Puede permitir analíticas anónimas y, por separado, la medición publicitaria de Meta. Las funciones esenciales del sitio y las consultas siempre permanecen disponibles.',
+      analyticsTitle: 'Analíticas',
+      analyticsBody: 'Google Analytics mide visitas anónimas y acciones de consulta.',
+      marketingTitle: 'Medición de marketing',
+      marketingBody: 'Meta Pixel mide visitas publicitarias y conversiones de consultas. Los eventos del servidor solo se envían tras guardar una consulta con consentimiento.',
+      save: 'Guardar opciones',
+      acceptAll: 'Aceptar todo',
+      decline: 'Rechazar lo no esencial',
       privacy: 'Política de privacidad',
-      preferences: 'Preferencias de analíticas'
+      preferences: 'Preferencias de medición'
     },
     'pt-br': {
-      title: 'Ajude-nos a melhorar este site',
-      body: 'Com sua permissão, usamos o Google Analytics para entender visitas anônimas às páginas e ações de consulta. Nunca enviamos nomes, endereços de e-mail, números de telefone, empresas ou mensagens para o Analytics.',
-      accept: 'Aceitar análises',
-      decline: 'Recusar',
+      title: 'Escolha suas preferências de medição',
+      body: 'Você pode permitir análises anônimas e, separadamente, a medição de publicidade da Meta. As funções essenciais do site e das consultas permanecem disponíveis.',
+      analyticsTitle: 'Análises',
+      analyticsBody: 'O Google Analytics mede visitas anônimas e ações de consulta.',
+      marketingTitle: 'Medição de marketing',
+      marketingBody: 'O Meta Pixel mede visitas de anúncios e conversões de consultas. Eventos do servidor só são enviados após salvar uma consulta consentida.',
+      save: 'Salvar escolhas',
+      acceptAll: 'Aceitar tudo',
+      decline: 'Rejeitar não essenciais',
       privacy: 'Política de privacidade',
-      preferences: 'Preferências de análise'
+      preferences: 'Preferências de medição'
     },
     ru: {
-      title: 'Помогите нам улучшить сайт',
-      body: 'С вашего разрешения мы используем Google Analytics, чтобы анализировать обезличенные посещения страниц и действия, связанные с запросами. Мы никогда не передаем в систему аналитики имена, адреса электронной почты, номера телефонов, названия компаний или сообщения.',
-      accept: 'Разрешить аналитику',
-      decline: 'Отклонить',
+      title: 'Выберите настройки измерения',
+      body: 'Вы можете разрешить обезличенную аналитику и отдельно — рекламные измерения Meta. Основные функции сайта и отправки запросов всегда доступны.',
+      analyticsTitle: 'Аналитика',
+      analyticsBody: 'Google Analytics измеряет обезличенные посещения и действия с запросами.',
+      marketingTitle: 'Маркетинговые измерения',
+      marketingBody: 'Meta Pixel измеряет рекламные посещения и конверсии запросов. Серверные события отправляются только после сохранения запроса с согласием.',
+      save: 'Сохранить выбор',
+      acceptAll: 'Принять всё',
+      decline: 'Отклонить необязательное',
       privacy: 'Политика конфиденциальности',
-      preferences: 'Настройки аналитики'
+      preferences: 'Настройки измерения'
     },
     ar: {
-      title: 'ساعدنا على تحسين هذا الموقع',
-      body: 'بموافقتك، نستخدم Google Analytics لفهم زيارات الصفحات وإجراءات الاستفسار بصورة مجهولة. لا نرسل مطلقًا الأسماء أو عناوين البريد الإلكتروني أو أرقام الهواتف أو أسماء الشركات أو الرسائل إلى خدمة التحليلات.',
-      accept: 'قبول التحليلات',
-      decline: 'رفض',
+      title: 'اختر تفضيلات القياس',
+      body: 'يمكنك السماح بالتحليلات المجهولة وبشكل منفصل بقياس إعلانات Meta. تظل وظائف الموقع والاستفسارات الأساسية متاحة دائمًا.',
+      analyticsTitle: 'التحليلات',
+      analyticsBody: 'يقيس Google Analytics زيارات الصفحات وإجراءات الاستفسار بصورة مجهولة.',
+      marketingTitle: 'قياس التسويق',
+      marketingBody: 'يقيس Meta Pixel زيارات الإعلانات وتحويلات الاستفسارات. لا تُرسل أحداث الخادم إلا بعد حفظ استفسار تمت الموافقة عليه.',
+      save: 'حفظ الاختيارات',
+      acceptAll: 'قبول الكل',
+      decline: 'رفض غير الضروري',
       privacy: 'سياسة الخصوصية',
-      preferences: 'تفضيلات التحليلات'
+      preferences: 'تفضيلات القياس'
     }
   };
 
   let measurementId = '';
+  let pixelId = '';
   let analyticsEnabled = false;
-  let eventQueue = [];
+  let metaEnabled = false;
+  let analyticsEventQueue = [];
+  let metaEventQueue = [];
 
   function locale() {
     return window.HUAGUI_I18N?.locale || ({ 'pt-BR': 'pt-br' }[document.documentElement.lang] || document.documentElement.lang || 'en');
@@ -140,21 +174,57 @@
     return output;
   }
 
-  function dispatchEvent(name, params) {
+  function dispatchAnalyticsEvent(name, params) {
     if (!analyticsEnabled || typeof window.gtag !== 'function') return;
     window.gtag('event', name, cleanEventParams(params));
   }
 
+  function metaEventParams(name, params = {}) {
+    const clean = cleanEventParams(params);
+    const output = {};
+    if (['mens', 'womens', 'lingerie', 'activewear', 'binding', 'other'].includes(clean.category)) {
+      output.content_category = clean.category;
+    }
+    if (name === 'view_product' && /^[A-Za-z0-9_-]{1,100}$/.test(clean.item_no || '')) {
+      output.content_ids = [clean.item_no];
+    }
+    if (name === 'view_product' && /^[A-Za-z0-9_-]{1,100}$/.test(clean.product_slug || '')) {
+      output.content_name = clean.product_slug;
+    }
+    return output;
+  }
+
+  function dispatchMetaEvent(name, params) {
+    const metaName = META_EVENT_MAP[name];
+    if (!metaName || !metaEnabled || typeof window.fbq !== 'function') return;
+    const eventId = cleanEventParams(params).event_id;
+    const options = eventId ? { eventID: eventId } : undefined;
+    window.fbq('track', metaName, metaEventParams(name, params), options);
+  }
+
   function track(name, params = {}) {
     if (!ALLOWED_EVENTS.has(name)) return false;
-    if (analyticsConsent() !== 'granted') return false;
-    if (!analyticsEnabled) {
-      eventQueue.push([name, cleanEventParams(params)]);
-      if (eventQueue.length > 20) eventQueue = eventQueue.slice(-20);
-      return false;
+    const cleaned = cleanEventParams(params);
+    let dispatched = false;
+    if (analyticsConsent() === 'granted') {
+      if (analyticsEnabled) {
+        dispatchAnalyticsEvent(name, cleaned);
+        dispatched = true;
+      } else {
+        analyticsEventQueue.push([name, cleaned]);
+        if (analyticsEventQueue.length > 20) analyticsEventQueue = analyticsEventQueue.slice(-20);
+      }
     }
-    dispatchEvent(name, params);
-    return true;
+    if (marketingConsent() === 'granted' && META_EVENT_MAP[name]) {
+      if (metaEnabled) {
+        dispatchMetaEvent(name, cleaned);
+        dispatched = true;
+      } else {
+        metaEventQueue.push([name, cleaned]);
+        if (metaEventQueue.length > 20) metaEventQueue = metaEventQueue.slice(-20);
+      }
+    }
+    return dispatched;
   }
 
   function trackLinkClick(event) {
@@ -187,8 +257,30 @@
     } catch { /* ignore malformed links */ }
   }
 
+  function consentPreferences() {
+    const stored = safeStorage('localStorage', 'getItem', CONSENT_KEY);
+    if (stored) {
+      try {
+        const parsed = JSON.parse(stored);
+        return {
+          analytics: ['granted', 'denied'].includes(parsed.analytics) ? parsed.analytics : '',
+          marketing: ['granted', 'denied'].includes(parsed.marketing) ? parsed.marketing : ''
+        };
+      } catch { /* fall through to the legacy analytics choice */ }
+    }
+    const legacy = safeStorage('localStorage', 'getItem', LEGACY_ANALYTICS_CONSENT_KEY);
+    return {
+      analytics: ['granted', 'denied'].includes(legacy) ? legacy : '',
+      marketing: ''
+    };
+  }
+
   function analyticsConsent() {
-    return safeStorage('localStorage', 'getItem', CONSENT_KEY) || '';
+    return consentPreferences().analytics;
+  }
+
+  function marketingConsent() {
+    return consentPreferences().marketing;
   }
 
   function removeGoogleAnalyticsCookies() {
@@ -210,7 +302,7 @@
       });
     }
     analyticsEnabled = false;
-    eventQueue = [];
+    analyticsEventQueue = [];
     removeGoogleAnalyticsCookies();
   }
 
@@ -231,9 +323,9 @@
       allow_ad_personalization_signals: false
     });
     analyticsEnabled = true;
-    const queued = eventQueue;
-    eventQueue = [];
-    queued.forEach(([name, params]) => dispatchEvent(name, params));
+    const queued = analyticsEventQueue;
+    analyticsEventQueue = [];
+    queued.forEach(([name, params]) => dispatchAnalyticsEvent(name, params));
     if (!document.querySelector(`script[data-huagui-ga4="${measurementId}"]`)) {
       const script = document.createElement('script');
       script.async = true;
@@ -243,15 +335,81 @@
     }
   }
 
+  function readCookie(name) {
+    const prefix = `${name}=`;
+    const value = document.cookie.split(';').map(part => part.trim()).find(part => part.startsWith(prefix));
+    if (!value) return '';
+    try {
+      return decodeURIComponent(value.slice(prefix.length)).slice(0, 255);
+    } catch {
+      return '';
+    }
+  }
+
+  function removeMetaCookies() {
+    ['_fbp', '_fbc'].forEach(name => {
+      document.cookie = `${name}=; Max-Age=0; Path=/; SameSite=Lax`;
+      document.cookie = `${name}=; Max-Age=0; Path=/; Domain=.huaguielastic.com; SameSite=Lax`;
+    });
+  }
+
+  function disableMeta() {
+    if (typeof window.fbq === 'function') window.fbq('consent', 'revoke');
+    metaEnabled = false;
+    metaEventQueue = [];
+    removeMetaCookies();
+  }
+
+  function enableMeta() {
+    if (!pixelId || metaEnabled) return;
+    if (typeof window.fbq !== 'function') {
+      const fbq = function fbq() {
+        if (fbq.callMethod) fbq.callMethod.apply(fbq, arguments);
+        else fbq.queue.push(arguments);
+      };
+      fbq.push = fbq;
+      fbq.loaded = true;
+      fbq.version = '2.0';
+      fbq.queue = [];
+      window.fbq = fbq;
+      window._fbq = fbq;
+    }
+    window.fbq('consent', 'grant');
+    window.fbq('init', pixelId);
+    window.fbq('track', 'PageView');
+    metaEnabled = true;
+    const queued = metaEventQueue;
+    metaEventQueue = [];
+    queued.forEach(([name, params]) => dispatchMetaEvent(name, params));
+    if (!document.querySelector(`script[data-huagui-meta-pixel="${pixelId}"]`)) {
+      const script = document.createElement('script');
+      script.async = true;
+      script.src = 'https://connect.facebook.net/en_US/fbevents.js';
+      script.dataset.huaguiMetaPixel = pixelId;
+      document.head.appendChild(script);
+    }
+  }
+
   function removeConsentPanel() {
     document.querySelector('[data-analytics-consent]')?.remove();
   }
 
-  function saveConsent(value) {
-    safeStorage('localStorage', 'setItem', CONSENT_KEY, value);
+  function saveConsent(preferences) {
+    const normalized = {
+      analytics: measurementId
+        ? (preferences.analytics === 'granted' ? 'granted' : 'denied')
+        : '',
+      marketing: pixelId
+        ? (preferences.marketing === 'granted' ? 'granted' : 'denied')
+        : ''
+    };
+    safeStorage('localStorage', 'setItem', CONSENT_KEY, JSON.stringify(normalized));
+    safeStorage('localStorage', 'removeItem', LEGACY_ANALYTICS_CONSENT_KEY);
     removeConsentPanel();
-    if (value === 'granted') enableAnalytics();
+    if (normalized.analytics === 'granted') enableAnalytics();
     else disableAnalytics();
+    if (normalized.marketing === 'granted') enableMeta();
+    else disableMeta();
   }
 
   function renderConsentPanel() {
@@ -265,17 +423,44 @@
     panel.setAttribute('role', 'dialog');
     panel.setAttribute('aria-live', 'polite');
     panel.setAttribute('aria-label', text.title);
+    const preferences = consentPreferences();
+    const analyticsChoice = measurementId ? `
+      <label class="measurement-consent-choice">
+        <input type="checkbox" data-consent-analytics>
+        <span><strong>${text.analyticsTitle}</strong><small>${text.analyticsBody}</small></span>
+      </label>` : '';
+    const marketingChoice = pixelId ? `
+      <label class="measurement-consent-choice">
+        <input type="checkbox" data-consent-marketing>
+        <span><strong>${text.marketingTitle}</strong><small>${text.marketingBody}</small></span>
+      </label>` : '';
     panel.innerHTML = `
       <div class="analytics-consent-copy">
         <strong>${text.title}</strong>
         <p>${text.body} <a href="${prefix}/privacy.html">${text.privacy}</a></p>
+        <div class="measurement-consent-choices">${analyticsChoice}${marketingChoice}</div>
       </div>
       <div class="analytics-consent-actions">
-        <button type="button" class="btn btn-primary" data-analytics-accept>${text.accept}</button>
+        <button type="button" class="btn btn-primary" data-consent-save>${text.save}</button>
+        <button type="button" class="btn btn-outline" data-consent-accept-all>${text.acceptAll}</button>
         <button type="button" class="btn btn-outline" data-analytics-decline>${text.decline}</button>
       </div>`;
-    panel.querySelector('[data-analytics-accept]').addEventListener('click', () => saveConsent('granted'));
-    panel.querySelector('[data-analytics-decline]').addEventListener('click', () => saveConsent('denied'));
+    const analyticsInput = panel.querySelector('[data-consent-analytics]');
+    const marketingInput = panel.querySelector('[data-consent-marketing]');
+    if (analyticsInput) analyticsInput.checked = preferences.analytics === 'granted';
+    if (marketingInput) marketingInput.checked = preferences.marketing === 'granted';
+    panel.querySelector('[data-consent-save]').addEventListener('click', () => saveConsent({
+      analytics: analyticsInput?.checked ? 'granted' : 'denied',
+      marketing: marketingInput?.checked ? 'granted' : 'denied'
+    }));
+    panel.querySelector('[data-consent-accept-all]').addEventListener('click', () => saveConsent({
+      analytics: measurementId ? 'granted' : 'denied',
+      marketing: pixelId ? 'granted' : 'denied'
+    }));
+    panel.querySelector('[data-analytics-decline]').addEventListener('click', () => saveConsent({
+      analytics: 'denied',
+      marketing: 'denied'
+    }));
     document.body.appendChild(panel);
   }
 
@@ -300,21 +485,51 @@
       measurementId = /^G-[A-Z0-9]{4,20}$/.test(config?.analytics?.measurementId || '')
         ? config.analytics.measurementId
         : '';
+      pixelId = /^\d{8,30}$/.test(config?.meta?.pixelId || '')
+        ? config.meta.pixelId
+        : '';
     } catch {
       measurementId = '';
+      pixelId = '';
     }
-    if (!measurementId) {
-      eventQueue = [];
+    if (!measurementId && !pixelId) {
+      analyticsEventQueue = [];
+      metaEventQueue = [];
       return;
     }
     addPreferencesControl();
-    const consent = analyticsConsent();
-    if (consent === 'granted') enableAnalytics();
-    else if (consent !== 'denied') renderConsentPanel();
+    const preferences = consentPreferences();
+    if (preferences.analytics === 'granted') enableAnalytics();
+    else if (preferences.analytics === 'denied') disableAnalytics();
+    if (preferences.marketing === 'granted') enableMeta();
+    else if (preferences.marketing === 'denied') disableMeta();
+    const needsAnalyticsChoice = Boolean(measurementId) && !preferences.analytics;
+    const needsMarketingChoice = Boolean(pixelId) && !preferences.marketing;
+    if (needsAnalyticsChoice || needsMarketingChoice) renderConsentPanel();
+  }
+
+  function getMetaContext() {
+    if (marketingConsent() !== 'granted') {
+      return {
+        marketingConsent: 'denied',
+        metaFbp: '',
+        metaFbc: '',
+        metaEventSourceUrl: ''
+      };
+    }
+    const fallbackUrl = `${location.origin}${location.pathname}${location.search || ''}`;
+    return {
+      marketingConsent: 'granted',
+      metaFbp: readCookie('_fbp'),
+      metaFbc: readCookie('_fbc'),
+      metaEventSourceUrl: String(location.href || fallbackUrl).slice(0, 500)
+    };
   }
 
   window.HUAGUI_ANALYTICS = {
     getAttribution: () => ({ ...attribution }),
+    getConsent: () => ({ ...consentPreferences() }),
+    getMetaContext,
     init,
     track
   };

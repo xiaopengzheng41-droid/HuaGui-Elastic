@@ -68,11 +68,16 @@ function renderGlobalContactInfo() {
 }
 
 function createSubmissionId() {
-  if (window.crypto && typeof window.crypto.randomUUID === 'function') return window.crypto.randomUUID();
-  const random = window.crypto && typeof window.crypto.getRandomValues === 'function'
-    ? window.crypto.getRandomValues(new Uint32Array(4))
-    : [Date.now(), Math.random() * 1e9, Math.random() * 1e9, Math.random() * 1e9];
-  return Array.from(random, value => Math.floor(value).toString(16).padStart(8, '0')).join('-');
+  const createdDate = new Date().toISOString().slice(0, 10).replace(/-/g, '');
+  const token = window.crypto && typeof window.crypto.randomUUID === 'function'
+    ? window.crypto.randomUUID()
+    : Array.from(
+      window.crypto && typeof window.crypto.getRandomValues === 'function'
+        ? window.crypto.getRandomValues(new Uint32Array(4))
+        : [Date.now(), Math.random() * 1e9, Math.random() * 1e9, Math.random() * 1e9],
+      value => Math.floor(value).toString(16).padStart(8, '0')
+    ).join('-');
+  return `${createdDate}-${token}`;
 }
 
 // ========== Header/Footer Injection ==========
@@ -4944,6 +4949,7 @@ function initContactForm() {
     payload.sourceUrl = window.location.href;
     payload.submissionId = submissionId;
     Object.assign(payload, window.HUAGUI_ANALYTICS?.getAttribution?.() || {});
+    Object.assign(payload, window.HUAGUI_ANALYTICS?.getMetaContext?.() || {});
 
     submitButton.disabled = true;
     submitButton.textContent = 'Sending...';
@@ -4971,7 +4977,8 @@ function initContactForm() {
       window.HUAGUI_ANALYTICS?.track('generate_lead', {
         category: payload.product || '',
         item_no: payload.itemNo || '',
-        cta_placement: payload.productName ? 'product_inquiry_form' : 'contact_form'
+        cta_placement: payload.productName ? 'product_inquiry_form' : 'contact_form',
+        event_id: inquiryId || ''
       });
       contactForm.reset();
       submissionId = createSubmissionId();

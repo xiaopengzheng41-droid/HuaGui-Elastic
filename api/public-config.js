@@ -1,4 +1,5 @@
 const { sendError, sendJson } = require('./_cms');
+const { publicMetaConfig } = require('./_meta');
 
 function publicAnalyticsConfig() {
   const measurementId = String(process.env.GA4_MEASUREMENT_ID || '').trim().toUpperCase();
@@ -15,8 +16,10 @@ module.exports = async function publicConfigHandler(req, res) {
   }
   return sendJson(res, 200, {
     ok: true,
-    analytics: publicAnalyticsConfig()
+    analytics: publicAnalyticsConfig(),
+    meta: publicMetaConfig()
   });
 };
 
 module.exports.publicAnalyticsConfig = publicAnalyticsConfig;
+module.exports.publicMetaConfig = publicMetaConfig;

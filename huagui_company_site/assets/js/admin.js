@@ -29,6 +29,25 @@ const TAG_LABELS = {
 
 const DEFAULT_FEATURES = [];
 
+const INQUIRY_STATUS_LABELS = {
+  new: 'New',
+  read: 'Read',
+  qualified: 'Qualified channel lead',
+  quoted: 'Quoted',
+  sample_sent: 'Sample sent',
+  won: 'Order won',
+  disqualified: 'Disqualified',
+  resolved: 'Resolved'
+};
+
+const INQUIRY_STATUSES = Object.keys(INQUIRY_STATUS_LABELS);
+const META_EVENT_BY_INQUIRY_STATUS = Object.freeze({
+  qualified: 'QualifiedLead',
+  quoted: 'QuoteSent',
+  sample_sent: 'SampleSent',
+  won: 'OrderWon'
+});
+
 const LEGACY_SPEC_LABELS = ['Width', 'Material', 'Printing', 'Handfeel'];
 
 const IMAGE_LABEL_PRESETS = [
@@ -41,7 +60,7 @@ const IMAGE_LABEL_PRESETS = [
 
 const PLACEHOLDER_IMAGE = 'assets/images/products/catalog-2026/jq124/jq124-jacquard-elastic-main-view.jpg';
 const LOCAL_ADMIN_URL = 'http://127.0.0.1:3000/admin';
-const ADMIN_SCRIPT_VERSION = 'admin-cms-20260718-inquiries';
+const ADMIN_SCRIPT_VERSION = 'admin-cms-20261029-qualified-lead-funnel';
 
 if (window.location.protocol === 'file:') {
   window.location.replace(LOCAL_ADMIN_URL);
@@ -600,7 +619,19 @@ async function loadProducts() {
 
 function normalizeInquiry(value) {
   const source = value && typeof value === 'object' ? value : {};
-  const status = ['new', 'read', 'resolved'].includes(source.status) ? source.status : 'new';
+  const status = INQUIRY_STATUSES.includes(source.status) ? source.status : 'new';
+  const metaDeliveries = {};
+  ['Lead', ...Object.values(META_EVENT_BY_INQUIRY_STATUS)].forEach(eventName => {
+    const delivery = source.metaDeliveries && source.metaDeliveries[eventName];
+    if (!delivery || typeof delivery !== 'object') return;
+    metaDeliveries[eventName] = {
+      status: String(delivery.status || ''),
+      attempts: Number(delivery.attempts || 0),
+      updatedAt: delivery.updatedAt || '',
+      reason: String(delivery.reason || ''),
+      lastError: String(delivery.lastError || '')
+    };
+  });
   return {
     id: String(source.id || ''),
     status,
@@ -627,7 +658,23 @@ function normalizeInquiry(value) {
     utmTerm: String(source.utmTerm || ''),
     createdAt: source.createdAt || '',
     updatedAt: source.updatedAt || '',
-    resolvedAt: source.resolvedAt || null
+    readAt: source.readAt || null,
+    qualifiedAt: source.qualifiedAt || null,
+    quotedAt: source.quotedAt || null,
+    sampleSentAt: source.sampleSentAt || null,
+    wonAt: source.wonAt || null,
+    disqualifiedAt: source.disqualifiedAt || null,
+    resolvedAt: source.resolvedAt || null,
+    disqualificationReason: String(source.disqualificationReason || ''),
+    metaDeliveries,
+    statusHistory: Array.isArray(source.statusHistory)
+      ? source.statusHistory.map(entry => ({
+        fromStatus: String(entry.fromStatus || ''),
+        status: INQUIRY_STATUSES.includes(entry.status) ? entry.status : 'new',
+        changedAt: entry.changedAt || '',
+        reason: String(entry.reason || '')
+      }))
+      : []
   };
 }
 
@@ -636,11 +683,7 @@ function currentInquiry() {
 }
 
 function inquiryStatusLabel(status) {
-  return {
-    new: 'New',
-    read: 'Read',
-    resolved: 'Resolved'
-  }[status] || 'New';
+  return INQUIRY_STATUS_LABELS[status] || INQUIRY_STATUS_LABELS.new;
 }
 
 function formatInquiryDate(value, options = {}) {
@@ -683,6 +726,8 @@ function renderInquiryList() {
       CATEGORY_LABELS[inquiry.product] || '',
       inquiry.itemNo,
       inquiry.quantity,
+      inquiry.status,
+      inquiry.disqualificationReason,
       inquiry.utmSource,
       inquiry.utmCampaign,
       inquiry.message
@@ -705,17 +750,81 @@ function renderInquiryList() {
   `).join('');
 }
 
-function inquiryStatusActions(inquiry) {
-  const actions = [];
-  if (inquiry.status === 'new') {
-    actions.push('<button class="btn btn-outline admin-compact-btn" type="button" data-inquiry-status="read">Mark Read</button>');
+function inquiryStatusOptions(selectedStatus) {
+  return INQUIRY_STATUSES.map(status => (
+    `<option value="${escapeHtml(status)}" ${status === selectedStatus ? 'selected' : ''}>${escapeHtml(inquiryStatusLabel(status))}</option>`
+  )).join('');
+}
+
+function metaDeliveryStatusCopy(eventName, delivery) {
+  const eventLabel = eventName.replace(/([a-z])([A-Z])/g, '$1 $2');
+  if (!delivery) return `${eventLabel} measurement will be prepared when this stage is saved.`;
+  if (delivery.status === 'sent') {
+    return `${eventLabel} sent to Meta${delivery.attempts > 1 ? ` after ${delivery.attempts} attempts` : ''}.`;
   }
-  if (inquiry.status !== 'resolved') {
-    actions.push('<button class="btn btn-primary admin-compact-btn" type="button" data-inquiry-status="resolved">Resolve</button>');
-  } else {
-    actions.push('<button class="btn btn-outline admin-compact-btn" type="button" data-inquiry-status="read">Reopen</button>');
+  if (delivery.status === 'failed') {
+    return `${eventLabel} failed (${delivery.reason || 'provider error'}). Click Update stage to retry.`;
   }
-  return actions.join('');
+  if (delivery.status === 'sending') return `${eventLabel} is being sent. Please wait before retrying.`;
+  if (delivery.status === 'pending') return `${eventLabel} is waiting to be sent.`;
+  if (delivery.status === 'skipped') {
+    return `${eventLabel} was skipped (${delivery.reason || 'marketing consent unavailable'}).`;
+  }
+  return '';
+}
+
+function metaDeliveryTone(status) {
+  if (status === 'failed') return 'error';
+  if (status === 'sending' || status === 'pending') return 'warning';
+  if (status === 'sent') return 'success';
+  return 'neutral';
+}
+
+function inquiryFunnelControl(inquiry) {
+  const isDisqualified = inquiry.status === 'disqualified';
+  const currentStageEvent = META_EVENT_BY_INQUIRY_STATUS[inquiry.status];
+  const eventNames = [
+    ...(inquiry.metaDeliveries.Lead ? ['Lead'] : []),
+    ...(currentStageEvent ? [currentStageEvent] : [])
+  ];
+  const metaStatuses = [...new Set(eventNames)].map(eventName => {
+    const delivery = inquiry.metaDeliveries[eventName];
+    const copy = metaDeliveryStatusCopy(eventName, delivery);
+    return copy
+      ? `<p class="admin-meta-delivery" data-tone="${escapeHtml(metaDeliveryTone(delivery?.status))}">${escapeHtml(copy)}</p>`
+      : '';
+  }).join('');
+  return `
+    <div class="admin-funnel-control">
+      <label>
+        <span>Sales stage</span>
+        <select data-inquiry-stage aria-label="Sales stage">
+          ${inquiryStatusOptions(inquiry.status)}
+        </select>
+      </label>
+      <label data-disqualification-reason-wrap ${isDisqualified ? '' : 'hidden'}>
+        <span>Disqualification reason</span>
+        <input type="text" maxlength="500" value="${escapeHtml(inquiry.disqualificationReason)}" placeholder="For example: retailer, quantity below MOQ, or no response" data-disqualification-reason>
+      </label>
+      <button class="btn btn-primary admin-compact-btn" type="button" data-update-inquiry-stage>Update stage</button>
+      ${metaStatuses}
+    </div>
+  `;
+}
+
+function inquiryHistoryMarkup(inquiry) {
+  if (!inquiry.statusHistory.length) {
+    return '<p class="admin-inquiry-history-empty">No stage changes recorded yet.</p>';
+  }
+  return `<ol class="admin-inquiry-history">
+    ${[...inquiry.statusHistory].reverse().map(entry => `
+      <li>
+        <span>${escapeHtml(formatInquiryDate(entry.changedAt))}</span>
+        <strong>${escapeHtml(inquiryStatusLabel(entry.status))}</strong>
+        ${entry.reason ? `<p>${escapeHtml(entry.reason)}</p>` : ''}
+      </li>
+    `).join('')}
+  </ol>`;
 }
 
 function renderInquiryDetail() {
@@ -754,12 +863,13 @@ function renderInquiryDetail() {
         </div>
         <div class="admin-inquiry-actions">
           <a class="btn btn-outline admin-compact-btn" href="${escapeHtml(replyHref)}">Reply by Email</a>
-          ${inquiryStatusActions(inquiry)}
         </div>
       </header>
       <div class="admin-inquiry-body">
+        ${inquiryFunnelControl(inquiry)}
         <div class="admin-inquiry-meta">
           <div><span>Status</span><strong>${escapeHtml(inquiryStatusLabel(inquiry.status))}</strong></div>
+          <div><span>Last stage update</span><strong>${escapeHtml(formatInquiryDate(inquiry.updatedAt))}</strong></div>
           <div><span>Email</span><a href="mailto:${escapeHtml(inquiry.email)}">${escapeHtml(inquiry.email)}</a></div>
           <div><span>Company</span><strong>${escapeHtml(inquiry.company || 'Not provided')}</strong></div>
           <div><span>Country / Region</span><strong>${escapeHtml(inquiry.country || 'Not provided')}</strong></div>
@@ -779,10 +889,15 @@ function renderInquiryDetail() {
           <div><span>UTM Campaign</span><strong>${escapeHtml(inquiry.utmCampaign || 'Not recorded')}</strong></div>
           <div><span>UTM Content</span><strong>${escapeHtml(inquiry.utmContent || 'Not recorded')}</strong></div>
           <div><span>UTM Term</span><strong>${escapeHtml(inquiry.utmTerm || 'Not recorded')}</strong></div>
+          ${inquiry.disqualificationReason ? `<div><span>Disqualification reason</span><strong>${escapeHtml(inquiry.disqualificationReason)}</strong></div>` : ''}
         </div>
         <div class="admin-inquiry-message">
           <span>Customer Message</span>
           <p>${escapeHtml(inquiry.message || 'No message')}</p>
+        </div>
+        <div class="admin-inquiry-history-wrap">
+          <span>Stage history</span>
+          ${inquiryHistoryMarkup(inquiry)}
         </div>
       </div>
     </article>
@@ -846,24 +961,66 @@ function selectInquiry(id) {
   renderInquiryDetail();
 }
 
-async function updateSelectedInquiryStatus(status) {
+function oneMetaUpdateMessage(meta) {
+  if (!meta || meta.status === 'not-applicable') return '';
+  const eventLabel = String(meta.eventName || 'Meta event').replace(/([a-z])([A-Z])/g, '$1 $2');
+  if (meta.status === 'sent') return `${eventLabel} is recorded by Meta.`;
+  if (meta.status === 'failed') {
+    return `${eventLabel} was not sent (${meta.reason || 'provider error'}). Click Update stage to retry.`;
+  }
+  if (meta.status === 'sending') return `${eventLabel} is already being sent. Refresh shortly to see the result.`;
+  if (meta.status === 'pending') return `${eventLabel} is waiting to be sent.`;
+  if (meta.status === 'skipped') return `${eventLabel} was skipped (${meta.reason || 'marketing consent unavailable'}).`;
+  return '';
+}
+
+function metaUpdateMessage(meta) {
+  const deliveries = Array.isArray(meta?.deliveries) && meta.deliveries.length
+    ? meta.deliveries
+    : [meta];
+  return deliveries.map(oneMetaUpdateMessage).filter(Boolean).join(' ');
+}
+
+async function updateSelectedInquiryStatus(status, options = {}) {
   const inquiry = currentInquiry();
   if (!inquiry) return;
+  const updateButton = $('[data-update-inquiry-stage]', els.inquiryDetail);
+  if (updateButton?.disabled) return;
+  if (updateButton) {
+    updateButton.disabled = true;
+    updateButton.textContent = 'Saving...';
+  }
   try {
     const data = await apiJson('/api/admin/inquiries', {
       method: 'PATCH',
       body: {
         id: inquiry.id,
-        status
+        status,
+        disqualificationReason: options.disqualificationReason || ''
       }
     });
     const updated = normalizeInquiry(data.inquiry);
     const index = state.inquiries.findIndex(item => item.id === updated.id);
     if (index !== -1) state.inquiries[index] = updated;
     renderInquiries();
-    updateLiveState(`${updated.id} marked ${inquiryStatusLabel(updated.status).toLowerCase()}.`, 'success');
+    const metaMessage = metaUpdateMessage(data.meta);
+    const metaStatuses = Array.isArray(data.meta?.deliveries)
+      ? data.meta.deliveries.map(item => item.status)
+      : [data.meta?.status];
+    const tone = metaStatuses.some(value => ['failed', 'sending', 'pending'].includes(value))
+      ? 'warning'
+      : 'success';
+    updateLiveState(
+      `${updated.id} marked ${inquiryStatusLabel(updated.status).toLowerCase()}.${metaMessage ? ` ${metaMessage}` : ''}`,
+      tone
+    );
   } catch (error) {
     updateLiveState(error.message, 'error');
+  } finally {
+    if (updateButton?.isConnected) {
+      updateButton.disabled = false;
+      updateButton.textContent = 'Update stage';
+    }
   }
 }
 
@@ -1560,8 +1717,20 @@ function bindEvents() {
     if (button) selectInquiry(button.dataset.selectInquiry);
   });
   els.inquiryDetail.addEventListener('click', event => {
-    const button = event.target.closest('[data-inquiry-status]');
-    if (button) updateSelectedInquiryStatus(button.dataset.inquiryStatus);
+    const button = event.target.closest('[data-update-inquiry-stage]');
+    if (!button) return;
+    const stage = $('[data-inquiry-stage]', els.inquiryDetail);
+    const reason = $('[data-disqualification-reason]', els.inquiryDetail);
+    if (!stage) return;
+    updateSelectedInquiryStatus(stage.value, {
+      disqualificationReason: reason ? reason.value.trim() : ''
+    });
+  });
+  els.inquiryDetail.addEventListener('change', event => {
+    const select = event.target.closest('[data-inquiry-stage]');
+    if (!select) return;
+    const reasonWrap = $('[data-disqualification-reason-wrap]', els.inquiryDetail);
+    if (reasonWrap) reasonWrap.hidden = select.value !== 'disqualified';
   });
 
   els.newProduct.addEventListener('click', createDraftProduct);

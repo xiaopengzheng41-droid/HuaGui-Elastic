@@ -128,6 +128,12 @@ test('inquiry validation preserves only bounded attribution fields and submissio
   assert.equal(id, createInquiryId(now, input.submissionId));
   assert.match(id, /^HG-20261029-[A-F0-9]{16}$/);
   assert.notEqual(id, createInquiryId(now, `${input.submissionId}-new`));
+
+  const stableSubmissionId = '20261029-6f088b5d-244a-47c6-8dc6-76f8153d7ecb';
+  assert.equal(
+    createInquiryId(new Date('2026-10-30T02:00:00.000Z'), stableSubmissionId),
+    createInquiryId(new Date('2026-10-29T23:59:59.000Z'), stableSubmissionId)
+  );
   assert.equal(inquiryPathForId('HG-20261029-ABCDEF12'), 'inquiries/2026/10/HG-20261029-ABCDEF12.json');
   assert.equal(inquiryPathForId('HG-20261029-ABCDEF1234567890'), 'inquiries/2026/10/HG-20261029-ABCDEF1234567890.json');
 });
@@ -279,16 +285,16 @@ test('all public pages load the consent-aware analytics layer and privacy copy i
   const pages = ['index', 'products', 'service', 'factory', 'exhibitions', 'faq', 'about', 'contact', 'privacy'];
   pages.forEach(page => {
     const source = fs.readFileSync(path.join(ROOT, 'huagui_company_site', `${page}.html`), 'utf8');
-    assert.match(source, /assets\/js\/analytics\.js\?v=postlaunch-20261029a/);
+    assert.match(source, /assets\/js\/analytics\.js\?v=measurement-20261029a/);
   });
   const productSource = fs.readFileSync(path.join(ROOT, 'huagui_company_site', 'product-detail.html'), 'utf8');
-  assert.match(productSource, /assets\/js\/analytics\.js\?v=postlaunch-20261029a/);
+  assert.match(productSource, /assets\/js\/analytics\.js\?v=measurement-20261029a/);
 
   const products = await loadProducts({ includeDrafts: false });
   for (const locale of LOCALES.filter(value => value !== 'en')) {
     const html = renderStaticPage({ page: 'privacy', locale, products });
     assert.doesNotMatch(html, /We also record the inquiry source page/i, `${locale} attribution copy remained English`);
-    assert.doesNotMatch(html, /If Google Analytics is configured/i, `${locale} analytics copy remained English`);
+    assert.doesNotMatch(html, /Measurement technologies are optional/i, `${locale} measurement copy remained English`);
   }
 });
 

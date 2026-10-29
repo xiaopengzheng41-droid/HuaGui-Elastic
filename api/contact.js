@@ -1,7 +1,72 @@
-const { createInquiry } = require('./_inquiries');
+const {
+  claimInquiryMetaDelivery,
+  completeInquiryMetaDelivery,
+  createInquiry,
+  queueInquiryMetaDelivery
+} = require('./_inquiries');
 const { parseJsonBody, sendError, sendJson } = require('./_cms');
+const { requestMetaContext, sendMetaLeadEvent } = require('./_meta');
 const { notifyNewInquiry } = require('./_notifications');
 const { applyRateLimit } = require('./_rate-limit');
+
+async function deliverMetaLead(
+  inquiry,
+  metaContext,
+  {
+    queueDelivery = queueInquiryMetaDelivery,
+    claimDelivery = claimInquiryMetaDelivery,
+    completeDelivery = completeInquiryMetaDelivery,
+    sendEvent = sendMetaLeadEvent
+  } = {}
+) {
+  const queued = await queueDelivery(inquiry.id, 'Lead');
+  const claim = await claimDelivery(queued.inquiry.id, 'Lead');
+  if (!claim.claimed) {
+    return { inquiry: claim.inquiry, delivery: claim.delivery };
+  }
+
+  let outcome;
+  try {
+    const eventTime = new Date(claim.delivery?.createdAt || claim.inquiry.createdAt || Date.now());
+    const provider = await sendEvent(claim.inquiry, {
+      context: metaContext,
+      now: Number.isNaN(eventTime.getTime()) ? new Date() : eventTime
+    });
+    if (provider.sent) {
+      outcome = {
+        status: 'sent',
+        eventId: provider.eventId,
+        traceId: provider.traceId
+      };
+    } else if (provider.reason === 'no-marketing-consent') {
+      outcome = { status: 'skipped', reason: provider.reason };
+    } else {
+      outcome = {
+        status: 'failed',
+        reason: provider.reason || 'provider-did-not-accept',
+        error: provider.reason || 'Meta did not accept the event.',
+        eventId: provider.eventId
+      };
+    }
+  } catch (metaError) {
+    console.error('Meta Lead event failed', {
+      inquiryId: claim.inquiry.id,
+      error: metaError.message
+    });
+    outcome = {
+      status: 'failed',
+      reason: 'provider-error',
+      error: metaError.message
+    };
+  }
+  const completed = await completeDelivery(
+    claim.inquiry.id,
+    'Lead',
+    claim.claimToken,
+    outcome
+  );
+  return { inquiry: completed.inquiry, delivery: completed.delivery };
+}
 
 function allowedContactOrigin(req) {
   const fetchSite = String(req.headers['sec-fetch-site'] || '').toLowerCase();
@@ -57,8 +122,13 @@ module.exports = async function contactHandler(req, res) {
       return sendJson(res, 201, { ok: true }, { 'Cache-Control': 'no-store' });
     }
 
-    const inquiry = await createInquiry({
+    const metaContext = requestMetaContext(req, body);
+    let inquiry = await createInquiry({
       ...body,
+      marketingConsent: metaContext.marketingConsent,
+      metaFbp: metaContext.fbp,
+      metaFbc: metaContext.fbc,
+      metaEventSourceUrl: metaContext.eventSourceUrl,
       sourceUrl: body.sourceUrl || req.headers.referer || ''
     });
     try {
@@ -67,6 +137,15 @@ module.exports = async function contactHandler(req, res) {
       console.error('Inquiry notification failed', {
         inquiryId: inquiry.id,
         error: notificationError.message
+      });
+    }
+    try {
+      const metaDelivery = await deliverMetaLead(inquiry, metaContext);
+      inquiry = metaDelivery.inquiry;
+    } catch (metaDeliveryError) {
+      console.error('Meta Lead delivery state failed', {
+        inquiryId: inquiry.id,
+        error: metaDeliveryError.message
       });
     }
     return sendJson(res, 201, {
@@ -85,3 +164,4 @@ module.exports = async function contactHandler(req, res) {
 };
 
 module.exports.allowedContactOrigin = allowedContactOrigin;
+module.exports.deliverMetaLead = deliverMetaLead;
