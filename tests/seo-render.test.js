@@ -107,7 +107,7 @@ test('localized pages expose localized source text and locale-prefixed internal 
   }
 });
 
-test('exhibitions publish the Hanoi 2026 booth 1F15 record and five real photos in every locale', () => {
+test('exhibitions publish the Hanoi 2026 booth 1F15 record and ordered four-photo grid in every locale', () => {
   const expected = {
     en: ['Booth 1F15', '21–23 October 2026'],
     es: ['Stand 1F15', '21–23 de octubre de 2026'],
@@ -117,9 +117,8 @@ test('exhibitions publish the Hanoi 2026 booth 1F15 record and five real photos 
   };
   const images = [
     'hanoi-textile-garment-expo-2026-booth-1f15-overview.jpg',
-    'hanoi-textile-garment-expo-2026-booth-1f15-full-display.jpg',
-    'hanoi-textile-garment-expo-2026-elastic-display.jpg',
     'hanoi-textile-garment-expo-2026-fold-over-picot-waistband.jpg',
+    'hanoi-textile-garment-expo-2026-elastic-display.jpg',
     'hanoi-textile-garment-expo-2026-decorative-edge-bra-strap.jpg'
   ];
 
@@ -134,7 +133,15 @@ test('exhibitions publish the Hanoi 2026 booth 1F15 record and five real photos 
     assert.ok(html.includes(expected[locale][0]), `${locale} missing localized booth 1F15`);
     assert.ok(html.includes(expected[locale][1]), `${locale} missing localized exhibition date`);
     assert.ok(html.includes('ho-chi-minh-2025-booth-bj01.webp'), `${locale} lost the separate SIUF Vietnam 2025 record`);
-    images.forEach(image => assert.ok(html.includes(image), `${locale} missing ${image}`));
+    const grid = html.match(/<div class="exhibition-card-four-grid"[^>]*>([\s\S]*?)<\/div>/i)?.[1] || '';
+    assert.ok(grid, `${locale} missing the four-photo grid`);
+    assert.equal((grid.match(/<img\b/gi) || []).length, 4, `${locale} four-photo grid does not contain exactly four images`);
+    let previousIndex = -1;
+    images.forEach(image => {
+      const index = grid.indexOf(image);
+      assert.ok(index > previousIndex, `${locale} missing or misordered ${image}`);
+      previousIndex = index;
+    });
 
     const description = html.match(/<meta\s+name=["']description["'][^>]+content=["']([^"']+)/i)?.[1] || '';
     assert.match(description, /1F15/);

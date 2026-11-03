@@ -1008,32 +1008,20 @@ main { padding-top: var(--nav-height); }
 .exhibition-card-featured, .exhibition-card-wide { grid-column: span 2; }
 .exhibition-card-featured { grid-template-columns: 1.45fr 0.85fr; grid-template-rows: 440px; }
 .exhibition-card img { width: 100%; height: 100%; min-height: 280px; object-fit: cover; }
-.exhibition-card-gallery { grid-template-columns: minmax(0, 1.45fr) minmax(300px, 0.85fr); grid-template-rows: auto; }
-.exhibition-card-media {
+.exhibition-card-gallery { grid-template-columns: minmax(0, 1.85fr) minmax(260px, 0.65fr); grid-template-rows: auto; }
+.exhibition-card-four-grid {
   display: grid;
-  grid-template-rows: minmax(360px, 1fr) 112px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
   min-width: 0;
-  background: var(--color-bg);
-}
-.exhibition-card-hero-frame {
-  min-width: 0;
-  min-height: 360px;
-  overflow: hidden;
-}
-.exhibition-card .exhibition-card-hero {
-  min-height: 360px;
-  transform: scale(1.12);
-  transform-origin: left center;
-}
-.exhibition-card-thumbnails {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 6px;
-  padding: 6px;
+  padding: 8px;
   background: var(--color-white);
 }
-.exhibition-card .exhibition-card-thumbnails img {
+.exhibition-card .exhibition-card-four-grid img {
+  width: 100%;
+  height: auto;
   min-height: 0;
+  aspect-ratio: 4 / 3;
   border-radius: 6px;
   object-fit: cover;
 }
@@ -2199,11 +2187,7 @@ main { padding-top: var(--nav-height); }
     grid-template-rows: auto auto;
   }
   .exhibition-card img { min-height: 0; aspect-ratio: 4 / 3; }
-  .exhibition-card-media { grid-template-rows: auto auto; }
-  .exhibition-card-hero-frame { min-height: 0; aspect-ratio: 4 / 3; }
-  .exhibition-card .exhibition-card-hero { min-height: 0; aspect-ratio: auto; }
-  .exhibition-card-thumbnails { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .exhibition-card .exhibition-card-thumbnails img { aspect-ratio: 4 / 3; }
+  .exhibition-card-four-grid { gap: 6px; padding: 6px; }
   .hero-slider { height: auto; min-height: 560px; }
   .hero-content { min-height: 560px; padding: 48px 18px 70px; }
   .hero-content h1 { font-size: 2.35rem; }
