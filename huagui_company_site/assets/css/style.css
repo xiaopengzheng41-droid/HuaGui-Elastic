@@ -1008,9 +1008,44 @@ main { padding-top: var(--nav-height); }
 .exhibition-card-featured, .exhibition-card-wide { grid-column: span 2; }
 .exhibition-card-featured { grid-template-columns: 1.45fr 0.85fr; grid-template-rows: 440px; }
 .exhibition-card img { width: 100%; height: 100%; min-height: 280px; object-fit: cover; }
+.exhibition-card-gallery { grid-template-columns: minmax(0, 1.45fr) minmax(300px, 0.85fr); grid-template-rows: auto; }
+.exhibition-card-media {
+  display: grid;
+  grid-template-rows: minmax(360px, 1fr) 112px;
+  min-width: 0;
+  background: var(--color-bg);
+}
+.exhibition-card-hero-frame {
+  min-width: 0;
+  min-height: 360px;
+  overflow: hidden;
+}
+.exhibition-card .exhibition-card-hero {
+  min-height: 360px;
+  transform: scale(1.12);
+  transform-origin: left center;
+}
+.exhibition-card-thumbnails {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 6px;
+  padding: 6px;
+  background: var(--color-white);
+}
+.exhibition-card .exhibition-card-thumbnails img {
+  min-height: 0;
+  border-radius: 6px;
+  object-fit: cover;
+}
 .exhibition-card-body { padding: 26px; }
 .exhibition-card-body h3 { margin-bottom: 10px; }
 .exhibition-card-body > p:not(.material) { color: var(--color-text-light); }
+.exhibition-card-body .exhibition-card-date {
+  margin-bottom: 14px;
+  color: var(--color-primary-dark);
+  font-size: 0.9rem;
+  font-weight: 800;
+}
 .exhibition-booth {
   display: inline-flex;
   margin-top: 18px;
@@ -2101,6 +2136,7 @@ main { padding-top: var(--nav-height); }
   .factory-focus-card-large { grid-row: auto; grid-template-rows: minmax(280px, 1fr) auto; }
   .factory-quality-grid { grid-template-columns: 1fr; }
   .exhibition-card-featured, .exhibition-card-wide, .shipment-proof-grid { grid-template-columns: 1fr; }
+  .exhibition-card-gallery { grid-template-rows: auto auto; }
   .section-heading-row { align-items: flex-start; flex-direction: column; }
   .footer-grid { grid-template-columns: 1fr 1fr; }
   .company-facts-grid { grid-template-columns: repeat(2, 1fr); }
@@ -2163,6 +2199,11 @@ main { padding-top: var(--nav-height); }
     grid-template-rows: auto auto;
   }
   .exhibition-card img { min-height: 0; aspect-ratio: 4 / 3; }
+  .exhibition-card-media { grid-template-rows: auto auto; }
+  .exhibition-card-hero-frame { min-height: 0; aspect-ratio: 4 / 3; }
+  .exhibition-card .exhibition-card-hero { min-height: 0; aspect-ratio: auto; }
+  .exhibition-card-thumbnails { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .exhibition-card .exhibition-card-thumbnails img { aspect-ratio: 4 / 3; }
   .hero-slider { height: auto; min-height: 560px; }
   .hero-content { min-height: 560px; padding: 48px 18px 70px; }
   .hero-content h1 { font-size: 2.35rem; }

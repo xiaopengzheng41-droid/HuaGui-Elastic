@@ -107,6 +107,41 @@ test('localized pages expose localized source text and locale-prefixed internal 
   }
 });
 
+test('exhibitions publish the Hanoi 2026 booth 1F15 record and five real photos in every locale', () => {
+  const expected = {
+    en: ['Booth 1F15', '21–23 October 2026'],
+    es: ['Stand 1F15', '21–23 de octubre de 2026'],
+    'pt-br': ['Estande 1F15', '21–23 de outubro de 2026'],
+    ru: ['Стенд 1F15', '21–23 октября 2026 г.'],
+    ar: ['الجناح 1F15', '21–23 أكتوبر 2026']
+  };
+  const images = [
+    'hanoi-textile-garment-expo-2026-booth-1f15-overview.jpg',
+    'hanoi-textile-garment-expo-2026-booth-1f15-full-display.jpg',
+    'hanoi-textile-garment-expo-2026-elastic-display.jpg',
+    'hanoi-textile-garment-expo-2026-fold-over-picot-waistband.jpg',
+    'hanoi-textile-garment-expo-2026-decorative-edge-bra-strap.jpg'
+  ];
+
+  for (const image of images) {
+    const file = path.join(ROOT, 'huagui_company_site/assets/images/exhibitions', image);
+    assert.ok(fs.statSync(file).size > 100_000, `${image} is missing or unexpectedly small`);
+  }
+
+  for (const locale of LOCALES) {
+    const html = renderStaticPage({ page: 'exhibitions', locale, products });
+    assert.match(html, /HanoiTex &amp; HanoiFabric 2026/i);
+    assert.ok(html.includes(expected[locale][0]), `${locale} missing localized booth 1F15`);
+    assert.ok(html.includes(expected[locale][1]), `${locale} missing localized exhibition date`);
+    assert.ok(html.includes('ho-chi-minh-2025-booth-bj01.webp'), `${locale} lost the separate SIUF Vietnam 2025 record`);
+    images.forEach(image => assert.ok(html.includes(image), `${locale} missing ${image}`));
+
+    const description = html.match(/<meta\s+name=["']description["'][^>]+content=["']([^"']+)/i)?.[1] || '';
+    assert.match(description, /1F15/);
+    assert.match(description, /HanoiTex/i);
+  }
+});
+
 test('Spanish factory capacity uses linear meters rather than square meters', () => {
   const html = renderStaticPage({ page: 'about', locale: 'es', products });
   assert.match(html, /1,5 millones de metros/i);
