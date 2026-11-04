@@ -284,6 +284,8 @@ test('production CSP permits consented Pixel loading and server event requests',
   assert.match(csp, /script-src[^;]*https:\/\/connect\.facebook\.net/);
   assert.match(csp, /connect-src[^;]*https:\/\/www\.facebook\.com/);
   assert.match(csp, /connect-src[^;]*https:\/\/graph\.facebook\.com/);
+  assert.match(csp, /frame-src[^;]*https:\/\/www\.facebook\.com/);
+  assert.match(csp, /form-action[^;]*https:\/\/www\.facebook\.com/);
 });
 
 test('qualified funnel stages map only commercial progress to Meta events', () => {
