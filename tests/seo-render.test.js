@@ -222,7 +222,7 @@ test('non-English source localizes key image alternatives and accessibility labe
   }
 });
 
-test('home and inquiry source expose the four catalog categories and confirmed MOQ in every locale', () => {
+test('home and inquiry source expose the four catalog categories and confirmed minimum order value in every locale', () => {
   const expectedCategory = {
     en: 'Activewear Elastics',
     es: 'Elásticos para ropa deportiva',
@@ -231,11 +231,11 @@ test('home and inquiry source expose the four catalog categories and confirmed M
     ar: 'مطاط للملابس الرياضية'
   };
   const expectedMoq = {
-    en: '30,000 meters per product',
-    es: '30.000 metros por producto',
-    'pt-br': '30.000 metros por produto',
-    ru: '30 000 метров на один вид продукции',
-    ar: '30,000 متر لكل منتج'
+    en: 'US$8,000',
+    es: 'US$8.000',
+    'pt-br': 'US$ 8.000',
+    ru: '8 000 долларов США',
+    ar: '8,000 دولار أمريكي'
   };
 
   for (const locale of LOCALES) {
@@ -246,7 +246,10 @@ test('home and inquiry source expose the four catalog categories and confirmed M
 
     const contact = renderStaticPage({ page: 'contact', locale, products });
     assert.match(contact, /<option value=["']activewear["']>/i, `${locale} inquiry form is missing Activewear`);
-    assert.ok(contact.includes(expectedMoq[locale]), `${locale} inquiry page is missing the confirmed MOQ`);
+    assert.ok(contact.includes(expectedMoq[locale]), `${locale} inquiry page is missing the confirmed minimum order value`);
+    for (const fieldName of ['companyWebsite', 'city', 'customerType', 'importExperience', 'minimumOrderAcceptance', 'purchaseTimeline']) {
+      assert.match(contact, new RegExp(`name=["']${fieldName}["'][^>]*required`, 'i'), `${locale} inquiry form is missing required field ${fieldName}`);
+    }
     assert.doesNotMatch(contact, /5[,.]000m\s*\/\s*20[,.]000m/i, `${locale} inquiry page still suggests a sub-MOQ quantity`);
   }
 });

@@ -199,6 +199,109 @@
     }
   };
 
+  const QUALIFICATION_STRINGS = {
+    es: {
+      'Company Website / Social Profile *': 'Sitio web de la empresa / perfil social *',
+      'Website, LinkedIn, Facebook, or Instagram': 'Sitio web, LinkedIn, Facebook o Instagram',
+      'City *': 'Ciudad *',
+      'City where your business operates': 'Ciudad donde opera su empresa',
+      'Primary Customer Type *': 'Tipo principal de cliente *',
+      'Select your main customer type': 'Seleccione su principal tipo de cliente',
+      'Intimate Apparel Factory': 'Fábrica de ropa íntima',
+      'Intimate Apparel Brand': 'Marca de ropa íntima',
+      'Garment Factory': 'Fábrica de confección',
+      'Trims / Accessories Wholesaler': 'Mayorista de avíos / accesorios',
+      Retailer: 'Minorista',
+      'Overseas Import Experience *': 'Experiencia en importación internacional *',
+      'Select import experience': 'Seleccione la experiencia de importación',
+      'Yes, currently importing': 'Sí, importamos actualmente',
+      'Preparing to import': 'Preparándonos para importar',
+      'No import experience': 'Sin experiencia en importación',
+      'Estimated order value or quantity': 'Valor estimado del pedido o cantidad',
+      'Can your company consider an initial order of at least US$8,000? *': '¿Su empresa puede considerar un pedido inicial de al menos US$8.000? *',
+      'Select one': 'Seleccione una opción', Yes: 'Sí', 'Need further discussion': 'Necesita más conversación', No: 'No',
+      'Expected Purchase Timeline *': 'Plazo previsto de compra *', Immediately: 'Inmediatamente',
+      'Within 1–3 months': 'Dentro de 1–3 meses', 'Within 3–6 months': 'Dentro de 3–6 meses', 'Research only': 'Solo investigación',
+      'What is the minimum order value?': '¿Cuál es el valor mínimo del pedido?',
+      'The minimum total order value is US$8,000. Product mix, color quantities, construction, material, dyeing, finishing, and packing are reviewed for each quotation.': 'El valor mínimo total del pedido es de US$8.000. La combinación de productos, las cantidades por color, la construcción, el material, el teñido, el acabado y el embalaje se revisan en cada cotización.',
+      'The minimum total order value is US$8,000. Also share your expected quantity, sample deadline, delivery country, and packing requirement.': 'El valor mínimo total del pedido es de US$8.000. Indique también la cantidad prevista, la fecha límite de la muestra, el país de entrega y los requisitos de embalaje.',
+      'B2B buyer focus:': 'Enfoque en compradores B2B:',
+      'We welcome importers, distributors, wholesalers, agents, intimate-apparel manufacturers, and brands. Samples are free when the customer pays courier charges.': 'Damos la bienvenida a importadores, distribuidores, mayoristas, agentes, fabricantes de ropa íntima y marcas. Las muestras son gratuitas cuando el cliente paga los gastos de mensajería.',
+      'When you send a business inquiry, we may collect your name, company, company website or social profile, country or region, city, email address, telephone or WhatsApp number, business role, primary customer type, import experience, product interests, target quantity, minimum-order response, expected purchase timeline, trade preferences, message, and any files or product references you choose to provide. We also record the inquiry source page and limited attribution details such as the first landing path, referring website host, and UTM campaign parameters.': 'Cuando envía una consulta comercial, podemos recopilar su nombre, empresa, sitio web o perfil social de la empresa, país o región, ciudad, correo electrónico, teléfono o WhatsApp, función comercial, tipo principal de cliente, experiencia de importación, productos de interés, cantidad prevista, respuesta sobre el pedido mínimo, plazo previsto de compra, preferencias comerciales, mensaje y los archivos o referencias que decida proporcionar. También registramos la página de origen, la primera ruta de llegada, el dominio de referencia y los parámetros UTM.'
+    },
+    'pt-br': {
+      'Company Website / Social Profile *': 'Site da empresa / perfil em rede social *',
+      'Website, LinkedIn, Facebook, or Instagram': 'Site, LinkedIn, Facebook ou Instagram',
+      'City *': 'Cidade *',
+      'City where your business operates': 'Cidade onde sua empresa atua',
+      'Primary Customer Type *': 'Tipo principal de cliente *',
+      'Select your main customer type': 'Selecione o principal tipo de cliente',
+      'Intimate Apparel Factory': 'Fábrica de moda íntima',
+      'Intimate Apparel Brand': 'Marca de moda íntima',
+      'Garment Factory': 'Fábrica de confecção',
+      'Trims / Accessories Wholesaler': 'Atacadista de aviamentos / acessórios',
+      Retailer: 'Varejista',
+      'Overseas Import Experience *': 'Experiência com importação direta *',
+      'Select import experience': 'Selecione a experiência de importação',
+      'Yes, currently importing': 'Sim, já importamos',
+      'Preparing to import': 'Estamos nos preparando para importar',
+      'No import experience': 'Sem experiência de importação',
+      'Estimated order value or quantity': 'Valor estimado do pedido ou quantidade',
+      'Can your company consider an initial order of at least US$8,000? *': 'Sua empresa pode considerar um pedido inicial de pelo menos US$ 8.000? *',
+      'Select one': 'Selecione uma opção', Yes: 'Sim', 'Need further discussion': 'Precisa de mais detalhes', No: 'Não',
+      'Expected Purchase Timeline *': 'Prazo previsto para compra *', Immediately: 'Imediatamente',
+      'Within 1–3 months': 'Dentro de 1–3 meses', 'Within 3–6 months': 'Dentro de 3–6 meses', 'Research only': 'Apenas pesquisando',
+      'What is the minimum order value?': 'Qual é o valor mínimo do pedido?',
+      'The minimum total order value is US$8,000. Product mix, color quantities, construction, material, dyeing, finishing, and packing are reviewed for each quotation.': 'O valor mínimo total do pedido é US$ 8.000. O mix de produtos, as quantidades por cor, a construção, o material, o tingimento, o acabamento e a embalagem são avaliados em cada cotação.',
+      'The minimum total order value is US$8,000. Also share your expected quantity, sample deadline, delivery country, and packing requirement.': 'O valor mínimo total do pedido é US$ 8.000. Informe também a quantidade prevista, o prazo da amostra, o país de entrega e os requisitos de embalagem.',
+      'B2B buyer focus:': 'Foco em compradores B2B:',
+      'We welcome importers, distributors, wholesalers, agents, intimate-apparel manufacturers, and brands. Samples are free when the customer pays courier charges.': 'Atendemos importadores, distribuidores, atacadistas, agentes, fabricantes de moda íntima e marcas. As amostras são gratuitas quando o cliente paga o frete expresso.',
+      'When you send a business inquiry, we may collect your name, company, company website or social profile, country or region, city, email address, telephone or WhatsApp number, business role, primary customer type, import experience, product interests, target quantity, minimum-order response, expected purchase timeline, trade preferences, message, and any files or product references you choose to provide. We also record the inquiry source page and limited attribution details such as the first landing path, referring website host, and UTM campaign parameters.': 'Quando você envia uma consulta comercial, podemos coletar seu nome, empresa, site ou perfil social da empresa, país ou região, cidade, e-mail, telefone ou WhatsApp, função comercial, tipo principal de cliente, experiência de importação, produtos de interesse, quantidade desejada, resposta sobre o pedido mínimo, prazo previsto para compra, preferências comerciais, mensagem e os arquivos ou referências que decidir fornecer. Também registramos a página de origem, a primeira rota de chegada, o domínio de referência e os parâmetros UTM.'
+    },
+    ru: {
+      'Company Website / Social Profile *': 'Сайт компании / профиль в соцсети *',
+      'Website, LinkedIn, Facebook, or Instagram': 'Сайт, LinkedIn, Facebook или Instagram',
+      'City *': 'Город *', 'City where your business operates': 'Город, где работает ваша компания',
+      'Primary Customer Type *': 'Основной тип клиента *', 'Select your main customer type': 'Выберите основной тип клиента',
+      'Intimate Apparel Factory': 'Фабрика нижнего белья', 'Intimate Apparel Brand': 'Бренд нижнего белья',
+      'Garment Factory': 'Швейная фабрика', 'Trims / Accessories Wholesaler': 'Оптовик фурнитуры / аксессуаров', Retailer: 'Розничная компания',
+      'Overseas Import Experience *': 'Опыт международного импорта *', 'Select import experience': 'Выберите опыт импорта',
+      'Yes, currently importing': 'Да, уже импортируем', 'Preparing to import': 'Готовимся к импорту', 'No import experience': 'Нет опыта импорта',
+      'Estimated order value or quantity': 'Ориентировочная стоимость или количество заказа',
+      'Can your company consider an initial order of at least US$8,000? *': 'Может ли ваша компания рассмотреть первый заказ на сумму не менее 8 000 долларов США? *',
+      'Select one': 'Выберите вариант', Yes: 'Да', 'Need further discussion': 'Нужно обсудить', No: 'Нет',
+      'Expected Purchase Timeline *': 'Ожидаемый срок закупки *', Immediately: 'Сразу',
+      'Within 1–3 months': 'В течение 1–3 месяцев', 'Within 3–6 months': 'В течение 3–6 месяцев', 'Research only': 'Только изучение',
+      'What is the minimum order value?': 'Какова минимальная стоимость заказа?',
+      'The minimum total order value is US$8,000. Product mix, color quantities, construction, material, dyeing, finishing, and packing are reviewed for each quotation.': 'Минимальная общая стоимость заказа составляет 8 000 долларов США. Ассортимент, количество по цветам, конструкция, материал, окрашивание, отделка и упаковка рассматриваются для каждого предложения.',
+      'The minimum total order value is US$8,000. Also share your expected quantity, sample deadline, delivery country, and packing requirement.': 'Минимальная общая стоимость заказа составляет 8 000 долларов США. Также укажите ожидаемое количество, срок изготовления образца, страну доставки и требования к упаковке.',
+      'B2B buyer focus:': 'Для покупателей B2B:',
+      'We welcome importers, distributors, wholesalers, agents, intimate-apparel manufacturers, and brands. Samples are free when the customer pays courier charges.': 'Мы работаем с импортерами, дистрибьюторами, оптовиками, агентами, производителями и брендами нижнего белья. Образцы бесплатны при оплате курьерской доставки клиентом.',
+      'When you send a business inquiry, we may collect your name, company, company website or social profile, country or region, city, email address, telephone or WhatsApp number, business role, primary customer type, import experience, product interests, target quantity, minimum-order response, expected purchase timeline, trade preferences, message, and any files or product references you choose to provide. We also record the inquiry source page and limited attribution details such as the first landing path, referring website host, and UTM campaign parameters.': 'При отправке делового запроса мы можем получить ваше имя, название компании, сайт или профиль компании в соцсети, страну или регион, город, электронную почту, телефон или WhatsApp, роль в бизнесе, основной тип клиента, опыт импорта, интересующие товары, планируемое количество, ответ о минимальном заказе, ожидаемый срок закупки, торговые предпочтения, сообщение и предоставленные файлы или ссылки. Мы также фиксируем исходную страницу, первую страницу входа, домен источника и параметры UTM.'
+    },
+    ar: {
+      'Company Website / Social Profile *': 'موقع الشركة / حساب التواصل الاجتماعي *',
+      'Website, LinkedIn, Facebook, or Instagram': 'الموقع أو LinkedIn أو Facebook أو Instagram',
+      'City *': 'المدينة *', 'City where your business operates': 'المدينة التي تعمل فيها شركتك',
+      'Primary Customer Type *': 'نوع العميل الرئيسي *', 'Select your main customer type': 'اختر نوع العميل الرئيسي',
+      'Intimate Apparel Factory': 'مصنع ملابس داخلية', 'Intimate Apparel Brand': 'علامة تجارية للملابس الداخلية',
+      'Garment Factory': 'مصنع ملابس', 'Trims / Accessories Wholesaler': 'تاجر جملة للوازم / الإكسسوارات', Retailer: 'بائع تجزئة',
+      'Overseas Import Experience *': 'خبرة الاستيراد الدولي *', 'Select import experience': 'اختر خبرة الاستيراد',
+      'Yes, currently importing': 'نعم، نستورد حاليًا', 'Preparing to import': 'نستعد للاستيراد', 'No import experience': 'لا توجد خبرة في الاستيراد',
+      'Estimated order value or quantity': 'قيمة الطلب أو الكمية التقديرية',
+      'Can your company consider an initial order of at least US$8,000? *': 'هل يمكن لشركتك النظر في طلب أولي بقيمة لا تقل عن 8,000 دولار أمريكي؟ *',
+      'Select one': 'اختر خيارًا', Yes: 'نعم', 'Need further discussion': 'بحاجة إلى مزيد من المناقشة', No: 'لا',
+      'Expected Purchase Timeline *': 'الجدول الزمني المتوقع للشراء *', Immediately: 'فورًا',
+      'Within 1–3 months': 'خلال 1–3 أشهر', 'Within 3–6 months': 'خلال 3–6 أشهر', 'Research only': 'بحث فقط',
+      'What is the minimum order value?': 'ما الحد الأدنى لقيمة الطلب؟',
+      'The minimum total order value is US$8,000. Product mix, color quantities, construction, material, dyeing, finishing, and packing are reviewed for each quotation.': 'الحد الأدنى لإجمالي قيمة الطلب هو 8,000 دولار أمريكي. تتم مراجعة تشكيلة المنتجات وكميات الألوان والبنية والمواد والصباغة والتشطيب والتعبئة لكل عرض سعر.',
+      'The minimum total order value is US$8,000. Also share your expected quantity, sample deadline, delivery country, and packing requirement.': 'الحد الأدنى لإجمالي قيمة الطلب هو 8,000 دولار أمريكي. يرجى أيضًا ذكر الكمية المتوقعة وموعد العينة وبلد التسليم ومتطلبات التعبئة.',
+      'B2B buyer focus:': 'التركيز على المشترين بين الشركات:',
+      'We welcome importers, distributors, wholesalers, agents, intimate-apparel manufacturers, and brands. Samples are free when the customer pays courier charges.': 'نرحب بالمستوردين والموزعين وتجار الجملة والوكلاء ومصنعي وعلامات الملابس الداخلية. العينات مجانية عندما يدفع العميل رسوم الشحن السريع.',
+      'When you send a business inquiry, we may collect your name, company, company website or social profile, country or region, city, email address, telephone or WhatsApp number, business role, primary customer type, import experience, product interests, target quantity, minimum-order response, expected purchase timeline, trade preferences, message, and any files or product references you choose to provide. We also record the inquiry source page and limited attribution details such as the first landing path, referring website host, and UTM campaign parameters.': 'عند إرسال استفسار تجاري، قد نجمع اسمك واسم الشركة وموقعها أو حسابها الاجتماعي وبلدك أو منطقتك ومدينتك وبريدك الإلكتروني ورقم الهاتف أو واتساب والدور التجاري ونوع العميل الرئيسي وخبرة الاستيراد والمنتجات المطلوبة والكمية المستهدفة والرد بشأن الحد الأدنى للطلب والجدول المتوقع للشراء والتفضيلات التجارية والرسالة وأي ملفات أو مراجع تقدمها. كما نسجل صفحة المصدر وصفحة الوصول الأولى ونطاق الإحالة ومعلمات UTM.'
+    }
+  };
+
   const COMMON_STRINGS = {
     es: {
       FAQ: 'PREGUNTAS FRECUENTES', 'Buyer FAQ': 'Preguntas frecuentes para compradores', 'Privacy Policy': 'Política de privacidad', 'Binding & Edge Elastics': 'Elásticos para ribetes y bordes',
@@ -274,7 +377,8 @@
     ...(window.HUAGUI_LEAF_TRANSLATIONS?.[locale] || {}),
     ...(window.HUAGUI_PAGE_TRANSLATIONS?.[locale] || {}),
     ...(STRINGS[locale] || {}),
-    ...(COMMON_STRINGS[locale] || {})
+    ...(COMMON_STRINGS[locale] || {}),
+    ...(QUALIFICATION_STRINGS[locale] || {})
   };
   const productTerms = PRODUCT_TERMS[locale] || {};
   const productTemplates = PRODUCT_TEMPLATES[locale] || {};

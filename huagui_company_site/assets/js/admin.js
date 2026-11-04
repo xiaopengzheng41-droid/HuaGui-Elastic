@@ -637,14 +637,20 @@ function normalizeInquiry(value) {
     status,
     name: String(source.name || ''),
     company: String(source.company || ''),
+    companyWebsite: String(source.companyWebsite || ''),
     country: String(source.country || ''),
+    city: String(source.city || ''),
     businessRole: String(source.businessRole || ''),
+    customerType: String(source.customerType || ''),
+    importExperience: String(source.importExperience || ''),
     email: String(source.email || ''),
     phone: String(source.phone || ''),
     product: String(source.product || ''),
     productName: String(source.productName || ''),
     itemNo: String(source.itemNo || ''),
     quantity: String(source.quantity || ''),
+    minimumOrderAcceptance: String(source.minimumOrderAcceptance || ''),
+    purchaseTimeline: String(source.purchaseTimeline || ''),
     tradeTerm: String(source.tradeTerm || ''),
     quoteCurrency: String(source.quoteCurrency || ''),
     message: String(source.message || ''),
@@ -718,14 +724,20 @@ function renderInquiryList() {
       inquiry.id,
       inquiry.name,
       inquiry.company,
+      inquiry.companyWebsite,
       inquiry.country,
+      inquiry.city,
       inquiry.businessRole,
+      inquiry.customerType,
+      inquiry.importExperience,
       inquiry.email,
       inquiry.phone,
       inquiry.productName,
       CATEGORY_LABELS[inquiry.product] || '',
       inquiry.itemNo,
       inquiry.quantity,
+      inquiry.minimumOrderAcceptance,
+      inquiry.purchaseTimeline,
       inquiry.status,
       inquiry.disqualificationReason,
       inquiry.utmSource,
@@ -872,13 +884,19 @@ function renderInquiryDetail() {
           <div><span>Last stage update</span><strong>${escapeHtml(formatInquiryDate(inquiry.updatedAt))}</strong></div>
           <div><span>Email</span><a href="mailto:${escapeHtml(inquiry.email)}">${escapeHtml(inquiry.email)}</a></div>
           <div><span>Company</span><strong>${escapeHtml(inquiry.company || 'Not provided')}</strong></div>
+          <div><span>Company Website / Social</span><strong>${escapeHtml(inquiry.companyWebsite || 'Not provided')}</strong></div>
           <div><span>Country / Region</span><strong>${escapeHtml(inquiry.country || 'Not provided')}</strong></div>
+          <div><span>City</span><strong>${escapeHtml(inquiry.city || 'Not provided')}</strong></div>
           <div><span>Business Role</span><strong>${escapeHtml(inquiry.businessRole || 'Not provided')}</strong></div>
+          <div><span>Primary Customer Type</span><strong>${escapeHtml(inquiry.customerType || 'Not provided')}</strong></div>
+          <div><span>Import Experience</span><strong>${escapeHtml(inquiry.importExperience || 'Not provided')}</strong></div>
           <div><span>Phone / WhatsApp</span>${inquiry.phone ? `<a href="tel:${escapeHtml(inquiry.phone)}">${escapeHtml(inquiry.phone)}</a>` : '<strong>Not provided</strong>'}</div>
           <div><span>Product Category</span><strong>${escapeHtml(productLabel)}</strong></div>
           <div><span>Product Reference</span><strong>${escapeHtml(inquiry.productName || 'Not provided')}</strong></div>
           <div><span>Item No.</span><strong>${escapeHtml(inquiry.itemNo || 'Not provided')}</strong></div>
           <div><span>Target Quantity</span><strong>${escapeHtml(inquiry.quantity || 'Not provided')}</strong></div>
+          <div><span>Can Consider US$8,000 Initial Order</span><strong>${escapeHtml(inquiry.minimumOrderAcceptance || 'Not provided')}</strong></div>
+          <div><span>Purchase Timeline</span><strong>${escapeHtml(inquiry.purchaseTimeline || 'Not provided')}</strong></div>
           <div><span>Trade Term</span><strong>${escapeHtml(inquiry.tradeTerm || 'Not provided')}</strong></div>
           <div><span>Quote Currency</span><strong>${escapeHtml(inquiry.quoteCurrency || 'Not provided')}</strong></div>
           <div><span>Source Page</span><strong>${escapeHtml(inquiry.sourceUrl || 'Not recorded')}</strong></div>

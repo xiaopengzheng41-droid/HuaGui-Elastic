@@ -56,6 +56,16 @@
               </div>
               <div class="form-row">
                 <div class="form-group">
+                  <label for="companyWebsite">Company Website / Social Profile *</label>
+                  <input type="text" id="companyWebsite" name="companyWebsite" placeholder="Website, LinkedIn, Facebook, or Instagram" required>
+                </div>
+                <div class="form-group">
+                  <label for="city">City *</label>
+                  <input type="text" id="city" name="city" placeholder="City where your business operates" required>
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group">
                   <label for="email">Email Address *</label>
                   <input type="email" id="email" name="email" placeholder="you@company.com" required>
                 </div>
@@ -79,6 +89,29 @@
               </div>
               <div class="form-row">
                 <div class="form-group">
+                  <label for="customerType">Primary Customer Type *</label>
+                  <select id="customerType" name="customerType" required>
+                    <option value="">Select your main customer type</option>
+                    <option value="intimate-apparel-factory">Intimate Apparel Factory</option>
+                    <option value="intimate-apparel-brand">Intimate Apparel Brand</option>
+                    <option value="garment-factory">Garment Factory</option>
+                    <option value="trims-wholesaler">Trims / Accessories Wholesaler</option>
+                    <option value="retailer">Retailer</option>
+                    <option value="other">Other</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="importExperience">Overseas Import Experience *</label>
+                  <select id="importExperience" name="importExperience" required>
+                    <option value="">Select import experience</option>
+                    <option value="currently-importing">Yes, currently importing</option>
+                    <option value="preparing">Preparing to import</option>
+                    <option value="none">No import experience</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group">
                   <label for="product">Product Interest</label>
                   <select id="product" name="product">
                     <option value="">Select a category</option>
@@ -92,7 +125,28 @@
                 </div>
                 <div class="form-group">
                   <label for="quantity">Target Quantity</label>
-                  <input type="text" id="quantity" name="quantity" placeholder="Example: 30,000m total / 6,000m per color">
+                  <input type="text" id="quantity" name="quantity" placeholder="Estimated order value or quantity">
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="minimumOrderAcceptance">Can your company consider an initial order of at least US$8,000? *</label>
+                  <select id="minimumOrderAcceptance" name="minimumOrderAcceptance" required>
+                    <option value="">Select one</option>
+                    <option value="yes">Yes</option>
+                    <option value="discuss">Need further discussion</option>
+                    <option value="no">No</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="purchaseTimeline">Expected Purchase Timeline *</label>
+                  <select id="purchaseTimeline" name="purchaseTimeline" required>
+                    <option value="">Select one</option>
+                    <option value="immediately">Immediately</option>
+                    <option value="one-to-three-months">Within 1–3 months</option>
+                    <option value="three-to-six-months">Within 3–6 months</option>
+                    <option value="research">Research only</option>
+                  </select>
                 </div>
               </div>
               <div class="form-row">
@@ -137,8 +191,9 @@
             <div class="capability-item"><strong>Application</strong><p>Men's underwear, women's underwear, bra, lingerie, or other intimate apparel type.</p></div>
             <div class="capability-item"><strong>Specification</strong><p>Width, thickness, material, stretch, logo method, color, and edge finish.</p></div>
             <div class="capability-item"><strong>Reference</strong><p>Product photo, physical sample photo, Pantone color, or artwork file.</p></div>
-            <div class="capability-item"><strong>Order Plan</strong><p>Normal MOQ is 30,000 meters per product and at least 6,000 meters per color. Also share your sample deadline, delivery country, and packing requirement.</p></div>
+            <div class="capability-item"><strong>Order Plan</strong><p>The minimum total order value is US$8,000. Also share your expected quantity, sample deadline, delivery country, and packing requirement.</p></div>
           </div>
+          <p class="partner-callout"><strong>B2B buyer focus:</strong> We welcome importers, distributors, wholesalers, agents, intimate-apparel manufacturers, and brands. Samples are free when the customer pays courier charges.</p>
         </div>
       </section>
     </main>

@@ -15,7 +15,7 @@ Set `GA4_MEASUREMENT_ID` to a valid GA4 web stream ID such as `G-XXXXXXXXXX` in 
 Use UTM parameters on campaign links:
 
 ```text
-https://www.huaguielastic.com/pt-br/products.html?utm_source=facebook&utm_medium=paid_social&utm_campaign=brazil_distributors&utm_content=factory_video
+https://www.huaguielastic.com/pt-br/contact.html?utm_source=meta&utm_medium=paid_social&utm_campaign=BR_LEADS_IMPORTER_202611&utm_content=binding_creative_01
 ```
 
 The inquiry record stores the first landing path, external referrer host, and the five standard UTM parameters. It intentionally does not store `gclid`, `fbclid`, or arbitrary referrer paths.
@@ -29,6 +29,8 @@ Configure these Vercel secrets only after the sending domain and address have be
 - `RESEND_API_KEY`
 - `INQUIRY_NOTIFICATION_TO`
 - `INQUIRY_NOTIFICATION_FROM`
+
+For Huagui, set `INQUIRY_NOTIFICATION_TO` to `evenzheng@vip.163.com`. Use a sender address on a domain that Resend has verified; do not use the recipient address as the sender unless that domain is verified.
 
 The notification uses an idempotency key derived from the inquiry ID and sets the buyer's address as `reply_to`. If any required variable is absent, notification is safely skipped and the inquiry remains available in `/admin`.
 
@@ -44,6 +46,6 @@ The in-function rate limit is a burst control, not a global distributed limit. I
 
 1. Confirm public pages, localized pages, products, `/sitemap.xml`, and `/admin` still load.
 2. Confirm no request to `googletagmanager.com` occurs before analytics acceptance.
-3. Submit a controlled inquiry with a unique test company name; verify it appears in `/admin` with attribution data.
+3. Submit a controlled inquiry with a unique test company name and all qualification fields; verify it appears in `/admin` with attribution data.
 4. When Resend is configured, verify exactly one notification arrives and the reply action targets the buyer.
 5. Remove or resolve the controlled test inquiry according to the normal admin workflow.

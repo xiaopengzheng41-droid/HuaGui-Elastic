@@ -30,6 +30,17 @@ const META_DELIVERY_EVENT_NAMES = [
   'OrderWon'
 ];
 const META_DELIVERY_STATUSES = ['pending', 'sending', 'sent', 'failed', 'skipped'];
+const CUSTOMER_TYPES = [
+  'intimate-apparel-factory',
+  'intimate-apparel-brand',
+  'garment-factory',
+  'trims-wholesaler',
+  'retailer',
+  'other'
+];
+const IMPORT_EXPERIENCE_VALUES = ['currently-importing', 'preparing', 'none'];
+const MINIMUM_ORDER_ACCEPTANCE_VALUES = ['yes', 'discuss', 'no'];
+const PURCHASE_TIMELINE_VALUES = ['immediately', 'one-to-three-months', 'three-to-six-months', 'research'];
 const META_DELIVERY_LEASE_MS = 2 * 60 * 1000;
 const MAX_BLOB_MUTATION_ATTEMPTS = 8;
 const INQUIRIES_BLOB_PREFIX = String(process.env.INQUIRIES_BLOB_PREFIX || 'inquiries')
@@ -127,14 +138,20 @@ function validateInquiryInput(input) {
   const inquiry = {
     name: cleanText(input.name, 120),
     company: cleanText(input.company, 180),
+    companyWebsite: cleanText(input.companyWebsite, 500),
     country: cleanText(input.country, 120),
+    city: cleanText(input.city, 120),
     businessRole: cleanText(input.businessRole, 80),
+    customerType: cleanText(input.customerType, 80),
+    importExperience: cleanText(input.importExperience, 40),
     email: cleanText(input.email, 254).toLowerCase(),
     phone: cleanText(input.phone, 80),
     product: cleanText(input.product, 40),
     productName: cleanText(input.productName, 160),
     itemNo: cleanText(input.itemNo, 100),
     quantity: cleanText(input.quantity, 120),
+    minimumOrderAcceptance: cleanText(input.minimumOrderAcceptance, 20),
+    purchaseTimeline: cleanText(input.purchaseTimeline, 40),
     tradeTerm: cleanText(input.tradeTerm, 20),
     quoteCurrency: cleanText(input.quoteCurrency, 20),
     message: cleanText(input.message, 5000),
@@ -154,8 +171,32 @@ function validateInquiryInput(input) {
     privacyConsent: input.privacyConsent === 'accepted'
   };
 
-  if (!inquiry.name || !inquiry.company || !inquiry.country || !inquiry.businessRole || !inquiry.email || !inquiry.message) {
-    const error = new Error('Name, company, country, business role, email, and message are required.');
+  if (
+    !inquiry.name || !inquiry.company || !inquiry.companyWebsite || !inquiry.country || !inquiry.city ||
+    !inquiry.businessRole || !inquiry.customerType || !inquiry.importExperience || !inquiry.email ||
+    !inquiry.minimumOrderAcceptance || !inquiry.purchaseTimeline || !inquiry.message
+  ) {
+    const error = new Error('Please complete every required company and purchasing qualification field.');
+    error.statusCode = 400;
+    throw error;
+  }
+  if (!CUSTOMER_TYPES.includes(inquiry.customerType)) {
+    const error = new Error('Please select a valid customer type.');
+    error.statusCode = 400;
+    throw error;
+  }
+  if (!IMPORT_EXPERIENCE_VALUES.includes(inquiry.importExperience)) {
+    const error = new Error('Please select a valid import experience.');
+    error.statusCode = 400;
+    throw error;
+  }
+  if (!MINIMUM_ORDER_ACCEPTANCE_VALUES.includes(inquiry.minimumOrderAcceptance)) {
+    const error = new Error('Please select a valid minimum order response.');
+    error.statusCode = 400;
+    throw error;
+  }
+  if (!PURCHASE_TIMELINE_VALUES.includes(inquiry.purchaseTimeline)) {
+    const error = new Error('Please select a valid purchase timeline.');
     error.statusCode = 400;
     throw error;
   }
@@ -225,14 +266,20 @@ function normalizeStoredInquiry(value) {
     status,
     name: cleanText(source.name, 120),
     company: cleanText(source.company, 180),
+    companyWebsite: cleanText(source.companyWebsite, 500),
     country: cleanText(source.country, 120),
+    city: cleanText(source.city, 120),
     businessRole: cleanText(source.businessRole, 80),
+    customerType: cleanText(source.customerType, 80),
+    importExperience: cleanText(source.importExperience, 40),
     email: cleanText(source.email, 254),
     phone: cleanText(source.phone, 80),
     product: cleanText(source.product, 40),
     productName: cleanText(source.productName, 160),
     itemNo: cleanText(source.itemNo, 100),
     quantity: cleanText(source.quantity, 120),
+    minimumOrderAcceptance: cleanText(source.minimumOrderAcceptance, 20),
+    purchaseTimeline: cleanText(source.purchaseTimeline, 40),
     tradeTerm: cleanText(source.tradeTerm, 20),
     quoteCurrency: cleanText(source.quoteCurrency, 20),
     message: cleanText(source.message, 5000),

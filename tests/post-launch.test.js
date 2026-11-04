@@ -32,14 +32,20 @@ function validInquiry(overrides = {}) {
   return {
     name: 'Buyer Name',
     company: 'Buyer Company',
+    companyWebsite: 'https://buyer.example.com',
     country: 'Brazil',
+    city: 'Sao Paulo',
     businessRole: 'distributor',
+    customerType: 'trims-wholesaler',
+    importExperience: 'currently-importing',
     email: 'buyer@example.com',
     phone: '+55 11 0000 0000',
     product: 'lingerie',
     productName: 'H6896 | Bra Strap Elastic',
     itemNo: 'H6896',
     quantity: '30000m',
+    minimumOrderAcceptance: 'yes',
+    purchaseTimeline: 'one-to-three-months',
     tradeTerm: 'EXW',
     quoteCurrency: 'USD',
     message: 'Please quote this item.',
@@ -175,6 +181,8 @@ test('notification content escapes customer HTML and uses an idempotency key', a
   const message = buildInquiryNotification(inquiry);
   assert.doesNotMatch(message.html, /<img src=x/i);
   assert.match(message.html, /&lt;img src=x onerror=alert\(1\)&gt;/);
+  assert.match(message.text, /Company Website \/ Social: https:\/\/buyer\.example\.com/);
+  assert.match(message.text, /Can Consider US\$8,000 Initial Order: yes/);
 
   let request;
   await withEnv({
