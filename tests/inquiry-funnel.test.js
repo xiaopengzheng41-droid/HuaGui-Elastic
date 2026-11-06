@@ -350,6 +350,39 @@ test('private inquiry mutation retries an ETag conflict using the latest record'
   assert.equal(result.inquiry.statusHistory[1].fromStatus, 'read');
 });
 
+test('private inquiry mutation uses a direct overwrite when conditional writes are disabled', async () => {
+  const puts = [];
+  const blobClient = {
+    async get() {
+      return {
+        statusCode: 200,
+        text: async () => JSON.stringify(legacyInquiry({ status: 'new' })),
+        blob: { etag: 'v1' }
+      };
+    },
+    async put(pathname, body, options) {
+      puts.push({ pathname, body, options });
+      return { pathname, etag: 'v2' };
+    }
+  };
+  const result = await mutatePrivateInquiry(
+    legacyInquiry().id,
+    inquiry => ({
+      inquiry: transitionInquiryStatus(
+        inquiry,
+        'qualified',
+        {},
+        new Date('2026-10-29T17:01:00.000Z')
+      ),
+      changed: true
+    }),
+    { blobClient, conditionalWrites: false }
+  );
+  assert.equal(puts.length, 1);
+  assert.equal(puts[0].options.ifMatch, undefined);
+  assert.equal(result.inquiry.status, 'qualified');
+});
+
 test('local inquiry mutations are serialized in call order', async () => {
   const order = [];
   await Promise.all([
@@ -427,9 +460,6 @@ test('contact Lead delivery uses the same persistent claim and completion contra
   let completedOutcome;
   let sentAt;
   const delivered = await deliverMetaLead(base, { marketingConsent: true }, {
-    queueDelivery: async () => ({
-      inquiry: prepareMetaDelivery(base, 'Lead', new Date('2026-10-29T18:00:00.000Z')).inquiry
-    }),
     claimDelivery: async () => ({
       inquiry: base,
       claimed: true,

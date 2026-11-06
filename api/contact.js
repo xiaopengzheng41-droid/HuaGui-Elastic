@@ -1,8 +1,7 @@
 const {
   claimInquiryMetaDelivery,
   completeInquiryMetaDelivery,
-  createInquiry,
-  queueInquiryMetaDelivery
+  createInquiry
 } = require('./_inquiries');
 const { parseJsonBody, sendError, sendJson } = require('./_cms');
 const { requestMetaContext, sendMetaLeadEvent } = require('./_meta');
@@ -13,14 +12,12 @@ async function deliverMetaLead(
   inquiry,
   metaContext,
   {
-    queueDelivery = queueInquiryMetaDelivery,
     claimDelivery = claimInquiryMetaDelivery,
     completeDelivery = completeInquiryMetaDelivery,
     sendEvent = sendMetaLeadEvent
   } = {}
 ) {
-  const queued = await queueDelivery(inquiry.id, 'Lead');
-  const claim = await claimDelivery(queued.inquiry.id, 'Lead');
+  const claim = await claimDelivery(inquiry.id, 'Lead');
   if (!claim.claimed) {
     return { inquiry: claim.inquiry, delivery: claim.delivery };
   }
@@ -30,7 +27,8 @@ async function deliverMetaLead(
     const eventTime = new Date(claim.delivery?.createdAt || claim.inquiry.createdAt || Date.now());
     const provider = await sendEvent(claim.inquiry, {
       context: metaContext,
-      now: Number.isNaN(eventTime.getTime()) ? new Date() : eventTime
+      now: Number.isNaN(eventTime.getTime()) ? new Date() : eventTime,
+      timeoutMs: 4000
     });
     if (provider.sent) {
       outcome = {
@@ -131,21 +129,22 @@ module.exports = async function contactHandler(req, res) {
       metaEventSourceUrl: metaContext.eventSourceUrl,
       sourceUrl: body.sourceUrl || req.headers.referer || ''
     });
-    try {
-      await notifyNewInquiry(inquiry);
-    } catch (notificationError) {
+    const [notificationResult, metaDeliveryResult] = await Promise.allSettled([
+      notifyNewInquiry(inquiry),
+      deliverMetaLead(inquiry, metaContext)
+    ]);
+    if (notificationResult.status === 'rejected') {
       console.error('Inquiry notification failed', {
         inquiryId: inquiry.id,
-        error: notificationError.message
+        error: notificationResult.reason?.message || String(notificationResult.reason || '')
       });
     }
-    try {
-      const metaDelivery = await deliverMetaLead(inquiry, metaContext);
-      inquiry = metaDelivery.inquiry;
-    } catch (metaDeliveryError) {
+    if (metaDeliveryResult.status === 'fulfilled') {
+      inquiry = metaDeliveryResult.value.inquiry;
+    } else {
       console.error('Meta Lead delivery state failed', {
         inquiryId: inquiry.id,
-        error: metaDeliveryError.message
+        error: metaDeliveryResult.reason?.message || String(metaDeliveryResult.reason || '')
       });
     }
     return sendJson(res, 201, {

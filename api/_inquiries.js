@@ -43,6 +43,7 @@ const MINIMUM_ORDER_ACCEPTANCE_VALUES = ['yes', 'discuss', 'no'];
 const PURCHASE_TIMELINE_VALUES = ['immediately', 'one-to-three-months', 'three-to-six-months', 'research'];
 const META_DELIVERY_LEASE_MS = 2 * 60 * 1000;
 const MAX_BLOB_MUTATION_ATTEMPTS = 8;
+const BLOB_OPERATION_TIMEOUT_MS = 5000;
 const INQUIRIES_BLOB_PREFIX = String(process.env.INQUIRIES_BLOB_PREFIX || 'inquiries')
   .trim()
   .replace(/^\/+|\/+$/g, '') || 'inquiries';
@@ -80,6 +81,25 @@ function inquiryBlobClientOptions() {
       ? { storeId }
       : {})
   };
+}
+
+function blobAbortSignal() {
+  return typeof AbortSignal !== 'undefined' && typeof AbortSignal.timeout === 'function'
+    ? AbortSignal.timeout(BLOB_OPERATION_TIMEOUT_MS)
+    : undefined;
+}
+
+function blobAbortOptions() {
+  const abortSignal = blobAbortSignal();
+  return abortSignal ? { abortSignal } : {};
+}
+
+function shouldUseConditionalBlobWrites() {
+  // Vercel's tokenless OIDC connection can create and overwrite private blobs,
+  // but conditional PUTs can remain open until the function times out. Keep
+  // optimistic ETag writes for local/token-backed clients and use a bounded
+  // latest-read + overwrite flow for the production OIDC connection.
+  return Boolean(process.env.INQUIRIES_BLOB_READ_WRITE_TOKEN) || !isVercelRuntime();
 }
 
 function storageMode() {
@@ -581,6 +601,7 @@ async function readPrivateInquiryRecord(pathname, blobClient) {
   const blob = await client.get(pathname, {
     access: 'private',
     useCache: false,
+    ...blobAbortOptions(),
     ...inquiryBlobClientOptions()
   });
   if (!blob || blob.statusCode !== 200) return null;
@@ -606,6 +627,7 @@ async function writePrivateInquiry(inquiry, { ifMatch = '', blobClient } = {}) {
     allowOverwrite: true,
     contentType: 'application/json',
     ...(ifMatch ? { ifMatch } : {}),
+    ...blobAbortOptions(),
     ...inquiryBlobClientOptions()
   });
   return inquiry;
@@ -623,7 +645,11 @@ function isBlobPreconditionFailedError(error, blobClient) {
 async function mutatePrivateInquiry(
   id,
   mutator,
-  { blobClient, maxAttempts = MAX_BLOB_MUTATION_ATTEMPTS } = {}
+  {
+    blobClient,
+    maxAttempts = MAX_BLOB_MUTATION_ATTEMPTS,
+    conditionalWrites = shouldUseConditionalBlobWrites()
+  } = {}
 ) {
   const pathname = inquiryPathForId(id);
   const client = blobClient || await import('@vercel/blob');
@@ -638,10 +664,14 @@ async function mutatePrivateInquiry(
     if (!mutation || mutation.changed === false) {
       return mutation || { inquiry: record.inquiry, changed: false };
     }
-    if (!record.etag) {
+    if (conditionalWrites && !record.etag) {
       const error = new Error('Inquiry version is unavailable for a safe update.');
       error.statusCode = 503;
       throw error;
+    }
+    if (!conditionalWrites) {
+      await writePrivateInquiry(mutation.inquiry, { blobClient: client });
+      return mutation;
     }
     try {
       await writePrivateInquiry(mutation.inquiry, {
